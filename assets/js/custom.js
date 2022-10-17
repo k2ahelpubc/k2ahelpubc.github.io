@@ -40,7 +40,7 @@ var data = [{
     texttemplate: "%{text}%",
     textposition: "top center",
     hovertext: [11300,10741,14401,13797,13918,14468,13535],
-    hovertemplate: '<span style="padding: 1rem; color:#f5f5f5;"><br>&nbsp;# Vulnerable: <br></span>'+
+    hovertemplate: '<span style="color:#f5f5f5;"><br>&nbsp;# Vulnerable: <br></span>'+
     '<b>&nbsp;%{hovertext:,}</b><br>'+
     '<extra></extra>',
     textfont: {'family': "Nunito Sans", 'size': 16 , 'color': 'rgb( 203, 24, 29)'},
@@ -134,6 +134,11 @@ var layout = {
         t: 50,
         pad: 4
     },
+    legend: {
+        "orientation":"h",
+        x: 0, 
+        y: 110,
+    },
     font: {
         family: 'Nunito Sans',
         size: 16,
@@ -144,7 +149,8 @@ var layout = {
     },
     xaxis: {
         title: "Wave"
-    }
+    },
+    hovermode: false,
 };
 
 Plotly.newPlot('stackedBar_vulnProfile', data, layout, {displayModeBar: false, responsive: true, scrollZoom: false});
@@ -317,6 +323,9 @@ var fourVuln = {
     marker: {
         color: colorValue_vulnPrimary,
     },
+    legend: {
+        y: 0.0,
+    },
 };
 
 var fiveVuln = {
@@ -385,7 +394,7 @@ var vulnOutcome = {
     marker: {
         color: colorValue_vulnPrimary
     },
-    orientation: 'h'
+    orientation: 'h',
 };
 
 var inFluxOutcome = {
@@ -411,7 +420,7 @@ var onTrackOutcome = {
     marker: {
         color: "#8EC73F"
     },
-    orientation: 'h'
+    orientation: 'h',
 };
 
 
@@ -432,6 +441,12 @@ var layout = {
         family: 'Nunito Sans',
         size: 16,
         color: '#252525',
+    },
+    legend: {
+        "orientation":"h",
+        y: 5,
+        x: 0,
+        traceorder: 'normal',
     },
     xaxis: {
         title: "Percent (%)",

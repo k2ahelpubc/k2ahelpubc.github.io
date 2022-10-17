@@ -4,9 +4,7 @@ OVERALL LAYOUT
 CHART DESIGN
 - demographics toggle switch
 - demographics line charts?
-- Vuln 1+ line chart hover to show count?
-- Vuln profile %/# toggle switch
-- vuln profile top legend
+- Vuln profile %/# toggle switch?!?!?!
 - Vuln map time slider through waves
 - vuln map description box?
 - Range in NH vuln chart show scatter (add all data), create just vertical scatter chart?
