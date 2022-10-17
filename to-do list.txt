@@ -1,0 +1,14 @@
+OVERALL LAYOUT
+- populate text/wireframe content
+- 
+CHART DESIGN
+- demographics toggle switch
+- demographics line charts?
+- Vuln 1+ line chart hover to show count?
+- Vuln profile %/# toggle switch
+- vuln profile top legend
+- Vuln map time slider through waves
+- vuln map description box?
+- Range in NH vuln chart show scatter (add all data), create just vertical scatter chart?
+- change order and colour 15/45 data table
+- Scale level outcomes top legend
