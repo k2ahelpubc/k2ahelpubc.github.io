@@ -4,8 +4,8 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 // GLOBAL VARIABLES
 
-var xValueWaves = ['2', '3', '4', '5', '6', '7', '8'];
-var colorValue_vulnPrimary = "#CB181D"
+const xValueWaves = ['2', '3', '4', '5', '6', '7', '8'];
+const colorValue_vulnPrimary = "#CB181D"
 
 
 // PARTICIPATION AND DEMOGRAPHICS
@@ -377,6 +377,12 @@ Plotly.newPlot('stackedBar_multiVuln', data, layout, {displayModeBar: false, res
 
 
 
+// SCALE-LEVEL VULNERABILITY TRENDS
+
+
+
+
+
 // SCALE-LEVEL OUTCOMES STACKED BAR CHART
 
 var yValue_ScaleNames = ['Physical', 'Social', 'Emotional','Language','Communication'];
@@ -461,3 +467,7 @@ var layout = {
 };
 
 Plotly.newPlot('stackedBar_scaleOutcomes', data, layout, {displayModeBar: false, responsive: true, scrollZoom: false});
+
+
+
+// EDI SUBSCALE-LEVEL OUTCOMES

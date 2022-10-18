@@ -9,4 +9,3 @@ CHART DESIGN
 - vuln map description box?
 - Range in NH vuln chart show scatter (add all data), create just vertical scatter chart?
 - change order and colour 15/45 data table
-- Scale level outcomes top legend
