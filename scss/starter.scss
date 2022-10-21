@@ -51,6 +51,13 @@ $light:#f5f5f5;
 $med:#76777a;
 $dark:#353535;
 
+$social: #3182BD;
+$emotional: #54278F;
+$physical: #006D2C;
+$language: #C51B8A;
+$communication: #E6550D;
+
+
 
 
 
@@ -73,8 +80,8 @@ $dark:#353535;
 // @import "bootstrap/scss/button-group";
 // @import "bootstrap/scss/input-group"; // Requires forms
 // @import "bootstrap/scss/custom-forms";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
 // @import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/pagination";
@@ -188,4 +195,74 @@ body {
   position: absolute;
   bottom: 20px;
   height: 400px;
+}
+
+
+
+// TAB STYLES
+
+.nav-pills .nav-link {
+  padding: 1rem;
+  border-radius: 50px;
+  width: 90%;
+  &.social {
+    color: $social;
+    border: 2px solid $social;
+    &:hover {
+      color: #f5f5f5;
+      background-color: rgba($social,0.75);
+    }
+  }
+  &.emotional {
+    color: $emotional;
+    border: 2px solid $emotional;
+    &:hover {
+      color: #f5f5f5;
+      background-color: rgba($emotional,0.75);
+    }
+  }
+  &.physical {
+    color: $physical;
+    border: 2px solid $physical;
+    &:hover {
+      color: #f5f5f5;
+      background-color: rgba($physical,0.75);
+    }
+  }
+  &.language {
+    color: $language;
+    border: 2px solid $language;
+    &:hover {
+      color: #f5f5f5;
+      background-color: rgba($language,0.75);
+    }
+  }
+  &.communication {
+    color: $communication;
+    border: 2px solid $communication;
+    &:hover {
+      color: #f5f5f5;
+      background-color: rgba($communication,0.75);
+    }
+  }
+}
+
+.nav-pills .nav-link.active {
+  color: #f5f5f5;
+}
+
+.nav-pills .nav-link.active.social {
+  background-color: $social;
+}
+.nav-pills .nav-link.active.emotional {
+  background-color: $emotional;
+}
+.nav-pills .nav-link.active.physical {
+  background-color: $physical;
+}
+.nav-pills .nav-link.active.language {
+  background-color: $language;
+}
+.nav-pills .nav-link.active.communication {
+  background-color: $communication;
 }

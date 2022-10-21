@@ -357,8 +357,68 @@
       </div>
 
       <div id="ediScalesSubscales_section" class="mt-5">
+
         <h3>EDI Subscale-Level Trends Over Time</h3>
-        <div id="trend_scaleSubscale" class="col-lg-12 px-0"></div>
+
+        
+        <ul class="nav nav-pills nav-fill mt-5" id="scaleSubscaleTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active social" id="social-tab" data-toggle="pill" data-target="#social-subscales-container" type="button" role="tab" aria-controls="social-subscales-container" aria-selected="true">Social</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link emotional" id="emotional-tab" data-toggle="pill" data-target="#emotional-subscales-container" type="button" role="tab" aria-controls="emotional-subscales-container" aria-selected="false">Emotional</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link physical" id="physical-tab" data-toggle="pill" data-target="#physical-subscales-container" type="button" role="tab" aria-controls="physical-subscales-container" aria-selected="false">Physical</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link language" id="language-tab" data-toggle="pill" data-target="#language-subscales-container" type="button" role="tab" aria-controls="language-subscales-container" aria-selected="false">Language</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link communication" id="communication-tab" data-toggle="pill" data-target="#communication-subscales-container" type="button" role="tab" aria-controls="communication-subscales-container" aria-selected="false">Communication</button>
+          </li>
+        </ul>
+
+
+        <div id="scaleSubscaleTabs-Content" class="tab-content">
+
+          <div id="social-subscales-container" class="tab-pane fade show active mt-5" role="tabpanel" aria-labelledby="social-tab">
+            <h5>Social Competence</h5>
+            <div id="trend_scale-social" class="col-lg-12 px-0"></div>
+            <h5>Social Competence Subscales</h5>
+            <div id="trend_subscale-social" class="col-lg-12 px-0"></div>
+          </div>
+
+          <div id="emotional-subscales-container"class="tab-pane fade mt-5" role="tabpanel" aria-labelledby="emotional-tab">
+            <h5>Emotional Maturity</h5>
+            <div id="trend_scale-emotional" class="col-lg-12 px-0"></div>
+            <h5>Emotional Maturity Subscales</h5>
+            <div id="trend_subscale-emotional" class="col-lg-12 px-0"></div>
+          </div>
+
+          <div id="physical-subscales-container" class="tab-pane fade mt-5" role="tabpanel" aria-labelledby="physical-tab">
+            <h5>Physical Health & Well-being</h5>
+            <div id="trend_scale-physical" class="col-lg-12 px-0"></div>
+            <h5>Physical Health & Well-being Subscales</h5>
+            <div id="trend_subscale-physical" class="col-lg-12 px-0"></div>
+          </div>
+
+          <div id="language-subscales-container" class="tab-pane fade mt-5" role="tabpanel" aria-labelledby="language-tab">
+            <h5>Language & Cognitive Development</h5>
+            <div id="trend_scale-language" class="col-lg-12 px-0"></div>
+            <h5>Language & Cognitive Development Subscales</h5>
+            <div id="trend_subscale-language" class="col-lg-12 px-0"></div>
+          </div>
+
+          <div id="communication-subscales-container"class="tab-pane fade mt-5" role="tabpanel" aria-labelledby="communication-tab">
+            <h5>Communication Skills & General Knowledge</h5>
+            <div id="trend_scale-communication" class="col-lg-12 px-0"></div>
+            <h5>Communication Skills & General Knowledge Subscales</h5>
+            <div id="trend_subscale-communication" class="col-lg-12 px-0"></div>
+          </div>
+
+        </div>
+        
       </div>
 
     </div>

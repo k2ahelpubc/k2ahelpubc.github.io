@@ -393,6 +393,8 @@ multiVulnBarChart();
 
 // SCALE-LEVEL VULNERABILITY TRENDS
 
+
+
 const socialTrendData = {
     scaleVuln: [13.3, 12.7, 14.5, 15.6, 15.7, 16.1, 16.3],
     scaleNumVuln: [5013,4748,6750,6609,6756,6976,6703],
@@ -450,6 +452,8 @@ const communicationTrendData = {
     }
 };
 
+const scaleColours = ['rgb(49, 130, 189)','rgb(84, 39, 143)','rgb(0, 109, 44)','rgb(197, 27, 138)','rgb(230, 85, 13)'];
+
 function allScalesTrendChart() {
 
     const socialTrend = {
@@ -458,21 +462,24 @@ function allScalesTrendChart() {
         name: 'Social',
         mode: 'lines+markers+text',
         marker: {
-            color: 'rgb(49, 130, 189)',
+            color: scaleColours[0],
             size: 12
         },
         line: {
-            color: 'rgb(49, 130, 189)',
+            color: scaleColours[0],
             width: 4
         },
         // text: socialTrendData.scaleVuln.map(String),
         // texttemplate: "%{text}%",
         textposition: "top center",
         hovertext: socialTrendData.scaleNumVuln.map(String),
-        hovertemplate: '<span style="color:#f5f5f5;"><br>&nbsp;# Vulnerable: <br></span>' +
-            '<b>&nbsp;%{hovertext:,}</b><br>' +
-            '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': 'rgb(49, 130, 189)' },
+        hovertemplate: '<br><b>&nbsp;Wave %{x}:</b>' + 
+        '<br>&nbsp;% Vulnerable: <br>' +
+        '<b>&nbsp;%{y}%</b><br>'+
+        '<br>&nbsp;# Vulnerable: <br>' +
+        '<b>&nbsp;%{hovertext:,}</b><br>' +
+        '<extra></extra>',
+        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours[0] },
     };
 
     const emotionalTrend = {
@@ -481,21 +488,24 @@ function allScalesTrendChart() {
         name: 'Emotional',
         mode: 'lines+markers+text',
         marker: {
-            color: 'rgb(84, 39, 143)',
+            color: scaleColours[1],
             size: 12
         },
         line: {
-            color: 'rgb(84, 39, 143)',
+            color: scaleColours[1],
             width: 4
         },
         // text: emotionalTrendData.scaleVuln.map(String),
         // texttemplate: "%{text}%",
         textposition: "top center",
         hovertext: emotionalTrendData.scaleNumVuln.map(String),
-        hovertemplate: '<span style="color:#f5f5f5;"><br>&nbsp;# Vulnerable: <br></span>' +
-            '<b>&nbsp;%{hovertext:,}</b><br>' +
-            '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': 'rgb(84, 39, 143)' },
+        hovertemplate: '<br><b>&nbsp;Wave %{x}:</b>' + 
+        '<br>&nbsp;% Vulnerable: <br>' +
+        '<b>&nbsp;%{y}%</b><br>'+
+        '<br>&nbsp;# Vulnerable: <br>' +
+        '<b>&nbsp;%{hovertext:,}</b><br>' +
+        '<extra></extra>',
+        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours[1] },
     };
 
     const physicalTrend = {
@@ -504,21 +514,24 @@ function allScalesTrendChart() {
         name: 'Physical',
         mode: 'lines+markers+text',
         marker: {
-            color: 'rgb(0, 109, 44)',
+            color: scaleColours[2],
             size: 12
         },
         line: {
-            color: 'rgb(0, 109, 44)',
+            color: scaleColours[2],
             width: 4
         },
         // text: physicalTrendData.scaleVuln.map(String),
         // texttemplate: "%{text}%",
         textposition: "top center",
         hovertext: physicalTrendData.scaleNumVuln.map(String),
-        hovertemplate: '<span style="color:#f5f5f5;"><br>&nbsp;# Vulnerable: <br></span>' +
-            '<b>&nbsp;%{hovertext:,}</b><br>' +
-            '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': 'rgb(0, 109, 44)' },
+        hovertemplate: '<br><b>&nbsp;Wave %{x}:</b>' + 
+        '<br>&nbsp;% Vulnerable: <br>' +
+        '<b>&nbsp;%{y}%</b><br>'+
+        '<br>&nbsp;# Vulnerable: <br>' +
+        '<b>&nbsp;%{hovertext:,}</b><br>' +
+        '<extra></extra>',
+        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours[2] },
 
     };
 
@@ -528,21 +541,24 @@ function allScalesTrendChart() {
         name: 'Language',
         mode: 'lines+markers+text',
         marker: {
-            color: 'rgb(197, 27, 138)',
+            color: scaleColours[3],
             size: 12
         },
         line: {
-            color: 'rgb(197, 27, 138)',
+            color: scaleColours[3],
             width: 4
         },
         // text: languageTrendData.scaleVuln.map(String),
         // texttemplate: "%{text}%",
         textposition: "top center",
         hovertext: languageTrendData.scaleNumVuln.map(String),
-        hovertemplate: '<span style="color:#f5f5f5;"><br>&nbsp;# Vulnerable: <br></span>' +
-            '<b>&nbsp;%{hovertext:,}</b><br>' +
-            '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': 'rgb(197, 27, 138)' },
+        hovertemplate: '<br><b>&nbsp;Wave %{x}:</b>' + 
+        '<br>&nbsp;% Vulnerable: <br>' +
+        '<b>&nbsp;%{y}%</b><br>'+
+        '<br>&nbsp;# Vulnerable: <br>' +
+        '<b>&nbsp;%{hovertext:,}</b><br>' +
+        '<extra></extra>',
+        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours[3] },
 
     };
 
@@ -552,21 +568,24 @@ function allScalesTrendChart() {
         name: 'Communication',
         mode: 'lines+markers+text',
         marker: {
-            color: 'rgb(230, 85, 13)',
+            color: scaleColours[4],
             size: 12
         },
         line: {
-            color: 'rgb(230, 85, 13)',
+            color: scaleColours[4],
             width: 4
         },
         // text: communicationTrendData.scaleVuln.map(String),
         // texttemplate: "%{text}%",
         textposition: "top center",
         hovertext: communicationTrendData.scaleNumVuln.map(String),
-        hovertemplate: '<span style="color:#f5f5f5;"><br>&nbsp;# Vulnerable: <br></span>' +
-            '<b>&nbsp;%{hovertext:,}</b><br>' +
-            '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': 'rgb(230, 85, 13)' },
+        hovertemplate: '<br><b>&nbsp;Wave %{x}:</b>' + 
+        '<br>&nbsp;% Vulnerable: <br>' +
+        '<b>&nbsp;%{y}%</b><br>'+
+        '<br>&nbsp;# Vulnerable: <br>' +
+        '<b>&nbsp;%{hovertext:,}</b><br>' +
+        '<extra></extra>',
+        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours[4] },
 
     };
 
