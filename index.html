@@ -15,6 +15,7 @@
     <!-- Plotly Scripts -->   
     <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
 
+
   </head>
   <body>
     <div class="col-md-8 py-5 px-3 mx-auto">
@@ -79,10 +80,13 @@
 
       <div id="demographics_section" class="mt-5">
         <h3>Participation and Demographics</h3>
-
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" id="demoNumTable_btn" class="btn btn-secondary">Numbers</button>
-          <button type="button" id="demoPercentTable_btn" class="btn btn-secondary">Percentages</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label id="demoPercentTable_btn" class="btn btn-secondary">
+            <input type="radio" name="options" id="option1" checked> Percentages
+          </label>
+          <label id="demoNumTable_btn" class="btn btn-secondary active">
+            <input type="radio" name="options" id="option2"> Numbers
+          </label>
         </div>
         <div class="tableContainer">
           <table id="demoNumTable" class="table table-hover numTable">
@@ -275,7 +279,7 @@
     
     </div>
 
-    <div class="col-md-12 mx-auto">
+    <div class="col-md-12 mx-auto px-0">
 
       <div id="vulnMap_section" class="mt-5">
         <div class="col-md-8 py-5 px-3 mx-auto">
@@ -382,39 +386,39 @@
 
         <div id="scaleSubscaleTabs-Content" class="tab-content">
 
-          <div id="social-subscales-container" class="tab-pane fade show active mt-5" role="tabpanel" aria-labelledby="social-tab">
-            <h5>Social Competence</h5>
-            <div id="trend_scale-social" class="col-lg-12 px-0"></div>
-            <h5>Social Competence Subscales</h5>
-            <div id="trend_subscale-social" class="col-lg-12 px-0"></div>
+          <div id="social-subscales-container" class="tab-pane fade show active mt-4" role="tabpanel" aria-labelledby="social-tab">
+              <h5 class="socialColor">Scale-level Vulnerability</h5>
+              <div id="trend_socialScales" class="col-lg-12 px-0"></div>
+              <h5 class="socialColor">Social Competence Subscales</h5>
+              <div id="trend_socialSubscales" class="col-lg-12 px-0"></div>
           </div>
 
-          <div id="emotional-subscales-container"class="tab-pane fade mt-5" role="tabpanel" aria-labelledby="emotional-tab">
-            <h5>Emotional Maturity</h5>
-            <div id="trend_scale-emotional" class="col-lg-12 px-0"></div>
-            <h5>Emotional Maturity Subscales</h5>
-            <div id="trend_subscale-emotional" class="col-lg-12 px-0"></div>
+          <div id="emotional-subscales-container"class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="emotional-tab">
+              <h5 class="emotionalColor">Scale-level Vulnerability</h5>
+              <div id="trend_emotionalScales" class="col-lg-12 px-0"></div>
+              <h5 class="emotionalColor">Emotional Maturity Subscales</h5>
+              <div id="trend_emotionalSubscales" class="col-lg-12 px-0"></div>
           </div>
 
-          <div id="physical-subscales-container" class="tab-pane fade mt-5" role="tabpanel" aria-labelledby="physical-tab">
-            <h5>Physical Health & Well-being</h5>
-            <div id="trend_scale-physical" class="col-lg-12 px-0"></div>
-            <h5>Physical Health & Well-being Subscales</h5>
-            <div id="trend_subscale-physical" class="col-lg-12 px-0"></div>
+          <div id="physical-subscales-container" class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="physical-tab">
+              <h5 class="physicalColor">Scale-level Vulnerability</h5>
+              <div id="trend_physicalScales" class="col-lg-12 px-0"></div>
+              <h5 class="physicalColor">Physical Health & Well-being Subscales</h5>
+              <div id="trend_physicalSubscales" class="col-lg-12 px-0"></div>
           </div>
 
-          <div id="language-subscales-container" class="tab-pane fade mt-5" role="tabpanel" aria-labelledby="language-tab">
-            <h5>Language & Cognitive Development</h5>
-            <div id="trend_scale-language" class="col-lg-12 px-0"></div>
-            <h5>Language & Cognitive Development Subscales</h5>
-            <div id="trend_subscale-language" class="col-lg-12 px-0"></div>
+          <div id="language-subscales-container" class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="language-tab">
+              <h5 class="languageColor">Scale-level Vulnerability</h5>
+              <div id="trend_languageScales" class="col-lg-12 px-0"></div>
+              <h5 class="languageColor">Language & Cognitive Development Subscales</h5>
+              <div id="trend_languageSubscales" class="col-lg-12 px-0"></div>
           </div>
 
-          <div id="communication-subscales-container"class="tab-pane fade mt-5" role="tabpanel" aria-labelledby="communication-tab">
-            <h5>Communication Skills & General Knowledge</h5>
-            <div id="trend_scale-communication" class="col-lg-12 px-0"></div>
-            <h5>Communication Skills & General Knowledge Subscales</h5>
-            <div id="trend_subscale-communication" class="col-lg-12 px-0"></div>
+          <div id="communication-subscales-container"class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="communication-tab">
+              <h5 class="communicationColor">Scale-level Vulnerability</h5>
+              <div id="trend_communicationScales" class="col-lg-12 px-0"></div>
+              <h5 class="communicationColor">Communication Skills & General Knowledge Subscales</h5>
+              <div id="trend_communicationSubscales" class="col-lg-12 px-0"></div>
           </div>
 
         </div>
