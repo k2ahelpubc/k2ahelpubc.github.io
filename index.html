@@ -17,69 +17,138 @@
 
 
   </head>
-  <body>
-    <div class="col-md-8 py-5 px-3 mx-auto">
+  <body class="wrapper">
 
-      <header class="pb-3 mb-5 border-bottom">
-        <h1 class="">
-          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <span>EDI Wave 8 - Provincial Synthesis</span>
-          </a>
-        </h1>
-      </header>
+    <nav id="sidebar">
 
-      <div id="" class="container mt-5">
-        
-        <h3>Introduction/snazzy title</h3>
-        <p>Children’s early development is profoundly important… More here on importance of the first 1000 days, why we care about early childhood and why it’s essential that we track data for children in their early years, especially with the long-tail of COVID, and new pressures on the health and well-being of young children and their families.</p>
-        <h4>A Provincial Investment</h4>
-        <p>More here on the foundation for the EDI in BC – differences that make a difference, partnership between Province, HELP, BC School districts. Foundation for Monitoring System and advocacy for children and families blah blah…</p>
-        <p>The Early Development Instrument (EDI) is a questionnaire completed by kindergarten teachers in February of the school year for each of the children in their classroom and gathers data about five core areas of development: Physical Health & Well-being, Social Competence, Emotional Maturity, Language and Cognitive Development, and Communication Skills & General Knowledge. The EDI is a nationally and internationally recognized child health monitoring tool used to measure trends and patterns in the developmental health of kindergarten children at the population level.</p>
-        <p>This online report provides an overview of the EDI data collected across BC during Wave 8 (2019-2022). The report highlights both trends in children’s development over time, from Wave 2 (collected 2004-2007) to Wave 8, and across regions of the province of BC.</p>
+      <ul id="sidebarNavElements" class="list-unstyled components">
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#w8Highlights">Wave 8 Highlights</a>
+          </li>
+          <li class="active">
+            <a href="#bigPicSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">The Big Picture</a>
+            <ul class="collapse list-unstyled" id="bigPicSubmenu">
+              <li>
+                <a href="#demographics">Demographics</a>
+              </li>
+              <li>
+                  <a href="#vuln1orMore_trends">Overall Vulnerability</a>
+              </li>
+              <li>
+                  <a href="#multiVuln">Multiple Vulnerabilities</a>
+              </li>
+              <li>
+                <a href="#overallOutcomes">Overall Outcomes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="active">
+            <a href="#geographySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Geography of Vulnerability</a>
+            <ul class="collapse list-unstyled" id="geographySubmenu">
+              <li>
+                <a href="#vulnMap">School Districts of BC</a>
+              </li>
+              <li>
+                  <a href="#vulnDisparity">Disparity in Vulnerability</a>
+              </li>
+              <li>
+                  <a href="#nhLowHigh">The Shifting Curve</a>
+              </li>
+              <li>
+                  <a href="#nhUrbanRural">Urban vs Rural Matter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="active">
+            <a href="#scalesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">EDI Scales & Subscales</a>
+            <ul class="collapse list-unstyled" id="scalesSubmenu">
+              <li>
+                <a href="#ediScalesSubscales">Introduction</a>
+              </li>
+              <li>
+                <a href="#wave8ScaleOutcomes">Wave 8 Scale-level Outcomes</a>
+              </li>
+              <li>
+                <a href="#ediScalesSubscalesTrends">Scale & Subscale-level Trends</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+              <a href="#conclusion">Conclusion</a>
+          </li>
+      </ul>
+
+    </nav>
+
+<!-- LANDING SCREEN -->
+    <div id="landing-screen" class="pb-3 mb-5 text-center">
+      <div id="title-wrap" class="align-middle">
+        <h1>EDI Wave 8 Provincial Summary</h1>
+        <h2 class="mt-5">20 years of EDI Data in BC</h2>
+      </div>
+    </div>
+
+
+<!-- INTRODUCTION -->
+    <div id="introduction"class="row mt-5 bg-offwhite">
+      <div class="col-md-8 py-5 px-3 mx-auto">
+
+        <h5>Decades of research have demonstrated that children’s first years of development are profoundly important to their lifelong health and well-being. Early childhood development influences physical and mental health, learning and social outcomes over the life course and across generations.</h5>
+        </br>
+        <p>The Human Early Learning Partnership (HELP) has been collecting data on children’s development in BC to “shine the light” on how children are doing and inspire action to promote healthy development and well-being. Wave 8 (data collected 2019-2022) marks 20 years of EDI data collection in BC. This report provides a foundational summary of EDI data across these last two decades, setting the stage for more analysis and research to come.</p>
+        <p><span class="text-primary font-weight-bold text-uppercase">New to the EDI?</span> Learn more about the EDI, how it's collected and it's impact over the last 20 years on <a href="https://earlylearning.ubc.ca/monitoring-system/edi/edi-overview" target="_blank" alt="EDI Overview page on HELP Website" title="EDI Overview - HELP Website">HELP's website.</a></p>
 
       </div>
+    </div>
 
-      <div class="pulloutbox">
-        <h5>New to the EDI?</h5>
-        <p>Learn more about the EDI scales and subscales, what it measures, how EDI data is collected and the impact of the EDI over the last 20 years on our website.</p>
-      </div>
+<!-- WAVE 8 HIGHLIGHTS -->
+    <div id="w8Highlights" class="row mt-10">
+      <div class="col-md-8 px-3 mx-auto">
 
-      <div id="" class="container mt-5">
-
-        <h4>Two decades of data coming to life: What we know so far: Still 1 in 3</h4>
-        <p>In Wave 8, 32.9% of kindergarten children in BC – 1 in 3 – are vulnerable on one or more areas critical to their healthy development. This rate represents approximately 13,500 children across the province and is a meaningful increase in EDI vulnerability rates from the Wave 2 (data collected 2004-2007) rate of 29.9%. This level of vulnerability has significant social and economic cost to BC, not simply as children start school but throughout their lives.</p>
-        <p>Not only has the vulnerability rate in BC risen over the last 2 decades, BC’s rates have been consistently higher than other provinces across the country. “At a national level, vulnerability as measured by the EDI is experienced by 28% of Canadian children.” (NS report…CIHI Canadian #s… https://yourhealthsystem.cihi.ca/hsp/inbrief#!/indicators/013/children-vulnerable-in-areas-of-early-development/;mapC1;mapLevel2;overview;/).</p>
-        <p>Three key takeaways as a teaser for the detailed picture that follows as possible: Continue to see variability across the province in vulnerability rates and fewer NHs with low vulnerability. Introducing new metrics (on track & in flux) in this wave that help to provide further context on child development trends.</p>
-
-      </div>
-
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-sm pulloutbox">
-            <p>HELP will be releasing EDI Wave 8 data through a new interactive data dashboard to improve access to and interpretation of local and regional-level data. Learn more.</p>
+        <h2 class="text-primary">Wave 8 Highlights</h2>
+        <div id="still1in3" class="row mt-5 align-items-center">
+          <div class="col-lg-4">
+            <img src="https://via.placeholder.com/350" alt="" width="100%">
           </div>
-          <div class="col-sm pulloutbox">
-            <p>EDI and the Child Development Monitoring System: Link to monitoring system page</p>
+          <div class="col-lg-8">
+            <h5>Still 1 in 3</h5>
+            <p>In Wave 8, <span class="text-primary font-weight-bold">32.9% or approximately 13,500 kindergarten children in BC are vulnerable on one or more areas critical to their healthy development.</span> Wave 8 is the fifth provincial data collection in a row where more than 30% of children were vulnerable. Almost two decades of research show that the EDI predicts children’s future outcomes; without additional support and care, children who are vulnerable on one or more areas on the EDI are more likely to experience future challenges in their school years and beyond. With this, the level of vulnerability has significant social and economic cost to BC, not simply as children start school but throughout their lives.</p>
           </div>
         </div>
+        <div id="socEmoHighConcern" class="row mt-5">
+          <div class="col-lg-8 my-auto">
+            <h5>Social & Emotional Development, Areas of Highest Concern</h5>
+            <p>For the third wave in a row, <span class="text-primary font-weight-bold">the two EDI scales with the highest vulnerability rates continue to be Emotional Maturity and Social Competence.</span> This is particularly concerning given that these scales measure behaviours that relate to the most common childhood mental health issues. Indeed, these findings are consistent with other studies that show increase incidences of mental health concerns with young children across Canada (Raising Canada). </p>
+          </div>
+          <div class="col-lg-4">
+            <img src="https://via.placeholder.com/350" alt=""  width="100%">
+          </div>
+        </div>
+        <div id="geogDifferences" class="row mt-5">
+          <div class="col-lg-4">
+            <img src="https://via.placeholder.com/350" alt="" width="100%">
+          </div>
+          <div class="col-lg-8 my-auto">
+            <h5>Geographic Differences</h5>
+            <p><span class="text-primary font-weight-bold">Wave 8 data also continue to reveal large differences in developmental vulnerability rates across regions of BC.</span> At the school district level, vulnerability rates range from #% at the lowest end to #% at the highest. And, in Wave 8, there are only two neighbourhoods with vulnerability rates under 15%, but 23 with rates of 45% or higher. These data provide an important lens on the topography of inequities that continue to face BC children and families. </p>
+          </div>
+        </div>
+
       </div>
-
-      <div id="ediDataCollection" class="container mt-5">
-
-        <h3>EDI Data Collection</h3>
-        <p>In BC, the Human Early Learning Partnership (HELP, UBC) has been collecting EDI data province-wide since 2001, gathering data for over 330,000 kindergarten children in the last two decades.</p>
-        <p>EDI data are collected on a three-year schedule called a “Wave” to capture sufficient data in all school districts involved in the province. Data for over 41,000 children attending kindergarten were collected during Wave 8.</p>
-
-        <figure class="figure">
-          <figcaption>EDI Collection History</figcaption>
-          <img src="assets/images/EDI-Timeline-W8.png" alt="EDI Data Collection Timeline" class="img-fluid">
-        </figure>
-
-      </div>
+    </div>
       
 
-      <div id="demographics_section" class="mt-5">
-        <h3>Participation and Demographics</h3>
+<!-- DEMOGRAPHICS -->
+    <div id="demographics" class="row mt-10">
+      <div class="col-lg-8 px-3 mx-auto">
+
+        <h2 class="text-primary">The Big Picture</h2>
+
+        <h4>Participation and Demographics</h4>
+        <p>Sentence on Wave 8 Participation being 88% and similar to previous Waves of the EDI.</p>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
           <label id="demoPercentTable_btn" class="btn btn-secondary">
             <input type="radio" name="options" id="option1" checked> Percentages
@@ -88,7 +157,7 @@
             <input type="radio" name="options" id="option2"> Numbers
           </label>
         </div>
-        <div class="tableContainer">
+        <div class="tableContainer row my-2">
           <table id="demoNumTable" class="table table-hover numTable">
             <thead>
               <tr>
@@ -105,73 +174,61 @@
             <tbody>
               <tr>
                 <th scope="row">Total Valid EDI</th>
-                <td>38411</td>	
-                <td>38184</td>
-                <td>46944</td>	
-                <td>42519</td>	
-                <td>43292</td>
-                <td>43377</td>
-                <td>41176</td>	
+                <td>38,411</td>	
+                <td>38,184</td>
+                <td>46,944</td>	
+                <td>42,519</td>	
+                <td>43,292</td>
+                <td>43,377</td>
+                <td>41,176</td>	
               </tr>
             </tbody>
             <tbody>
               <tr>
                 <th scope="row">Male</th>              						
-                <td>19806</td>
-                <td>19683</td>
-                <td>24160</td>
-                <td>21666</td>
-                <td>22259</td>
-                <td>22260</td>
-                <td>21104</td>
+                <td>19,806</td>
+                <td>19,683</td>
+                <td>24,160</td>
+                <td>21,666</td>
+                <td>22,259</td>
+                <td>22,260</td>
+                <td>21,104</td>
               </tr>
             </tbody>
             <tbody>
               <tr>
                 <th scope="row">Female</th> 						
-                <td>18603</td>
-                <td>18492</td>
-                <td>22784</td>
-                <td>20853</td>
-                <td>21033</td>
-                <td>21117</td>
-                <td>20072</td>
+                <td>18,603</td>
+                <td>18,492</td>
+                <td>22,784</td>
+                <td>20,853</td>
+                <td>21,033</td>
+                <td>21,117</td>
+                <td>20,072</td>
               </tr>
             </tbody>
             <tbody>
               <tr>
                 <th scope="row">ELL</th>
-                <td>7111</td>
-                <td>6974</td>
-                <td>8193</td>
-                <td>7602</td>
-                <td>8147</td>
-                <td>8356</td>
-                <td>8244</td>
+                <td>7,111</td>
+                <td>6,974</td>
+                <td>8,193</td>
+                <td>7,602</td>
+                <td>8,147</td>
+                <td>8,356</td>
+                <td>8,244</td>
               </tr>
             </tbody>
             <tbody>
               <tr>
                 <th scope="row">Special Needs</th>
-                <td>1295</td>
-                <td>1198</td>
-                <td>1448</td>
-                <td>1322</td>
-                <td>1438</td>
-                <td>1680</td>
-                <td>1838</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th scope="row">Indigenous</th>
-                <td>3521</td>
-                <td>3552</td>
-                <td>4986</td>
-                <td>4659</td>
-                <td>4940</td>
-                <td>5007</td>
-                <td>4481</td>
+                <td>1,295</td>
+                <td>1,198</td>
+                <td>1,448</td>
+                <td>1,322</td>
+                <td>1,438</td>
+                <td>1,680</td>
+                <td>1,838</td>
               </tr>
             </tbody>
           </table>
@@ -193,13 +250,13 @@
               <tr>
                 <th scope="row">Total Valid EDI</th>
                 
-                <td>38411</td>	
-                <td>38184</td>
-                <td>46944</td>	
-                <td>42519</td>	
-                <td>43292</td>
-                <td>43377</td>
-                <td>41176</td>	
+                <td>38,411</td>	
+                <td>38,184</td>
+                <td>46,944</td>	
+                <td>42,519</td>	
+                <td>43,292</td>
+                <td>43,377</td>
+                <td>41,176</td>	
               </tr>
             </tbody>
             <tbody>
@@ -250,64 +307,171 @@
                 <td>4.5%</td>
               </tr>
             </tbody>
-            <tbody>
-              <tr>
-                <th scope="row">Indigenous</th>
-                <td>9.2%</td>
-                <td>9.3%</td>
-                <td>10.6%</td>
-                <td>11.0%</td>
-                <td>11.4%</td>
-                <td>11.5%</td>
-                <td>10.9%</td>
-              </tr>
-            </tbody>
           </table>
-      </div>
+        </div>
 
       </div>
+    </div>
 
-      <div id="vuln1orMore_section" class="mt-5">
-        <h3>Vulnerable on One or More Scales over Time</h3>
+
+<!-- EDI DATA COLLECTION --> <!-- ADD note re wave 8 participation -->
+    <div id="ediDataCollection_CTA" class="row mt-10 py-5 bg-secondary">
+      <div class="col-lg-8 px-3 mx-auto">
+
+        <h3 class="text-white">EDI Data Collection</h3>
+        <h6 class="text-white">Interested in finding out More about how the EDI is collected? <a class="" href="#ediDataCollection" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="ediDataCollection"> Click Here <i class="bi bi-chevron-down"></i></h6></a>
+
+      </div>
+    </div>
+    <div id="ediDataCollection" class="collapse row py-5 bg-offwhite">
+      <div class="col-lg-8 px-3 mx-auto">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-6">
+            <p>In BC, the Human Early Learning Partnership (HELP, UBC) has been collecting EDI data province-wide since 2001, gathering data for over 330,000 kindergarten children in the last two decades. EDI data are collected on a three-year schedule called a “Wave” to capture sufficient data in all school districts involved in the province. The EDI questionnaire is completed by kindergarten teachers in participating school districts in February of the school year for each of the children in their classroom. Data for over 41,000 children attending kindergarten were collected during Wave 8.</p>
+          </div>
+          <div class="col-lg-6">
+            <figure class="figure">
+              <figcaption>EDI Collection History</figcaption>
+              <img src="assets/images/EDI-Timeline-W8.png" alt="EDI Data Collection History" class="img-fluid">
+            </figure>
+          </div>
+
+        </div>   
+
+      </div>
+    </div>
+
+
+
+
+<!-- 
+------------------ OVERALL EDI DATA ----------------------
+-->
+<!-- VULNERABLE ON ONE OR MORE SCALES TREND -->
+    <div id="vuln1orMore_trends" class="row mt-10">
+      <div class="col-lg-8 px-3 mx-auto">
+
+        <h3>Overall Vulnerability</h3>
+        <p>In Wave 8, <span class="text-primary font-weight-bold">32.9% or approximately 13,500 of kindergarten children</span> were Vulnerable on One or More Scales of the EDI.This rate is similar to the Wave 7 (data collected 2016-2019) rate of 33.4%. This means that there are still 1 in 3 children arriving in kindergarten vulnerable on one or more areas of development important to their future success. The chart below shows the trend for Vulnerable on One or More Scales of the EDI from Wave 2 (2004-2007) to Wave 8 (2019-2022).</p>
+
         <div id="trend_vuln1orMore" class="col-lg-12 px-0"></div>
-      </div>
 
-      <div id="vulnProfile_section" class="mt-5">
-        <h3>The Vulnerability Profile in BC</h3>
+        <p>There has been a meaningful increase in EDI vulnerability rates over the long-term, rising from 29.9% in Wave 2 to 32.9% in Wave 8. While there was a small decrease in the vulnerability rate between Wave 7, at 33.4% (2016-2019) and Wave 8 (32.9%), this difference does not meet the threshold to be a meaningful change.</p>
+
+      </div>
+    </div>
+
+
+<!-- MULTIPLE VULNERABILITIES TREND -->
+    <div id="multiVuln" class="row mt-10">
+        <div class="col-lg-8 px-3 mx-auto">
+
+        <h3>Mulitiple Vulnerabilities in BC</h3>
+        <p>The rate for Vulnerable on One or More Scales of the EDI provides a perspective on the overall vulnerability rate for children in BC, but it doesn’t show the complex nature of vulnerability. While many of the province’s children are vulnerable on a single area of development, some are vulnerable on two, three, four or all five scales of the EDI. This suggests that in addition to the increasing rates of vulnerability in the province, the complexity of vulnerability patterns is also increasing. It appears that children and families are experiencing more complex challenges and vulnerable children are experiencing increased struggles across more areas of their lives. </p>
+
+        <div id="stackedBar_multiVuln" class="col-lg-12 px-0"></div>
+
+        <p>Over long-term, between Wave 2 and Wave 8, the percentage of children vulnerable on two or more areas of development has increased (16.1% in Wave 2 to 19.5% in Wave 8) (Figure #). In Wave 8, this represents over 8,000 children vulnerable on multiple areas of development (two or more scales of the EDI).</p>
+
+      </div>
+    </div>
+
+
+<!-- OVERALL EDI OUTCOMES -->
+    <div id="overallOutcomes" class="row mt-10">
+      <div class="col-lg-8 px-3 mx-auto">
+
+        <h3>New Overall Outcomes</h3>
+
+        <p>In past EDI data reporting, the focus has been on highlighting rates of developmental vulnerability in populations of children. However, the EDI measures the whole distribution of children’s developmental outcomes, allowing us to understand areas of strength and potential across the five key areas of development as follows. <a class="" href="#outcomesGraphic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="outcomesGraphic"> Find out more about the new metrics in the EDI. <i class="bi bi-chevron-down"></i></h6></a></p>
+        
+        <div class="row">
+          <div id="outcomesGraphic" class="col-lg-10 py-5 px-3 mx-auto collapse">
+
+            <img src="assets/images/EDI Outcomes-v2.png" alt="EDI Scale-level and Overall Outcomes" width="100%">
+
+            <!-- <p><span class="onTrackColor font-weight-bold">On Track:</span> Children who score above the 25th percentile cut-off score on the scale are on track in the area of development measured by the scale.</p>
+            <p><span class="inFluxColor font-weight-bold">At Risk:</span> Children who score between the 10th and the 25th percentile cut-off scores are at risk in the area of development measured by the scale.</p>
+            <p><span class="vulnerableColor font-weight-bold">Vulnerable:</span> Children who score below the 10th percentile cut-off score are considered vulnerable on the area of development measured by the scale.</p>
+
+            <h6>Overall Outcomes</h6>
+            <p><span class="onTrackColor font-weight-bold">On Track:</span> Children who are developmentally on-track across all five areas of development. These children are most likely to have successful trajectories in school and beyond.</p>
+            <p><span class="inFluxColor font-weight-bold">In Flux:</span> Children those "in the middle" who are neither on track overall nor vulnerable overall. These children may or may not catch up to their on-track peers and may benefit from additional supports.</p>
+            <p><span class="vulnerableColor font-weight-bold">Vulnerable:</span> Children who are developmentally vulnerable on one or more of the five areas of development. Without supports, these children are the most likely to experience difficulties in their school years and beyond.</p> -->
+          </div>
+        </div>
+
+        <h6>Overall EDI Outcomes</h6>
         <div id="stackedBar_vulnProfile" class="col-lg-12 px-0"></div>
+
+        <p>The bar chart above shows the trends over time for the percentage of children in BC on track, in flux and vulnerable on the EDI from Wave 2 to Wave 8. In Wave 8, while almost half of children (45.4%) are on track in their overall development, 32.9% are vulnerable in one or more areas of development and another 21.8% are in flux. The range in rates for “overall vulnerability” is higher over time (4.7 percentage points between the lowest and highest rates) than either “overall influx” (2.2%) or “overall on track” (2.1%). In short, <span class="text-primary font-weight-bold">while many children continue to do well across the developmental domains, the increasing prevalence of vulnerability is concerning.</span></p>
+        
+      </div> 
+    </div>
+
+
+
+
+<!-- 
+------------------ THE GEOGRAPHY OF VULNERABILITY ----------------------
+-->
+<!-- MAP OF VULNERABLE ON ONE OR MORE SCALES -->
+
+    <div id="vulnMap" class="mt-10">
+
+      <div class="row">
+        <div class="col-lg-8 px-3 mx-auto">
+          <h2 class="text-primary">The Geography of Vulnerability</h2>
+        </div>
       </div>
+
+      <div id="mapBoxContainer" class="row mt-5">
+        <div class="col-lg-12 px-0 mx-auto">
+
+          <div id="map"></div>
+
+          <div class="row">
+            <div class="col-lg-3 map-description p-5 mx-auto">
+              <h5>School District Vulnerability</h5>
+              <p>This map of school districts in BC showcases the summary measure of vulnerablity on one or more scales of the EDI in Wave 8. It is evident that there continues to be significant differences in vulnerability rates across the province - demonstrating that children's developmental outcomes are impacted by where they live in the province.</p>
+              <p class="font-weight-bold">Wave 8 - Range in Vulnerability</p>
+              <p>School Districts: <span class="text-primary">21.8% - 72%</span></p>
+            </div>
+            <div class='col-lg-2 map-overlay' id='legend'>
+              <h6>Vulnerable on One or More Scales</h6>
+              <img src="assets/images/vuln1orMore_Legend.png" class="legendClasses" alt="Map Legend Vulnerable on One or More Scales">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+<!-- DISPARITY IN VULNERABILITY --> <!-- ADD THE LINE CHART -->
+    <div id="vulnDisparity" class="row mt-5">
+      <div class="col-md-8 py-5 px-3 mx-auto">
+
+        <div class="mt-5">
+          <h3>The Disparity in Vulnerability:</h3>
+          <h5>The Range in Neighbourhood Vulnerability Across BC</h5>
+          <p>Disparities in vulnerability are even more pronounced at the neighbourhood level. In Wave 8, there is a difference of 59% between the highest neighbourhood at 72% and the lowest at 13.2%. The chart below shows how the disparity in vulnerability has changed over time and it's clear that degree of vulnerability has risen and the range has increased since Wave 7.</p>
+          <div id="range_vulnDisparity" class="col-lg-12 px-0"></div>
+        </div>
     
+      </div>
     </div>
 
-    <div class="col-md-12 mx-auto px-0">
 
-      <div id="vulnMap_section" class="mt-5">
-        <div class="col-md-8 py-5 px-3 mx-auto">
-        <h3>The Geography of Vulnerability:</h3>
-        <h4>Vulnerability by School Districts across BC</h4>
-      </div>
+<!-- HIGH LOW NEIGHBOURHOODS -->
+    <div id="nhLowHigh" class="row mt-5">
+      <div class="col-md-8 py-5 px-3 mx-auto">
 
-      <div id="map_vuln" class="col-lg-12 px-0 mx-auto">
-        <div id="map"></div>
-        <div class='map-overlay' id='legend'>
-          <h5>Vulnerable on One or More Scales</h5>
-          <img src="assets/images/vuln1orMore_Legend.png" class="legendClasses" alt="Map Legend Vulnerable on One or More Scales">
-        </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="col-md-8 py-5 px-3 mx-auto">
-
-      <div id="vulnDisparity_section" class="mt-5">
-        <h3>The Disparity in Vulnerability:</h3>
-        <h4>The Range in Neighbourhood Vulnerability Across BC</h4>
-        <div id="range_vulnDisparity" class="col-lg-12 px-0"></div>
-      </div>
-
-      <div id="nhLowHigh_section" class="mt-5">
         <h3>The Shifting Curve: More NHs with High Vulnerability </h3>
+        <p>The shift to higher vulnerability across BC continues when you look at the chart below that shows the number of neighbourhoods that have vulnerability rates of 15% or less (low rates) compared to the number with rates of 45% or higher (high rates) for each wave of EDI data collection. As can be seen in the chart, the number of neighbourhoods experiencing lower levels of vulnerability continues to decrease, falling from a high of 25 neighbourhoods to just two in Wave 8. There was also a decrease in the number of high vulnerability neighbourhoods between Wave 7 (33) and Wave 8 (27) – over time, the number of high vulnerability neighbourhoods has been fairly consistent. </p>
         <table class="table table-hover">
           <thead>
             <tr>
@@ -322,7 +486,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="bg-primary text-white">
               <th scope="row">45% and above</th>
               <td>27</td>
               <td>19</td>
@@ -330,11 +494,11 @@
               <td>23</td>
               <td>26</td>
               <td>33</td>
-              <td>23</td>
+              <td>27</td>
             </tr>
           </tbody>
           <tbody>
-            <tr>
+            <tr style="background-color: #FEE0D2;">
               <th scope="row">15% and below</th>
               <td>22</td>
               <td>25</td>
@@ -346,86 +510,169 @@
             </tr>
           </tbody>
         </table>
+        <!-- <div id="barchart_nhLowHigh" class="col-lg-12 px-0"></div> -->
       </div>
-      <div id="multiVuln_section" class="mt-5">
-        <h3>Mulitiple Vulnerabilities in BC</h3>
-        <div id="stackedBar_multiVuln" class="col-lg-12 px-0"></div>
-      </div>
+    </div>
 
-      <div id="ediScalesSubscalesIntro_section" class="mt-5">
-        <h3>EDI Scale-Level Trends Over Time</h3>
-        <div id="graphic_ediScalesSubscales" class="col-lg-12 px-0"></div>
-        <div id="trend_allScales" class="col-lg-12 px-0"></div>
-        <h3>Scale-Level Outcomes</h3>
-        <div id="stackedBar_scaleOutcomes" class="col-lg-12 px-0"></div>
-      </div>
 
-      <div id="ediScalesSubscales_section" class="mt-5">
+<!-- URBAN/RURAL NH DIFFERENCES -->
+    <div id="nhUrbanRural" class="row mt-5">
+      <div class="col-md-8 py-5 px-3 mx-auto">
 
-        <h3>EDI Subscale-Level Trends Over Time</h3>
-
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h3>Urban vs Rural Matter?</h3>
+            <p>As can be seen in Figure #, in Wave 8, there was very little difference between overall outcome rates for rural and urban neighbourhoods across the province. <span class="text-primary">Need definitions from Barry as pull out. DO WE/CAN WE GET FOR ALL WAVES?!</span></p>
+          </div>
+          <div id="stackedBar_urbanRuralvulnProfile" class="col-lg-6 px-0"></div>
+        </div>
         
-        <ul class="nav nav-pills nav-fill mt-5" id="scaleSubscaleTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active social" id="social-tab" data-toggle="pill" data-target="#social-subscales-container" type="button" role="tab" aria-controls="social-subscales-container" aria-selected="true">Social</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link emotional" id="emotional-tab" data-toggle="pill" data-target="#emotional-subscales-container" type="button" role="tab" aria-controls="emotional-subscales-container" aria-selected="false">Emotional</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link physical" id="physical-tab" data-toggle="pill" data-target="#physical-subscales-container" type="button" role="tab" aria-controls="physical-subscales-container" aria-selected="false">Physical</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link language" id="language-tab" data-toggle="pill" data-target="#language-subscales-container" type="button" role="tab" aria-controls="language-subscales-container" aria-selected="false">Language</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link communication" id="communication-tab" data-toggle="pill" data-target="#communication-subscales-container" type="button" role="tab" aria-controls="communication-subscales-container" aria-selected="false">Communication</button>
-          </li>
-        </ul>
+        
+      </div>
+    </div>
 
 
-        <div id="scaleSubscaleTabs-Content" class="tab-content">
 
-          <div id="social-subscales-container" class="tab-pane fade show active mt-4" role="tabpanel" aria-labelledby="social-tab">
-              <h5 class="socialColor">Scale-level Vulnerability</h5>
-              <div id="trend_socialScales" class="col-lg-12 px-0"></div>
-              <h5 class="socialColor">Social Competence Subscales</h5>
-              <div id="trend_socialSubscales" class="col-lg-12 px-0"></div>
+
+<!-- 
+--------------------- EDI SCALES AND SUBSCALES SECTION ------------------
+-->
+<!-- EDI SCALES AND SUBSCALES -->
+    <div id="ediScalesSubscales" class="row mt-10">
+      <div class="col-md-8 py-5 px-3 mx-auto">
+
+        <h2 class="text-primary">Exploring Deeper: EDI Scales and Subscales</h2>
+        <p>While overall EDI outcomes provide a summary of the developmental health of kindergarten children, more specific information about each area of development can be found at the scale and subscale level. Each scale of the EDI also measures the whole distribution of children’s development, identifying if children are vulnerable, at risk or on track in the specific area of development the scale is measuring. Want to know more about the relationship between the 5 EDI Scales, their subscales and the summary measures of vulnerable, at risk and on track? <a class="" href="#scalesSubscalesOutcomesIntro" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="scalesSubscalesOutcomesIntro">Click Here <i class="bi bi-chevron-down"></i></a>.</p>
+        <div id="scalesSubscalesOutcomesIntro" class="collapse row mt-5 border-top border-bottom border-primary">
+          <div class="col-lg-12 p-5 mx-auto">
+            <h5>Scale-level Outcomes</h5>
+            <p><span class="onTrackColor font-weight-bold">On Track:</span> Children who score above the 25th percentile cut-off score on the scale are on track in the area of development measured by the scale.</p>
+            <p><span class="inFluxColor font-weight-bold">At Risk:</span> Children who score between the 10th and the 25th percentile cut-off scores are at risk in the area of development measured by the scale.</p>
+            <p><span class="vulnerableColor font-weight-bold">Vulnerable:</span> Children who score below the 10th percentile cut-off score are considered vulnerable on the area of development measured by the scale.</p>
+            <img id="graphic_ediScalesSubscales" src="assets/images/EDI Outcomes-v1.jpg" alt="Graphic of the 5 Scales of the EDI, Subscales and Outcomes" title="5 Scales of the EDI, Subscales and Outcomes">
           </div>
+          
+        </div>
 
-          <div id="emotional-subscales-container"class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="emotional-tab">
-              <h5 class="emotionalColor">Scale-level Vulnerability</h5>
-              <div id="trend_emotionalScales" class="col-lg-12 px-0"></div>
-              <h5 class="emotionalColor">Emotional Maturity Subscales</h5>
-              <div id="trend_emotionalSubscales" class="col-lg-12 px-0"></div>
-          </div>
+        <div id="wave8ScaleOutcomes" class="mt-5">
+          <h3>Wave 8 Scale-Level Outcomes</h3>
+          <p>The stacked bar chart below, illustrates the percentage of BC children who fall in the vulnerable, at risk and on track categories on each of the five EDI Scales. Most children are On Track in their development on each of the five scales, with 78.4% of children On Track in Language & Cognitive Development, 75.3% in Communication Skills & General Knowledge, 69.8% in Physical Health & Well-being, 68.5% in Social Competence and 67% in Emotional Maturity.</p>
+          <div id="stackedBar_scaleOutcomes" class="col-lg-12 px-0"></div>
+        </div>
 
-          <div id="physical-subscales-container" class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="physical-tab">
-              <h5 class="physicalColor">Scale-level Vulnerability</h5>
-              <div id="trend_physicalScales" class="col-lg-12 px-0"></div>
-              <h5 class="physicalColor">Physical Health & Well-being Subscales</h5>
-              <div id="trend_physicalSubscales" class="col-lg-12 px-0"></div>
-          </div>
+        <div id="ediScalesSubscalesTrends" class="mt-5">
 
-          <div id="language-subscales-container" class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="language-tab">
-              <h5 class="languageColor">Scale-level Vulnerability</h5>
-              <div id="trend_languageScales" class="col-lg-12 px-0"></div>
-              <h5 class="languageColor">Language & Cognitive Development Subscales</h5>
-              <div id="trend_languageSubscales" class="col-lg-12 px-0"></div>
-          </div>
+          <h3>EDI Scale & Subscale-Level Trends Over Time</h3>
+          
+          <ul class="nav nav-pills nav-fill mt-5" id="scaleSubscaleTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active vulnerable" id="vulnerable-tab" data-toggle="pill" data-target="#vulnerable-subscales-container" type="button" role="tab" aria-controls="social-subscales-container" aria-selected="true">All 5 Scales</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link social" id="social-tab" data-toggle="pill" data-target="#social-subscales-container" type="button" role="tab" aria-controls="social-subscales-container" aria-selected="false">Social</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link emotional" id="emotional-tab" data-toggle="pill" data-target="#emotional-subscales-container" type="button" role="tab" aria-controls="emotional-subscales-container" aria-selected="false">Emotional</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link physical" id="physical-tab" data-toggle="pill" data-target="#physical-subscales-container" type="button" role="tab" aria-controls="physical-subscales-container" aria-selected="false">Physical</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link language" id="language-tab" data-toggle="pill" data-target="#language-subscales-container" type="button" role="tab" aria-controls="language-subscales-container" aria-selected="false">Language</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link communication" id="communication-tab" data-toggle="pill" data-target="#communication-subscales-container" type="button" role="tab" aria-controls="communication-subscales-container" aria-selected="false">Communication</button>
+            </li>
+          </ul>
 
-          <div id="communication-subscales-container"class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="communication-tab">
-              <h5 class="communicationColor">Scale-level Vulnerability</h5>
-              <div id="trend_communicationScales" class="col-lg-12 px-0"></div>
-              <h5 class="communicationColor">Communication Skills & General Knowledge Subscales</h5>
-              <div id="trend_communicationSubscales" class="col-lg-12 px-0"></div>
+          <div id="scaleSubscaleTabs-Content" class="tab-content">
+
+            <div id="vulnerable-subscales-container" class="tab-pane fade show active mt-4" role="tabpanel" aria-labelledby="vulnerable-tab">
+                <h5 class="vulnerableColor">Vulnerability on All 5 Scales of the EDI</h5>
+                <p>Exploring Scale and Subscale-level trends over time, especially long-term trends from Wave 2 (2004-2007) to Wave 8 (2019-2022), can provide insight into which areas of development, in particular, are of most concern. The line chart below shows the vulnerability trends over time from Wave 2 to Wave 8 on all five of the EDI scales. [You can explore the trends for each of the scales, and their related subscales, by clicking on the scale of your choice.]</p>
+                <div id="trend_allScales" class="col-lg-12 px-0"></div>
+                <p>Between Wave 2 and Wave 8, there have been meaningful increases in vulnerability in three of the five EDI scales: Physical Health & Well-being, Social Competence and Emotional Maturity. There has been a meaningful decrease in vulnerability on the Language & Cognitive Development scale, and a stable trend on the Communication Skills & General Knowledge scale over the long-term.</p>
+                <p>All five scales had stable trends since the last data collection in Wave 7. As in Wave 7, Emotional Maturity was the scale with the highest rate of vulnerability at 17.5%, followed closely by Social Competence at 16.3% in Wave 8. The Social Competence and Emotional Maturity scales are associated. Wave 8 data show that in the province, 8% of children are vulnerable on two EDI scales, and of these, 42.5% were vulnerable on both Social Competence and Emotional Maturity scales combined. The developmental aspects  assessed on these two scales represent are indicators of children’s early mental health.</p>
+            </div>
+            
+            <div id="social-subscales-container" class="tab-pane fade show mt-4" role="tabpanel" aria-labelledby="social-tab">
+                <h5 class="socialColor">Scale-level Vulnerability</h5>
+                <div id="trend_socialScales" class="col-lg-12 px-0"></div>
+                <p>Over the long-term, the Social Competence scale has seen a meaningful increase in vulnerability between W2 (13.3%) and W8 (16.3%). Over the short-term, the trend is stable between W7 (16.1%) to W8 (16.3%).</p>
+                <h5 class="socialColor">Social Competence Subscales</h5>
+                <div id="trend_socialSubscales" class="col-lg-12 px-0"></div>
+                <p>The Social Competence scale has four subscales. Overall Social Competence, Approaches to Learning and, Respect & Responsibility have seen worsening trends over the long-term, but stable short-term trends,  The Readiness to Explore New Things subscale has had stable trends both over the long- and short-term.</p>
+            </div>
+
+            <div id="emotional-subscales-container"class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="emotional-tab">
+                <h5 class="emotionalColor">Scale-level Vulnerability</h5>
+                <div id="trend_emotionalScales" class="col-lg-12 px-0"></div>
+                <h5 class="emotionalColor">Emotional Maturity Subscales</h5>
+                <div id="trend_emotionalSubscales" class="col-lg-12 px-0"></div>
+            </div>
+
+            <div id="physical-subscales-container" class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="physical-tab">
+                <h5 class="physicalColor">Scale-level Vulnerability</h5>
+                <div id="trend_physicalScales" class="col-lg-12 px-0"></div>
+                <h5 class="physicalColor">Physical Health & Well-being Subscales</h5>
+                <div id="trend_physicalSubscales" class="col-lg-12 px-0"></div>
+            </div>
+
+            <div id="language-subscales-container" class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="language-tab">
+                <h5 class="languageColor">Scale-level Vulnerability</h5>
+                <div id="trend_languageScales" class="col-lg-12 px-0"></div>
+                <h5 class="languageColor">Language & Cognitive Development Subscales</h5>
+                <div id="trend_languageSubscales" class="col-lg-12 px-0"></div>
+            </div>
+
+            <div id="communication-subscales-container"class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="communication-tab">
+                <h5 class="communicationColor">Scale-level Vulnerability</h5>
+                <div id="trend_communicationScales" class="col-lg-12 px-0"></div>
+                <h5 class="communicationColor">Communication Skills & General Knowledge Subscales</h5>
+                <div id="trend_communicationSubscales" class="col-lg-12 px-0"></div>
+            </div>
+
           </div>
 
         </div>
         
       </div>
-
     </div>
+
+
+
+  
+<!-- 
+--------------------- CONCLUSION/CLOSING ---------------------------
+-->
+<!-- REPORT CONCLUSION/CLOSING -->
+    <div id="conclusion" class="row mt-10">
+      <div class="col-md-8 py-5 px-3 mx-auto">
+
+        <h3>Conclusion</h3>
+        <p>The stable trend in EDI vulnerability rates between Wave 7 (2016-2019) and Wave 8 (2019-2022) is perhaps surprising given the immense disruption caused by the COVID-19 pandemic in BC and around the world. Certainly, data collected through the other Child Development Monitoring System tools (CHEQ, MDI, YDI) during this time tell a different story about the impact of the pandemic on the experiences of children and families (link to article).</p>
+        <p>The ongoing prevalence of childhood vulnerability, still in 1 in 3, is a continuing concern.  As well, many of the youngest infants and toddlers born and developing during the pandemic have not yet entered the school system. As such, the impact of the pandemic on their development may be enduring and will be captured by future EDI data collections.</p>
+        <p>At the community and neighbourhood levels, there is considerable variability in Wave 8 vulnerability rates and trends over time. The opportunity to explore EDI data at the community, neighbourhood and other regional aggregations will be available soon through a new interactive data dashboard – expected release January 2023.</p>
+        <p>Overall, there is more to unpack. With Wave 8 marking 20 years of EDI data collection, and a CDMS growing more robust with each year, there is now significant BC-specific child health and well-being data available for analysis and research purposes. This is an exciting time for HELP and our partners in research, government, school districts, and health to explore the data collected and link CDMS data with other administrative datasets to learn more.</p>
+
+      </div>
+    </div>
+
+    <div id="stay-tuned" class="row">
+      <div class="col-md-8 pt-3 pb-5 px-3 mx-auto">
+
+        <h5>Stay tuned! More to come from the Child Development Monitoring System</h5>
+        <p>Stay tuned through our <a href="#">social media</a> and <a href="#">newsletter</a> for more information and events that will include topic such as:</p>
+        <ul>
+          <li><span class="text-primary">Mini HELP Expo</span> exploring the Wave 8 EDI Provincial Summary with commentary on the trends and analysis already underway with EDI data.</li>
+          <li><span class="text-primary">Highlights from the substantial body of research that already exists using the EDI</span>. Learn more now through this recently released narrative research review of the breadth of EDI research: link to article.</li>
+          <li><span class="text-primary">What are we learning from four years of data collection using the Childhood Experiences Questionnaire (CHEQ)?</span> – a questionnaire completed by parents and caregivers at the start of their child’s kindergarten year about their early experiences and environments prior to starting school? And, what insights can be gained through linking CHEQ data with EDI data that may shed light on variability in EDI vulnerability rates across BC?</li>
+          <li><span class="text-primary">Exploring the relationship between EDI vulnerability and socioeconomic status</span>. As Statistics Canada releases the Census 2021 data, HELP will be exploring this relationship, including differences over time and across geographies.</li>
+        </ul>
+
+      </div>
+    </div>
+
 
 
 <!-- bootstrap default scripts -->

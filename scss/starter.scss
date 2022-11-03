@@ -41,14 +41,14 @@ $h5-font-size: 1.563rem;
 $h6-font-size: 1.25rem;
 
 // COLOUR THEME
-$primary: #cb181d;
-$secondary: #fb6a4a;
+$primary:#cb181d;
+$secondary:#fb6a4a;
 $success:#31a354;
 $warning:#fcb017;
 $danger:#ef3b2c;
 $white: #fff;
 $off-white:#f5f5f5;
-$light: #b3b5ba;
+$light:#b3b5ba;
 $med:#76777a;
 $dark:#353535;
 
@@ -57,6 +57,9 @@ $emotional: #54278F;
 $physical: #006D2C;
 $language: #C51B8A;
 $communication: #E6550D;
+$vulnerable: #cb181d;
+$influx: #FCB017;
+$ontrack: #8EC73F;
 
 .socialColor {
   color: $social;
@@ -72,6 +75,38 @@ $communication: #E6550D;
 }
 .communicationColor {
   color: $communication;
+}
+.vulnerableColor {
+  color: $primary;
+}
+.inFluxColor {
+  color: $influx;
+}
+.onTrackColor {
+  color: $ontrack;
+}
+
+.socialBcgColor {
+  background-color: $social;
+}
+.emotionalBcgColor {
+  background-color: $emotional;
+}
+.physicalBcgColor {
+  background-color: $physical;
+}
+.languageBcgColor {
+  background-color: $language;
+}
+.communicationBcgColor {
+  background-color: $communication;
+}
+.vulnerableBcgColor {
+  background-color: $primary;
+}
+
+.bg-offwhite {
+  background-color: $off-white;
 }
 
 
@@ -124,7 +159,22 @@ $communication: #E6550D;
 @import "icon-list";
 
 body {
-  padding: 3rem 0rem;
+  padding: 0rem;
+  margin: 0rem;
+  width: 100%;
+  // overflow-x: hidden !important;
+}
+
+.row {
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  line-height: 1.6em;
+}
+
+.mt-10 {
+  margin-top: 10rem;
 }
 
 // Style Bootstrap icons
@@ -132,12 +182,8 @@ body {
   fill: currentcolor;
 }
 
-.content-container {
-  padding: 1rem 2rem;
-}
-
 .pulloutbox {
-  background-color: $light;
+  background-color: $off-white;
   padding: 2rem;
 }
 
@@ -149,6 +195,14 @@ body {
   padding: 1rem;
   border-radius: 50px;
   width: 90%;
+  &.vulnerable {
+    color: $primary;
+    border: 2px solid $primary;
+    &:hover {
+      color: #f5f5f5;
+      background-color: rgba($primary,0.75);
+    }
+  }
   &.social {
     color: $social;
     border: 2px solid $social;
@@ -216,7 +270,21 @@ body {
 // BUTTON STYLES
 
 .btn {
+  background-color: transparent;
+}
+
+.btn {
   border: none;
+  box-shadow: none;
+  border-radius: 50px;
+}
+.btn-primary {
+  color: $primary;
+  background: transparent;
+  border: 2px solid $primary;
+  &:hover {
+    background: $primary;
+  }
 }
 .btn-secondary {
   background: $med;
@@ -227,11 +295,62 @@ body {
 
 
 
+// SIDEBAR NAV STYLING
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: 999;
+  color: $dark;
+  background: rgba($white,0.5);
+  transition: all 0.3s;
+  font-size: 1.1rem;
+  padding: 1rem;
+  > #sidebarNavElements {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    > li {
+      padding-bottom: 1rem;
+      > ul > li {
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+        margin-left: 0.5rem;
+      }
+      > ul > li:first-child {
+        padding-top: 1rem;
+      }
+    }
+  }
+}
+
+
+
+// INTRODUCTION
+#landing-screen {
+  width: 100%;
+  position: relative;
+  height: 80vh;
+  #title-wrap {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+  }
+}
+
+
+
 // PARTICIPATION/DEMOGRAPHICS
 .tableContainer {
   position: relative;
   height: 360px;
   margin-bottom: 3rem;
+}
+
+#demoNumTable_btn, #demoPercentTable_btn {
+  padding: .5rem 1.5rem;
 }
 
 #demoNumTable {
@@ -260,7 +379,7 @@ body {
   position: relative;
   top: 0;
   bottom: 0;
-  width: 100%;
+  width: auto;
   height: 600px;
 }
 
@@ -268,34 +387,38 @@ body {
 * Set rules for how the map overlays
 * (information box and legend) will be displayed
 * on the page. */
-.map-overlay {
+
+.mapBoxContainer {
+  position: relative;
+}
+
+.map-overlay, .map-description {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
   background: #fff;
   overflow: auto;
   border-radius: 3px;
   padding: 20px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.map-overlay {
+  height: 70%;
+  right: 30px;
+}
+.map-description {
   height: 90%;
-  width: 200px;
+  left: 30px;
+}
+.legendClasses {
+  width: 110px;
+  height: auto;
 }
 
 .mapboxgl-ctrl-fullscreen {
   position: absolute;
   top: 80px;
   left: 100px;
-}
-
-#legend {
-  height: 540px;
-  width: 250px;
-}
-
-.legendClasses {
-  position: absolute;
-  bottom: 20px;
-  height: 400px;
 }
 
 
