@@ -19,7 +19,7 @@
   </head>
   <body class="wrapper">
 
-    <nav id="sidebar">
+    <!-- <nav id="sidebar">
 
       <ul id="sidebarNavElements" class="list-unstyled components">
           <li>
@@ -81,7 +81,7 @@
           </li>
       </ul>
 
-    </nav>
+    </nav> -->
 
 <!-- LANDING SCREEN -->
     <div id="landing-screen" class="pb-3 mb-5 text-center">
@@ -150,10 +150,10 @@
         <h4>Participation and Demographics</h4>
         <p>Sentence on Wave 8 Participation being 88% and similar to previous Waves of the EDI.</p>
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label id="demoPercentTable_btn" class="btn btn-secondary">
+          <label id="demoPercentTable_btn" class="btn btn-primary btn-custom-primary btn-custom">
             <input type="radio" name="options" id="option1" checked> Percentages
           </label>
-          <label id="demoNumTable_btn" class="btn btn-secondary active">
+          <label id="demoNumTable_btn" class="btn btn-primary btn-custom-primary btn-custom active">
             <input type="radio" name="options" id="option2"> Numbers
           </label>
         </div>
@@ -315,16 +315,16 @@
 
 
 <!-- EDI DATA COLLECTION --> <!-- ADD note re wave 8 participation -->
-    <div id="ediDataCollection_CTA" class="row mt-10 py-5 bg-secondary">
-      <div class="col-lg-8 px-3 mx-auto">
+    <div class="row mt-5 py-5">
+      <div id="ediDataCollection_CTA" class="col-lg-8 p-5 mx-auto">
 
-        <h3 class="text-white">EDI Data Collection</h3>
-        <h6 class="text-white">Interested in finding out More about how the EDI is collected? <a class="" href="#ediDataCollection" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="ediDataCollection"> Click Here <i class="bi bi-chevron-down"></i></h6></a>
+        <h3>EDI Data Collection</h3>
+        <h6>Interested in finding out More about how the EDI is collected? <a class="" href="#ediDataCollection" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="ediDataCollection"> Click Here <i class="bi bi-chevron-down"></i></h6></a>
 
       </div>
-    </div>
-    <div id="ediDataCollection" class="collapse row py-5 bg-offwhite">
-      <div class="col-lg-8 px-3 mx-auto">
+    <!-- </div>
+    <div id="ediDataCollection" class="collapse row py-5 bg-offwhite"> -->
+      <div id="ediDataCollection" class="collapse col-lg-8 p-5 mx-auto bg-offwhite">
 
         <div class="row align-items-center">
 
@@ -334,7 +334,7 @@
           <div class="col-lg-6">
             <figure class="figure">
               <figcaption>EDI Collection History</figcaption>
-              <img src="assets/images/EDI-Timeline-W8.png" alt="EDI Data Collection History" class="img-fluid">
+              <img src="assets/images/EDI-Timeline-W8.jpg" alt="EDI Data Collection History" class="img-fluid" width="100%">
             </figure>
           </div>
 
@@ -390,7 +390,7 @@
         <div class="row">
           <div id="outcomesGraphic" class="col-lg-10 py-5 px-3 mx-auto collapse">
 
-            <img src="assets/images/EDI Outcomes-v2.png" alt="EDI Scale-level and Overall Outcomes" width="100%">
+            <img src="assets/images/EDI Outcomes.png" alt="EDI Scale-level and Overall Outcomes" width="100%">
 
             <!-- <p><span class="onTrackColor font-weight-bold">On Track:</span> Children who score above the 25th percentile cut-off score on the scale are on track in the area of development measured by the scale.</p>
             <p><span class="inFluxColor font-weight-bold">At Risk:</span> Children who score between the 10th and the 25th percentile cut-off scores are at risk in the area of development measured by the scale.</p>
@@ -455,11 +455,14 @@
     <div id="vulnDisparity" class="row mt-5">
       <div class="col-md-8 py-5 px-3 mx-auto">
 
-        <div class="mt-5">
+        <div class="row mt-5">
           <h3>The Disparity in Vulnerability:</h3>
           <h5>The Range in Neighbourhood Vulnerability Across BC</h5>
           <p>Disparities in vulnerability are even more pronounced at the neighbourhood level. In Wave 8, there is a difference of 59% between the highest neighbourhood at 72% and the lowest at 13.2%. The chart below shows how the disparity in vulnerability has changed over time and it's clear that degree of vulnerability has risen and the range has increased since Wave 7.</p>
+        </div>
+        <div id="vulnDisparity_innerWrap" class="row">
           <div id="range_vulnDisparity" class="col-lg-12 px-0"></div>
+          <div id="vuln1orMoreTrend_vulndisparity" class="col-lg-12 px-0"></div>
         </div>
     
       </div>
@@ -545,11 +548,12 @@
         <p>While overall EDI outcomes provide a summary of the developmental health of kindergarten children, more specific information about each area of development can be found at the scale and subscale level. Each scale of the EDI also measures the whole distribution of children’s development, identifying if children are vulnerable, at risk or on track in the specific area of development the scale is measuring. Want to know more about the relationship between the 5 EDI Scales, their subscales and the summary measures of vulnerable, at risk and on track? <a class="" href="#scalesSubscalesOutcomesIntro" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="scalesSubscalesOutcomesIntro">Click Here <i class="bi bi-chevron-down"></i></a>.</p>
         <div id="scalesSubscalesOutcomesIntro" class="collapse row mt-5 border-top border-bottom border-primary">
           <div class="col-lg-12 p-5 mx-auto">
-            <h5>Scale-level Outcomes</h5>
+            <!-- <h5>Scale-level Outcomes</h5>
             <p><span class="onTrackColor font-weight-bold">On Track:</span> Children who score above the 25th percentile cut-off score on the scale are on track in the area of development measured by the scale.</p>
             <p><span class="inFluxColor font-weight-bold">At Risk:</span> Children who score between the 10th and the 25th percentile cut-off scores are at risk in the area of development measured by the scale.</p>
-            <p><span class="vulnerableColor font-weight-bold">Vulnerable:</span> Children who score below the 10th percentile cut-off score are considered vulnerable on the area of development measured by the scale.</p>
-            <img id="graphic_ediScalesSubscales" src="assets/images/EDI Outcomes-v1.jpg" alt="Graphic of the 5 Scales of the EDI, Subscales and Outcomes" title="5 Scales of the EDI, Subscales and Outcomes">
+            <p><span class="vulnerableColor font-weight-bold">Vulnerable:</span> Children who score below the 10th percentile cut-off score are considered vulnerable on the area of development measured by the scale.</p> -->
+            <img id="graphic_ediScalesSubscales" src="assets/images/EDI Subscales only.png" alt="Graphic of the 5 Scales of the EDI, Subscales and Outcomes" title="5 Scales of the EDI, Subscales and Outcomes">
+            <img id="graphic_ediScalesSubscales" src="assets/images/EDI Outcomes.png" alt="Graphic of the 5 Scales of the EDI, Subscales and Outcomes" title="5 Scales of the EDI, Subscales and Outcomes">
           </div>
           
         </div>
@@ -601,38 +605,72 @@
                 <p>Over the long-term, the Social Competence scale has seen a meaningful increase in vulnerability between W2 (13.3%) and W8 (16.3%). Over the short-term, the trend is stable between W7 (16.1%) to W8 (16.3%).</p>
                 <h5 class="socialColor">Social Competence Subscales</h5>
                 <div id="trend_socialSubscales" class="col-lg-12 px-0"></div>
-                <p>The Social Competence scale has four subscales. Overall Social Competence, Approaches to Learning and, Respect & Responsibility have seen worsening trends over the long-term, but stable short-term trends,  The Readiness to Explore New Things subscale has had stable trends both over the long- and short-term.</p>
+                <p>Overall Social Competence, Approaches to Learning and, Respect & Responsibility have seen worsening trends over the long-term, but stable short-term trends,  The Readiness to Explore New Things subscale has had stable trends both over the long- and short-term.</p>
             </div>
 
             <div id="emotional-subscales-container"class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="emotional-tab">
                 <h5 class="emotionalColor">Scale-level Vulnerability</h5>
-                <div id="trend_emotionalScales" class="col-lg-12 px-0"></div>
+                <div id="trend_emotionalScales" class="col-lg-12 px-0"></div> 
+                <p>Over the long-term, the Emotional Competence scale has seen the largest meaningful increase in vulnerability between Wave 2 (11.9%) and Wave 8 (17.5%). While over the short-term, the trend is stable between Wave 7 (17.6%) to Wave 8 (17.5%), the Emotional Maturity scale continues to be the scale with the highest vulnerability rate of all five scales for the third wave in a row.</p>
                 <h5 class="emotionalColor">Emotional Maturity Subscales</h5>
                 <div id="trend_emotionalSubscales" class="col-lg-12 px-0"></div>
+                <p>Aggressive Behaviour, Anxious & Fearful Behaviours and, Hyperactivity & Inattention have seen consistently worsening trends over the long-term, but stable short-term trends – influencing the trends in vulnerability at the scale-level: Importantly, the behaviours observed in these three subscales are correlated with the behaviors that represent the most common childhood mental health issues – anxiety disorders, attention deficit and hyperactivity disorder ADHD), and conduct disorders.</p>
+                <p>The Prosocial & Helping Behaviours subscale, on the other hand, has seen some variability over time, with a stable long-term trend, but over the short-term, showing a meaningful change, indicating that children are doing better in this area between Wave 7 and Wave 8. This is reassuring given recent research that has found positive long-term associations between the prosocial behaviours of kindergarten children and key educational, employment mental health and substance use outcomes in young adults (ref 43 from W7 prov report).</p>
             </div>
 
             <div id="physical-subscales-container" class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="physical-tab">
                 <h5 class="physicalColor">Scale-level Vulnerability</h5>
                 <div id="trend_physicalScales" class="col-lg-12 px-0"></div>
+                <p>Over the long-term, the Physical Health & Well-being scale has seen a meaningful increase in vulnerability between Wave 2 (12.0%) and Wave 8 (14.7%). Over the short-term, while not considered a meaningful change, the Physical Health & Well-being scale decreased the most of all five scales down from 15.4% in Wave 7 to 14.7% in Wave.</p>
                 <h5 class="physicalColor">Physical Health & Well-being Subscales</h5>
                 <div id="trend_physicalSubscales" class="col-lg-12 px-0"></div>
+                <p>The Physical Readiness for the School Day subscale has seen some variability over time, with worsening trends over the long term. However, over the short-term, it is the subscale that most closely reflects the trends at the scale-level – showing an improvement between W7 and W8 and influencing the overall scale-level decrease in vulnerability.</p>
+                <p>The Physical Independence subscale has seen worsening trends over time, however, between Wave 7 and Wave 8, the trend is considered stable. The Gross & Fine Motor Skills subscale has improved over the long-term, with a stable trend between Wave 7 and Wave 8.</p>
             </div>
 
             <div id="language-subscales-container" class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="language-tab">
                 <h5 class="languageColor">Scale-level Vulnerability</h5>
                 <div id="trend_languageScales" class="col-lg-12 px-0"></div>
+                <p>The Language and Cognitive Development scale has consistently had the lowest vulnerability rates of all five scales over both the long- and short-terms – decreasing slightly from 11.2% in W2 to 10.5% in W8.</p>
                 <h5 class="languageColor">Language & Cognitive Development Subscales</h5>
-                <div id="trend_languageSubscales" class="col-lg-12 px-0"></div>
+                <div class="row">
+                  <div id="trend_languageSubscales" class="col-lg-12 px-0"></div>
+                </div>
+                <p>Only one subscale has had a meaningful change over time – Basic Literacy has had a long-term improvement, and has remained stable over the short-term. The other 3 subscales have had stable trends over both the long- and short-terms: Advanced Literacy, Basic Numeracy and Interest in Literacy, Numeracy & Memory.</p>
             </div>
 
             <div id="communication-subscales-container"class="tab-pane fade mt-4" role="tabpanel" aria-labelledby="communication-tab">
                 <h5 class="communicationColor">Scale-level Vulnerability</h5>
                 <div id="trend_communicationScales" class="col-lg-12 px-0"></div>
-                <h5 class="communicationColor">Communication Skills & General Knowledge Subscales</h5>
-                <div id="trend_communicationSubscales" class="col-lg-12 px-0"></div>
+                <p>The Communication Skills & General Knowledge scale has had very consistent, stable trends over time, across both the long- and short-terms – changing little from the W2 rate of 14.2% to 14.3% in W8. The Communication Skills & General Knowledge scale has no subscales, but includes items related to ability to communicate in English (the language of instruction), being understood by others, and being able to understand what others are communicating.</p>
+                <p>HELP data shows a link between vulnerability on the Communication Skills & General Knowledge scale and the proportion of a population who are newcomers to Canada, and are English language learners (ELL designation). Evidence also suggests that this vulnerability resolves itself for many children as they progress through the school system and develop competence in the language of instruction.</p>
+                <!-- <h5 class="communicationColor">Communication Skills & General Knowledge Subscales</h5>
+                <div id="trend_communicationSubscales" class="col-lg-12 px-0"></div> -->
             </div>
 
           </div>
+
+          <!-- SUBSCALES SECONDARY NAV - NEED BOTH MENUS TO CONNECT AND SHOW ACTIVE - USE JS FUNCTIONS FOR TABS -->
+          <ul class="nav nav-pills nav-fill mt-5" id="scaleSubscaleTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active vulnerable" id="vulnerable-tab" data-toggle="pill" data-target="#vulnerable-subscales-container" type="button" role="tab" aria-controls="social-subscales-container" aria-selected="true">All 5 Scales</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link social" id="social-tab" data-toggle="pill" data-target="#social-subscales-container" type="button" role="tab" aria-controls="social-subscales-container" aria-selected="false">Social</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link emotional" id="emotional-tab" data-toggle="pill" data-target="#emotional-subscales-container" type="button" role="tab" aria-controls="emotional-subscales-container" aria-selected="false">Emotional</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link physical" id="physical-tab" data-toggle="pill" data-target="#physical-subscales-container" type="button" role="tab" aria-controls="physical-subscales-container" aria-selected="false">Physical</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link language" id="language-tab" data-toggle="pill" data-target="#language-subscales-container" type="button" role="tab" aria-controls="language-subscales-container" aria-selected="false">Language</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link communication" id="communication-tab" data-toggle="pill" data-target="#communication-subscales-container" type="button" role="tab" aria-controls="communication-subscales-container" aria-selected="false">Communication</button>
+            </li>
+          </ul>
 
         </div>
         

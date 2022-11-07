@@ -33,13 +33,6 @@ $enable-shadows: true;
 // FONTS
 $font-family-sans-serif: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-$h1-font-size: 3.815rem;
-$h2-font-size: 3.052rem;
-$h3-font-size: 2.441rem;
-$h4-font-size: 1.953rem;
-$h5-font-size: 1.563rem;
-$h6-font-size: 1.25rem;
-
 // COLOUR THEME
 $primary:#cb181d;
 $secondary:#fb6a4a;
@@ -158,19 +151,9 @@ $ontrack: #8EC73F;
 
 @import "icon-list";
 
-body {
-  padding: 0rem;
-  margin: 0rem;
-  width: 100%;
-  // overflow-x: hidden !important;
-}
 
 .row {
   margin: 0;
-}
-
-h1,h2,h3,h4,h5,h6,p {
-  line-height: 1.6em;
 }
 
 .mt-10 {
@@ -269,16 +252,13 @@ h1,h2,h3,h4,h5,h6,p {
 
 // BUTTON STYLES
 
-.btn {
+.btn-custom {
   background-color: transparent;
-}
-
-.btn {
   border: none;
   box-shadow: none;
   border-radius: 50px;
 }
-.btn-primary {
+.btn-custom-primary {
   color: $primary;
   background: transparent;
   border: 2px solid $primary;
@@ -286,43 +266,17 @@ h1,h2,h3,h4,h5,h6,p {
     background: $primary;
   }
 }
-.btn-secondary {
+.btn-custom-secondary {
   background: $med;
-}
-.btn-secondary:not(:disabled):not(.disabled).active {
-  background-color: $primary;
-}
-
-
-
-// SIDEBAR NAV STYLING
-#sidebar {
-  width: 250px;
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  z-index: 999;
-  color: $dark;
-  background: rgba($white,0.5);
-  transition: all 0.3s;
-  font-size: 1.1rem;
-  padding: 1rem;
-  > #sidebarNavElements {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    > li {
-      padding-bottom: 1rem;
-      > ul > li {
-        font-size: 0.9rem;
-        padding-bottom: 1rem;
-        margin-left: 0.5rem;
-      }
-      > ul > li:first-child {
-        padding-top: 1rem;
-      }
-    }
+  & :not(:disabled):not(.disabled).active {
+    background-color: $primary;
   }
+}
+
+
+.plotlyjsicon.modebar-btn--logo {
+  display: none;
+  visibility: hidden;
 }
 
 
@@ -366,6 +320,14 @@ h1,h2,h3,h4,h5,h6,p {
   left: 0;
   z-index: 2;
   visibility: visible;
+}
+
+
+
+
+// EDI DATA COLLECTION
+#ediDataCollection_CTA {
+  border: 2px solid $med;
 }
 
 
@@ -420,6 +382,22 @@ h1,h2,h3,h4,h5,h6,p {
   top: 80px;
   left: 100px;
 }
+
+
+
+
+// NH DISPARITY SECTION
+
+#vulnDisparity_innerWrap {
+  position: relative;
+}
+#vuln1orMoreTrend_vulndisparity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
 
 
 

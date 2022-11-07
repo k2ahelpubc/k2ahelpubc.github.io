@@ -1,27 +1,27 @@
 CHART DESIGN
-- Fill out content in Scales, subscales section
-
-- annotate the nh distr chart with BC Avg, highest and lowest
-- scale subscale secondary nav
-- sidebar nav
-- Critical Difference on trend charts 
-- hover styles across all charts
+- Critical Difference on trend charts
 - Wave 8 highlights throughout
-- add total bc % line chart to multiple vulnerabilities chart?
-- add total bc % line chart to overall outcomes chart? 
+- instructional text for charts where necessary
+- numbers on track, at risk for hover?
+- scale subscale secondary nav - INCOMPLETE
+- text highlighting throughout - ASK KATE AS PART OF REVIEW
 
-- numbers on track, at risk at scale level
+- sidebar nav - NIGEL to work on this
+
+- Add text labels to all scales chart when a line is isolated.
+- Multiple vulnerabilities, perhaps pop out the % in the chart description that highlights the change between W2 and W8
+- change cursor type on chart hover to cursor when there are not interactions
+- Scales subscales coded diagram
+
+- customize png download button
+
 - Vuln map time slider through waves
 
 CHANGES/UPDATES
 - Add “participation 88%” sentence after the “participation and demographics” title
-- Charts… standardized look and range, either using 0 as starting point and going up to same # (50%) or taking out #s for charts where #s are embedded in the chart
-- Multiple vulnerabilities, make one vulnerability much lighter in colour than 2,3,4,5; add %s for vulnerable on 5 scales into the bar chart (no above because confusing), perhaps pop out the % in the chart description that highlights the change between W2 and W8
-- Overall Outcomes… change title to “New Overall Outcomes”
-- Graphic… to be revised by Ada, put space between overall and scale level
-- Range of V… keep scatterplot, add explanation for chart… add W8 only range for on track and in flux
+- Range of V:
+    - add explanation for chart… 
+    - add W8 only range for on track and in flux
 - NHs under 15% and over 45% - don’t worry about suppression because can’t go back to W2; Kate and Jeremy decided to go with chart… check #s in chart (W7 was 3 for under 15%??)
 - Rural/Urban yes, need definitions from Barry (kate to follow up)
-- Use one decimal for all #s even if 0 so… 32.4% and 32.0%
-- Subscales, add “better to worse” line
 - Jeremy and Kate can do content review, goes to Mariana for final sign off
