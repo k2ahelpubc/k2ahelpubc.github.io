@@ -1,21 +1,30 @@
 CHART DESIGN
 - Critical Difference on trend charts
-- Wave 8 highlights throughout
+- subscale explanation section coding
+- add in flux and on track of NH variability chart
 - instructional text for charts where necessary
+- map relayout once I pull website code from Nigel
 - numbers on track, at risk for hover?
 - scale subscale secondary nav - INCOMPLETE
 - text highlighting throughout - ASK KATE AS PART OF REVIEW
+- Bootstrap icons
 
 - sidebar nav - NIGEL to work on this
+- conclusion graphics from ADA
 
 - Add text labels to all scales chart when a line is isolated.
 - Multiple vulnerabilities, perhaps pop out the % in the chart description that highlights the change between W2 and W8
 - change cursor type on chart hover to cursor when there are not interactions
 - Scales subscales coded diagram
+- nh disparity download plot for whole chart...rearrange series
 
 - customize png download button
 
 - Vuln map time slider through waves
+
+WEBSITE UPDATES
+- note re w7 sd data and w8 provincial
+- remove w7 provincial report and add Wave 8 provincial report
 
 CHANGES/UPDATES
 - Add “participation 88%” sentence after the “participation and demographics” title

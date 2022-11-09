@@ -154,20 +154,21 @@ function vulnTrendLineChart() {
         hovertemplate: '<span style="color:#f5f5f5;"><br>&nbsp;# Vulnerable: <br></span>' +
             '<b>&nbsp;%{hovertext:,}</b><br>' +
             '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.vuln1orMore.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.vuln1orMore.primary },
 
     }];
 
     var layout = {
+        width: 949,
         margin: {
             l: 100,
-            r: 50,
+            r: 0,
             b: 100,
             t: 50,
             pad: 4
         },
         font: {
-            family: 'Nunito Sans',
+            family: 'Nunito',
             size: 16,
             color: '#252525',
         },
@@ -192,14 +193,15 @@ function vulnTrendLineChart() {
             // y-reference is assigned to the plot paper [0,1]
             yref: 'paper',
             x0: 0.88,
-            y0: 0,
+            y0: -0.15,
             x1: 0.98,
             y1: 1,
-            fillcolor: '#d3d3d3',
+            fillcolor: '#b3b5ba',
             opacity: 0.2,
             line: {
                 width: 0,
             },
+            layer: 'below',
         }]
     };
 
@@ -310,7 +312,7 @@ function multiVulnBarChart() {
         hovertemplate: '<span style="color:#f5f5f5;"><br>&nbsp;# Vulnerable: <br></span>' +
             '<b>&nbsp;%{hovertext:,}</b><br>' +
             '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.vuln1orMore.primary }
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.vuln1orMore.primary }
     };
 
 
@@ -328,7 +330,7 @@ function multiVulnBarChart() {
             pad: 4
         },
         font: {
-            family: 'Nunito Sans',
+            family: 'Nunito',
             size: 16,
             color: '#252525',
         },
@@ -355,13 +357,15 @@ function multiVulnBarChart() {
             // y-reference is assigned to the plot paper [0,1]
             yref: 'paper',
             x0: 0.86,
-            y0: 0,
+            y0: -0.1,
             x1: 1,
             y1: 1,
+            fillcolor: '#b3b5ba',
+            opacity: 0.2,
             line: {
-                width: 1,
-                linecolor: '#d3d3d3',
+                width: 0,
             },
+            layer: 'below',
         }]
     };
 
@@ -435,7 +439,7 @@ function overallOutcomesBarChart() {
             itemdoubleclick: false,
         },
         font: {
-            family: 'Nunito Sans',
+            family: 'Nunito',
             size: 16,
             color: '#252525',
         },
@@ -446,6 +450,23 @@ function overallOutcomesBarChart() {
             title: "Wave"
         },
         hovermode: false,
+        shapes: [{
+            type: 'rect',
+            // x-reference is assigned to the x-values
+            xref: 'paper',
+            // y-reference is assigned to the plot paper [0,1]
+            yref: 'paper',
+            x0: 0.86,
+            y0: -0.1,
+            x1: 1,
+            y1: 1,
+            fillcolor: '#b3b5ba',
+            opacity: 0.2,
+            line: {
+                width: 0,
+            },
+            layer: 'below',
+        }]
     };
 
     Plotly.newPlot('stackedBar_vulnProfile', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
@@ -613,7 +634,7 @@ function nhRangeVulnBoxPlot() {
             pad: 4
         },
         font: {
-            family: 'Nunito Sans',
+            family: 'Nunito',
             size: 16,
             color: '#252525',
         },
@@ -628,6 +649,23 @@ function nhRangeVulnBoxPlot() {
         },
         showlegend: false,
         hovermode: false,
+        shapes: [{
+            type: 'rect',
+            // x-reference is assigned to the x-values
+            xref: 'paper',
+            // y-reference is assigned to the plot paper [0,1]
+            yref: 'paper',
+            x0: 0.86,
+            y0: -0.1,
+            x1: 1,
+            y1: 1,
+            fillcolor: '#b3b5ba',
+            opacity: 0.2,
+            line: {
+                width: 0,
+            },
+            layer: 'below',
+        }]
     }
 
     Plotly.newPlot('range_vulnDisparity', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
@@ -653,7 +691,7 @@ function nhRangeVulnBoxPlot() {
         text: overallTrendData.vuln,
         texttemplate: "<b>%{text}%</b>",
         textposition: "top right",
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': '#252525'},
+        textfont: { 'family': "Nunito", 'size': 16, 'color': '#252525'},
         hoverinfo: 'none',
 
     };
@@ -677,7 +715,7 @@ function nhRangeVulnBoxPlot() {
         text: [55.4,69.6,59.1,56.4,60.4,68.4,72.0],
         texttemplate: "<b>%{text}%</b>",
         textposition: "top right",
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': '#252525'},
+        textfont: { 'family': "Nunito", 'size': 16, 'color': '#252525'},
         hoverinfo: 'none',
     };
 
@@ -700,7 +738,7 @@ function nhRangeVulnBoxPlot() {
         text: [6.0,6.1,6.4,4.3,9.2,12.6,13.2],
         texttemplate: "<b>%{text}%</b>",
         textposition: "middle right",
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': '#252525'},
+        textfont: { 'family': "Nunito", 'size': 16, 'color': '#252525'},
         hoverinfo: 'none',
     };
 
@@ -718,7 +756,7 @@ function nhRangeVulnBoxPlot() {
             pad: 4
         },
         font: {
-            family: 'Nunito Sans',
+            family: 'Nunito',
             size: 16,
             color: '#252525',
         },
@@ -796,7 +834,7 @@ nhRangeVulnBoxPlot();
 //             pad: 4
 //         },
 //         font: {
-//             family: 'Nunito Sans',
+//             family: 'Nunito',
 //             size: 16,
 //             color: '#252525',
 //         },
@@ -891,7 +929,7 @@ function urbanRuralOutcomesBarChart() {
             itemdoubleclick: false,
         },
         font: {
-            family: 'Nunito Sans',
+            family: 'Nunito',
             size: 16,
             color: '#252525',
         },
@@ -978,7 +1016,7 @@ function scaleOutcomesBarChart() {
             pad: 5
         },
         font: {
-            family: 'Nunito Sans',
+            family: 'Nunito',
             size: 16,
             color: '#252525',
         },
@@ -1044,7 +1082,7 @@ function allScalesTrendChart() {
         '<br>&nbsp;# Vulnerable: <br>' +
         '<b>&nbsp;%{hovertext:,}</b><br>' +
         '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.social.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.social.primary },
     };
 
     const emotionalTrend = {
@@ -1069,7 +1107,7 @@ function allScalesTrendChart() {
         '<br>&nbsp;# Vulnerable: <br>' +
         '<b>&nbsp;%{hovertext:,}</b><br>' +
         '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.emotional.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.emotional.primary },
     };
 
     const physicalTrend = {
@@ -1094,7 +1132,7 @@ function allScalesTrendChart() {
             '<br>&nbsp;# Vulnerable: <br>' +
             '<b>&nbsp;%{hovertext:,}</b><br>' +
             '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.physical.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.physical.primary },
 
     };
 
@@ -1120,7 +1158,7 @@ function allScalesTrendChart() {
         '<br>&nbsp;# Vulnerable: <br>' +
         '<b>&nbsp;%{hovertext:,}</b><br>' +
         '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.language.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.language.primary },
 
     };
 
@@ -1146,7 +1184,7 @@ function allScalesTrendChart() {
         '<br>&nbsp;# Vulnerable: <br>' +
         '<b>&nbsp;%{hovertext:,}</b><br>' +
         '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.communication.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.communication.primary },
 
     };
 
@@ -1161,7 +1199,7 @@ function allScalesTrendChart() {
             pad: 4
         },
         font: {
-            family: 'Nunito Sans',
+            family: 'Nunito',
             size: 16,
             color: '#252525',
         },
@@ -1181,6 +1219,23 @@ function allScalesTrendChart() {
             itemclick: 'toggleothers',
             itemdoubleclick: 'false',
         },
+        shapes: [{
+            type: 'rect',
+            // x-reference is assigned to the x-values
+            xref: 'paper',
+            // y-reference is assigned to the plot paper [0,1]
+            yref: 'paper',
+            x0: 0.88,
+            y0: -0.15,
+            x1: 0.98,
+            y1: 1,
+            fillcolor: '#b3b5ba',
+            opacity: 0.2,
+            line: {
+                width: 0,
+            },
+            layer: 'below',
+        }]
     };
 
     Plotly.newPlot('trend_allScales', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
@@ -1192,6 +1247,53 @@ allScalesTrendChart();
 // INDIVIDUAL SCALE AND SUBSCALE-LEVEL TREND CHARTS
 
 // INDIVIDUAL SCALE-LEVEL TREND CHARTS
+
+const indScaleChartlayout = {
+    width: 976,
+    height: 200,
+    margin: {
+        l: 100,
+        r: 50,
+        b: 0,
+        t: 0
+    },
+    font: {
+        family: 'Nunito',
+        size: 16,
+        color: '#252525',
+    },
+    xaxis: {
+        showzeroline: false,
+        visibile: false,
+        showgrid: false,
+        zeroline: false,
+        showticklabels: false,
+    },
+    yaxis: {
+        showline: false,
+        showgrid: false,
+        visibile: false,
+        range: [8, 20],
+        showticklabels: false,
+    },
+    shapes: [{
+        type: 'rect',
+        // x-reference is assigned to the x-values
+        xref: 'paper',
+        // y-reference is assigned to the plot paper [0,1]
+        yref: 'paper',
+        x0: 0.9,
+        y0: -0.15,
+        x1: 0.98,
+        y1: 1,
+        fillcolor: '#b3b5ba',
+        opacity: 0.2,
+        line: {
+            width: 0,
+        },
+        layer: 'below',
+    }]
+};
 
 function socialScalesTrendChart() {
 
@@ -1215,40 +1317,10 @@ function socialScalesTrendChart() {
             '<br>&nbsp;# Vulnerable: <br>' +
             '<b>&nbsp;%{hovertext:,}</b><br>' +
             '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.social.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.social.primary },
     }];
 
-    var layout = {
-        width: 976,
-        height: 200,
-        margin: {
-            l: 100,
-            r: 50,
-            b: 0,
-            t: 0
-        },
-        font: {
-            family: 'Nunito Sans',
-            size: 16,
-            color: '#252525',
-        },
-        xaxis: {
-            showzeroline: false,
-            visibile: false,
-            showgrid: false,
-            zeroline: false,
-            showticklabels: false,
-        },
-        yaxis: {
-            showline: false,
-            showgrid: false,
-            visibile: false,
-            range: [8, 19],
-            showticklabels: false,
-        },
-    };
-
-    Plotly.newPlot('trend_socialScales', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_socialScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
 
 };
 socialScalesTrendChart();
@@ -1276,40 +1348,10 @@ function emotionalScalesTrendChart() {
             '<br>&nbsp;# Vulnerable: <br>' +
             '<b>&nbsp;%{hovertext:,}</b><br>' +
             '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.emotional.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.emotional.primary },
     }];
 
-    var layout = {
-        width: 976,
-        height: 200,
-        margin: {
-            l: 100,
-            r: 50,
-            b: 0,
-            t: 0
-        },
-        font: {
-            family: 'Nunito Sans',
-            size: 16,
-            color: '#252525',
-        },
-        xaxis: {
-            showzeroline: false,
-            visibile: false,
-            showgrid: false,
-            zeroline: false,
-            showticklabels: false,
-        },
-        yaxis: {
-            showline: false,
-            showgrid: false,
-            visibile: false,
-            range: [8, 19],
-            showticklabels: false,
-        },
-    };
-
-    Plotly.newPlot('trend_emotionalScales', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_emotionalScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
 
 };
 emotionalScalesTrendChart();
@@ -1337,41 +1379,11 @@ function physicalScalesTrendChart() {
             '<br>&nbsp;# Vulnerable: <br>' +
             '<b>&nbsp;%{hovertext:,}</b><br>' +
             '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.physical.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.physical.primary },
 
     }];
 
-    var layout = {
-        width: 976,
-        height: 200,
-        margin: {
-            l: 100,
-            r: 50,
-            b: 0,
-            t: 0
-        },
-        font: {
-            family: 'Nunito Sans',
-            size: 16,
-            color: '#252525',
-        },
-        xaxis: {
-            showzeroline: false,
-            visibile: false,
-            showgrid: false,
-            zeroline: false,
-            showticklabels: false,
-        },
-        yaxis: {
-            showline: false,
-            showgrid: false,
-            visibile: false,
-            range: [8, 19],
-            showticklabels: false,
-        },
-    };
-
-    Plotly.newPlot('trend_physicalScales', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_physicalScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
 
 };
 physicalScalesTrendChart();
@@ -1399,41 +1411,11 @@ function languageScalesTrendChart() {
             '<br>&nbsp;# Vulnerable: <br>' +
             '<b>&nbsp;%{hovertext:,}</b><br>' +
             '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.language.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.language.primary },
 
     }];
 
-    var layout = {
-        width: 976,
-        height: 200,
-        margin: {
-            l: 100,
-            r: 50,
-            b: 0,
-            t: 0
-        },
-        font: {
-            family: 'Nunito Sans',
-            size: 16,
-            color: '#252525',
-        },
-        xaxis: {
-            showzeroline: false,
-            visibile: false,
-            showgrid: false,
-            zeroline: false,
-            showticklabels: false,
-        },
-        yaxis: {
-            showline: false,
-            showgrid: false,
-            visibile: false,
-            range: [5, 16],
-            showticklabels: false,
-        },
-    };
-
-    Plotly.newPlot('trend_languageScales', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_languageScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
 
 };
 languageScalesTrendChart();
@@ -1461,41 +1443,11 @@ function communicationScalesTrendChart() {
             '<br>&nbsp;# Vulnerable: <br>' +
             '<b>&nbsp;%{hovertext:,}</b><br>' +
             '<extra></extra>',
-        textfont: { 'family': "Nunito Sans", 'size': 16, 'color': scaleColours.communication.primary },
+        textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.communication.primary },
 
     }];
 
-    var layout = {
-        width: 976,
-        height: 200,
-        margin: {
-            l: 100,
-            r: 50,
-            b: 0,
-            t: 0
-        },
-        font: {
-            family: 'Nunito Sans',
-            size: 16,
-            color: '#252525',
-        },
-        xaxis: {
-            showzeroline: false,
-            visibile: false,
-            showgrid: false,
-            zeroline: false,
-            showticklabels: false,
-        },
-        yaxis: {
-            showline: false,
-            showgrid: false,
-            visibile: false,
-            range: [8, 19],
-            showticklabels: false,
-        },
-    };
-
-    Plotly.newPlot('trend_communicationScales', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_communicationScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
 
 };
 communicationScalesTrendChart();
@@ -1513,7 +1465,7 @@ const subscaleLayout = {
         pad: 12
     },
     font: {
-        family: 'Nunito Sans',
+        family: 'Nunito',
         size: 16,
         color: '#252525',
     },
@@ -1546,8 +1498,8 @@ const subscaleLayout = {
         xanchor: 'left',
         y: 1,
         yanchor: 'top',
-        text: 'Better',
-        font: {size: 16, color: '#8EC73F'},
+        text: 'Worse',
+        font: {size: 16, color: '#CB181D'},
         showarrow: false
       }, {
         xref: 'paper',
@@ -1566,11 +1518,28 @@ const subscaleLayout = {
         xanchor: 'left',
         y: 0.05,
         yanchor: 'top',
-        text: 'Worse',
-        font: {size: 16, color: '#CB181D'},
+        text: 'Better',
+        font: {size: 16, color: '#8EC73F'},
         showarrow: false
       }],
     hovermode: false,
+    shapes: [{
+        type: 'rect',
+        // x-reference is assigned to the x-values
+        xref: 'paper',
+        // y-reference is assigned to the plot paper [0,1]
+        yref: 'paper',
+        x0: 0.9,
+        y0: -0.15,
+        x1: 0.98,
+        y1: 1,
+        fillcolor: '#b3b5ba',
+        opacity: 0.2,
+        line: {
+            width: 0,
+        },
+        layer: 'below',
+    }]
 };
 
 

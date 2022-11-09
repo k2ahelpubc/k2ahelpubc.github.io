@@ -31,7 +31,7 @@ $enable-shadows: true;
 // Customize some defaults
 
 // FONTS
-$font-family-sans-serif: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 // COLOUR THEME
 $primary:#cb181d;
@@ -53,6 +53,16 @@ $communication: #E6550D;
 $vulnerable: #cb181d;
 $influx: #FCB017;
 $ontrack: #8EC73F;
+
+.meaningfulincrease{
+  color: #D96936;
+}
+.meaningfuldecrease{
+  color: #8FC289;
+}
+.meaningfulstable{
+  color: #ACA199;
+}
 
 .socialColor {
   color: $social;
@@ -158,6 +168,13 @@ $ontrack: #8EC73F;
 
 .mt-10 {
   margin-top: 10rem;
+}
+
+.pt-10 {
+  padding-top: 10rem;
+}
+.pb-10 {
+  padding-bottom: 10rem;
 }
 
 // Style Bootstrap icons
@@ -279,18 +296,102 @@ $ontrack: #8EC73F;
   visibility: hidden;
 }
 
+.js-plotly-plot .plotly .modebar-btn {
+  z-index: 9999;
+}
 
 
-// INTRODUCTION
+
+// LANDING/INTRODUCTION
 #landing-screen {
   width: 100%;
   position: relative;
   height: 80vh;
+  background-image: url('../images/landingImage.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
   #title-wrap {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 100%;
+    position: absolute;
+    bottom: 75px;
+    left: 75px;
     display: inline-block;
+    > .landing-content-wrap {     
+      > p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+#logo-container {
+  position: relative;
+  z-index: 4;
+  display: inline-block;
+  background-color: rgba($off-white,0.65);
+  padding: 20px;
+  > p {
+    padding: 20px 0px 10px;
+    font-size: 55px;
+    line-height: 45px;
+  }
+  > img {
+    margin: 20px;
+    width: 200px;
+    display: block;
+    height: auto;
+  }
+}
+
+#landing-titleContainer {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  top: -115px;
+  left: -37px;
+  background-color: rgba($secondary,0.5);
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 20px 30px;
+  > p {
+    font-size: 40px;
+    color: $white;
+  }
+}
+
+#landing-subtitleContainer {
+  position: relative;
+  top: -30px;
+  left: -535px;
+  z-index: 2;
+  background-color: rgba($dark,0.5);
+  display: inline-block;
+  padding: 35px 20px 20px 20px;
+  text-transform: uppercase;
+  > p {
+    font-size: 30px;
+    color: $white;
+  }
+}
+
+#introduction h5 {
+  line-height: 2rem;
+}
+
+@media (max-width: 1250px) {
+  #title-wrap {
+    bottom: 0;
+    left: 50px;
+    top: 0;
+  }
+  #landing-titleContainer, #landing-subtitleContainer {
+    width: 280px;
+    top: 0;
+    left: 0;
+    display: block;
+    padding: 20px;
+    margin-top: 10px;
   }
 }
 
@@ -330,6 +431,14 @@ $ontrack: #8EC73F;
   border: 2px solid $med;
 }
 
+
+// MEANINGFUL CHANGE
+#meaningfulChangeContent {
+  border: 1px solid $med;
+  > .col-4 > p {
+    margin-bottom: 0;
+  }
+}
 
 
 
