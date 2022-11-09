@@ -345,15 +345,16 @@ $ontrack: #8EC73F;
 }
 
 #landing-titleContainer {
+  width: auto;
   position: relative;
   z-index: 3;
   display: inline-block;
   top: -115px;
-  left: -37px;
+  left: -25px;
   background-color: rgba($secondary,0.5);
   text-transform: uppercase;
   display: inline-block;
-  padding: 20px 30px;
+  padding: 20px 35px;
   > p {
     font-size: 40px;
     color: $white;
@@ -361,9 +362,10 @@ $ontrack: #8EC73F;
 }
 
 #landing-subtitleContainer {
+  width: auto;
   position: relative;
   top: -30px;
-  left: -535px;
+  left: -510px;
   z-index: 2;
   background-color: rgba($dark,0.5);
   display: inline-block;
