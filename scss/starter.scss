@@ -33,8 +33,35 @@ $enable-shadows: true;
 // FONTS
 $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+//Font weights
+$light-font: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$bolder: 800;
+
+.light-font {font-weight: 300;}
+.normal-font {font-weight: 400;}
+.medium-font {font-weight: 500;}
+.semi-bold-font {font-weight: 600;}
+.bold-font {font-weight: 700;}
+.bolder-font {font-weight: 800;}
+
+//sizes
+$font-size-base: 1rem;
+$large-body-font-size: $font-size-base * 1.625;
+.large-body-font-size {
+  font-size: $large-body-font-size;
+}
+$small-body-font-size: $font-size-base * 0.8;
+.small-body-font-size {
+  font-size: $small-body-font-size;
+}
+
 // COLOUR THEME
-$primary:#cb181d;
+$edi-base: #e4002b;
+$primary:  #cb181d;
 $secondary:#fb6a4a;
 $success:#31a354;
 $warning:#fcb017;
@@ -45,6 +72,10 @@ $light:#b3b5ba;
 $med:#76777a;
 $dark:#353535;
 
+.text-med {
+  color: $med;
+}
+
 $social: #3182BD;
 $emotional: #54278F;
 $physical: #006D2C;
@@ -53,16 +84,6 @@ $communication: #E6550D;
 $vulnerable: #cb181d;
 $influx: #FCB017;
 $ontrack: #8EC73F;
-
-.meaningfulincrease{
-  color: #D96936;
-}
-.meaningfuldecrease{
-  color: #8FC289;
-}
-.meaningfulstable{
-  color: #ACA199;
-}
 
 .socialColor {
   color: $social;
@@ -79,14 +100,25 @@ $ontrack: #8EC73F;
 .communicationColor {
   color: $communication;
 }
+
 .vulnerableColor {
-  color: $primary;
+  color: $edi-base;
 }
 .inFluxColor {
   color: $influx;
 }
 .onTrackColor {
   color: $ontrack;
+}
+
+.meaningfulincrease{
+  color: #D96936;
+}
+.meaningfuldecrease{
+  color: #8FC289;
+}
+.meaningfulstable{
+  color: #ACA199;
 }
 
 .socialBcgColor {
@@ -105,13 +137,85 @@ $ontrack: #8EC73F;
   background-color: $communication;
 }
 .vulnerableBcgColor {
-  background-color: $primary;
+  background-color: $edi-base;
 }
 
 .bg-offwhite {
   background-color: $off-white;
 }
 
+$help-base: #002e5d;
+$help-1: $help-base;
+$help-2: #34587d;
+$help-3: #68829d;
+$help-4: #9cacbd;
+$help-5: #d0d6dd;
+
+//tdi colours
+$tdi-base: #7abe20;
+$tdi-1: $tdi-base;
+$tdi-2: #94cc4c;
+$tdi-3: #aeda78;
+$tdi-4: #c8e8a4;
+$tdi-5: #e2f6d0;
+
+//edi colours
+$edi-base: #e4002b;
+$edi-1: $edi-base;
+$edi-2: #d7424a;
+$edi-3: #db6771;
+$edi-4: #de8991;
+$edi-5: #e1aead;
+
+//cheq colours
+$cheq-base: #283d8f;
+$cheq-1: $cheq-base;
+$cheq-2: #3444a1;
+$cheq-3: #6874b9;
+$cheq-4: #9ca4d1;
+$cheq-5: #d4d8e9;
+
+//mdi colours
+$mdi-base: #de7c00;
+$mdi-1: $mdi-base;
+$mdi-2: #e49634;
+$mdi-3: #eab068;
+$mdi-4: #f0ca9c;
+$mdi-5: #f6e4d0;
+
+//ydi colours
+$ydi-base: #512d6d;
+$ydi-1: $ydi-base;
+$ydi-2: #6f5186;
+$ydi-3: #9a85aa;
+$ydi-4: #b4a4c0;
+$ydi-5: #cdc2d5;
+
+//teal colours
+$teal-base: #00778b;
+$teal-1: $teal-base;
+$teal-2: #009ca6;
+$teal-3: #64c2c2;
+$teal-4: #a8dddd;
+$teal-5: #c6eaea;
+
+//grey colours
+$grey-base: #53565a;
+$grey-1: $grey-base;
+$grey-2: #75787b;
+$grey-3: #97999b;
+$grey-4: #b1b3b3;
+$grey-5: #c8c9c7;
+$grey-6: #f8f8f8;
+
+$theme-colors: (
+  "edi": $edi-base,
+  "mdi": $mdi-base,
+  "tdi": $tdi-base,
+  "cheq": $cheq-base,
+  "ydi": $ydi-base,
+  "help": $help-base
+);
 
 
 
@@ -142,7 +246,7 @@ $ontrack: #8EC73F;
 // @import "bootstrap/scss/jumbotron";
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/media";
+@import "bootstrap/scss/media";
 // @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
 // @import "bootstrap/scss/toasts";
@@ -162,6 +266,9 @@ $ontrack: #8EC73F;
 @import "icon-list";
 
 
+
+
+// SPACING STYLES
 .row {
   margin: 0;
 }
@@ -189,6 +296,7 @@ $ontrack: #8EC73F;
 
 
 
+
 // TAB STYLES
 
 .nav-pills .nav-link {
@@ -196,11 +304,11 @@ $ontrack: #8EC73F;
   border-radius: 50px;
   width: 90%;
   &.vulnerable {
-    color: $primary;
-    border: 2px solid $primary;
+    color: $edi-base;
+    border: 2px solid $edi-base;
     &:hover {
       color: #f5f5f5;
-      background-color: rgba($primary,0.75);
+      background-color: rgba($edi-base,0.75);
     }
   }
   &.social {
@@ -276,28 +384,37 @@ $ontrack: #8EC73F;
   border-radius: 50px;
 }
 .btn-custom-primary {
-  color: $primary;
+  color: $edi-base;
   background: transparent;
-  border: 2px solid $primary;
+  border: 2px solid $edi-base;
   &:hover {
-    background: $primary;
+    background: $edi-base;
   }
 }
 .btn-custom-secondary {
   background: $med;
   & :not(:disabled):not(.disabled).active {
-    background-color: $primary;
+    background-color: $edi-base;
   }
 }
 
 
-.plotlyjsicon.modebar-btn--logo {
-  display: none;
-  visibility: hidden;
+
+
+// PLOTLY CUSTOM STYLES
+
+.svg-container {
+  width: 100%;
+  height: auto;
 }
 
-.js-plotly-plot .plotly .modebar-btn {
-  z-index: 9999;
+
+
+
+// CUSTOM TEXT STYLES
+
+.sectionTitle {
+  font-size: 3rem;
 }
 
 
@@ -310,11 +427,11 @@ $ontrack: #8EC73F;
   background-image: url('../images/landingImage.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top right;
+  background-position: center right;
   #title-wrap {
-    width: 100%;
+    width: 80%;
     position: absolute;
-    bottom: 75px;
+    bottom: -25px;
     left: 75px;
     display: inline-block;
     > .landing-content-wrap {     
@@ -364,8 +481,8 @@ $ontrack: #8EC73F;
 #landing-subtitleContainer {
   width: auto;
   position: relative;
-  top: -30px;
-  left: -510px;
+  top: -130px;
+  left: 300px;
   z-index: 2;
   background-color: rgba($dark,0.5);
   display: inline-block;
@@ -397,13 +514,42 @@ $ontrack: #8EC73F;
   }
 }
 
+@media (min-width: 1440px) {
+  #landing-screen {
+    #title-wrap {
+      bottom: -125px;
+      #landing-titleContainer, #landing-subtitleContainer {
+        display: block;
+      }
+      #landing-titleContainer {
+        width: 520px;
+        top: -215px;
+        left: 260px;
+      }
+      #landing-subtitleContainer {
+        width: 455px;
+        top: -232px;
+        left: 300px;
+      }
+    }
+  }
+}
 
 
 // PARTICIPATION/DEMOGRAPHICS
+.chartTitle p {
+  font-size: 14px;
+  color: $med;
+}
+.chartCopyright p {
+  font-size: 12px;
+  color: $med;
+}
+
 .tableContainer {
   position: relative;
-  height: 360px;
-  margin-bottom: 3rem;
+  height: 315px;
+  margin-bottom: 0rem;
 }
 
 #demoNumTable_btn, #demoPercentTable_btn {
@@ -428,16 +574,14 @@ $ontrack: #8EC73F;
 
 
 
-// EDI DATA COLLECTION
-#ediDataCollection_CTA {
-  border: 2px solid $med;
-}
-
-
 // MEANINGFUL CHANGE
-#meaningfulChangeContent {
-  border: 1px solid $med;
-  > .col-4 > p {
+#meaningfulChange {
+  .mcIconImg {
+    display: inline-block;
+    padding-left: 1rem;
+    width: 35px;
+  }
+  > .col-5 > p {
     margin-bottom: 0;
   }
 }
@@ -448,7 +592,7 @@ $ontrack: #8EC73F;
 /**
 * Create a position for the map
 * on the page */
-#map {
+#mapVuln1orMore {
   position: relative;
   top: 0;
   bottom: 0;
@@ -464,34 +608,21 @@ $ontrack: #8EC73F;
 .mapBoxContainer {
   position: relative;
 }
-
-.map-overlay, .map-description {
+.map-overlay {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  min-height: 75%;
+  right: 30px;
   background: #fff;
   overflow: auto;
   border-radius: 3px;
-  padding: 20px;
+  padding: 1rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-.map-overlay {
-  height: 70%;
-  right: 30px;
-}
-.map-description {
-  height: 90%;
-  left: 30px;
-}
 .legendClasses {
-  width: 110px;
+  width: 120px;
   height: auto;
-}
-
-.mapboxgl-ctrl-fullscreen {
-  position: absolute;
-  top: 80px;
-  left: 100px;
 }
 
 
@@ -508,7 +639,91 @@ $ontrack: #8EC73F;
   left: 0;
   z-index: 5;
 }
+#nhOutcomeRanges p {
+  margin-bottom: 0;
+}
 
 
 
 
+// SCALE SUBSCALE DIAGRAMS
+
+.scaleIcons {
+  width: 75px;
+}
+.subscaleList {
+  color: $grey-base;
+  list-style: none;
+  margin-left: 38px;
+  a.subscaleListName {
+    color: $dark;
+  }
+  ul.subscaleListDescription {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+    color: $med;
+  }
+}
+
+.yAxisArrowUP {
+  position: absolute;
+  top: 155px;
+  right: 69px;
+  height: 80px;
+  width: auto;
+}
+.yAxisArrowDOWN {
+  position: absolute;
+  bottom: 115px;
+  right: 69px;
+  height: 80px;
+  width: auto;
+}
+
+
+
+
+// CONCLUSION SECTION
+
+.conclusionImg {
+  height: 250px;
+  width: 100%;
+  margin: 10rem 0 5rem;
+
+  background-image: url('../images/conclusionImage.jpeg');
+  background-position: 50% 15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.stayTunedImg {
+  width: 100px;
+  height: auto;
+}
+
+#citations {
+  ol > li {
+    color: $med;
+    font-size: $small-body-font-size;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+
+// SIDE BAR MENU
+
+#edi-synth-side-menu {
+  top: 8rem;
+  font-size: 0.85rem;
+
+  .list-group-item {
+    padding: 0.5rem 0.5rem;
+
+    &:hover {
+      background-color: $gray-100;
+    }
+  }
+}

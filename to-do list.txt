@@ -1,22 +1,21 @@
 CHART DESIGN
-- Critical Difference on trend charts
-- subscale explanation section coding
-- add in flux and on track of NH variability chart
-- instructional text for charts where necessary
-- map relayout once I pull website code from Nigel
+- Critical Difference on scale-level trend charts
+- subscale explanation add subscale explanation notes - NEED TO?!
+- add meaninguful change explanation
+- participation rate hover text (others?!) - added it to paragraph for now
+
+- add vulnerability rates to SDs on map and note re data availability
+
 - numbers on track, at risk for hover?
-- scale subscale secondary nav - INCOMPLETE
 - text highlighting throughout - ASK KATE AS PART OF REVIEW
-- Bootstrap icons
 
 - sidebar nav - NIGEL to work on this
-- conclusion graphics from ADA
 
 - Add text labels to all scales chart when a line is isolated.
 - Multiple vulnerabilities, perhaps pop out the % in the chart description that highlights the change between W2 and W8
 - change cursor type on chart hover to cursor when there are not interactions
-- Scales subscales coded diagram
 - nh disparity download plot for whole chart...rearrange series
+- scale subscale secondary nav - INCOMPLETE
 
 - customize png download button
 

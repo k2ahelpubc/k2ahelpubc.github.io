@@ -113,7 +113,9 @@ const chartConfig = {
         format: 'png',
         filename: 'EDI Wave 8 Plot Image',
         scale: 2,
-    }
+    },
+    responsive: true, 
+    scrollZoom: false,
 };
 
 
@@ -159,13 +161,22 @@ function vulnTrendLineChart() {
     }];
 
     var layout = {
-        width: 949,
+        autosize: true,
         margin: {
-            l: 100,
+            l: 75,
             r: 0,
             b: 100,
             t: 50,
             pad: 4
+        },
+        title: {
+            text: 'EDI Overall Vulnerability Trend for BC, Wave 2 to Wave 8',
+            font: {
+                size: 14,
+                color: '#76777a',
+            },
+            xanchor: 'left',
+            x: 0,
         },
         font: {
             family: 'Nunito',
@@ -186,6 +197,87 @@ function vulnTrendLineChart() {
             dtick: 10,
             zeroline: false
         },
+        annotations: [{
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.03,
+            xanchor: 'left',
+            y: -0.15,
+            yanchor: 'left',
+            text: '2004-2007',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false
+        },{
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.17,
+            xanchor: 'left',
+            y: -0.15,
+            yanchor: 'left',
+            text: '2007-2009',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false
+        },{
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.315,
+            xanchor: 'left',
+            y: -0.15,
+            yanchor: 'left',
+            text: '2009-2011',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false
+        },{
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.455,
+            xanchor: 'left',
+            y: -0.15,
+            yanchor: 'left',
+            text: '2011-2013',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false
+        },{
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.6,
+            xanchor: 'left',
+            y: -0.15,
+            yanchor: 'left',
+            text: '2013-2016',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false
+        },{
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.74,
+            xanchor: 'left',
+            y: -0.15,
+            yanchor: 'left',
+            text: '2016-2019',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false
+        },{
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.885,
+            xanchor: 'left',
+            y: -0.15,
+            yanchor: 'left',
+            text: '2019-2022',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false
+        },{
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.98,
+            xanchor: 'right',
+            y: -0.3,
+            yanchor: 'right',
+            text: '©Human Early Learning Partnership, UBC - 2022',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false
+        }],
         shapes: [{
             type: 'rect',
             // x-reference is assigned to the x-values
@@ -205,7 +297,7 @@ function vulnTrendLineChart() {
         }]
     };
 
-    Plotly.newPlot('trend_vuln1orMore', data, layout, chartConfig, { responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_vuln1orMore', data, layout, chartConfig);
 
 };
 
@@ -304,7 +396,7 @@ function multiVulnBarChart() {
             color: scaleColours.vuln1orMore.primary,
             width: 2
         },
-        name: '% Vulnerable for BC',
+        name: 'BC Overall<br>Vulnerability',
         text: overallTrendData.vuln,
         texttemplate: "%{text}%",
         textposition: "top center",
@@ -319,9 +411,7 @@ function multiVulnBarChart() {
     var data = [oneVuln, twoVuln, threeVuln, fourVuln, fiveVuln, vuln1orMoreTrendLine];
 
     var layout = {
-        barmode: 'stack',
-        width: 1024,
-        height: 500,
+        autosize: true,
         margin: {
             l: 100,
             r: 0,
@@ -333,6 +423,15 @@ function multiVulnBarChart() {
             family: 'Nunito',
             size: 16,
             color: '#252525',
+        },
+        title: {
+            text: 'Percentage of Overall Vulnerability by Number of Scales Vulnerable, Wave 2 to Wave 8',
+            font: {
+                size: 14,
+                color: '#76777a',
+            },
+            xanchor: 'left',
+            x: 0,
         },
         xaxis: {
             title: 'Wave',
@@ -350,6 +449,18 @@ function multiVulnBarChart() {
             itemclick: false,
             itemdoubleclick: false,
         },
+        barmode: 'stack',
+        annotations: [{
+            xref: 'paper',
+            yref: 'paper',
+            x: 1.2,
+            xanchor: 'right',
+            y: -0.3,
+            yanchor: 'right',
+            text: '©Human Early Learning Partnership, UBC - 2022',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false,
+        }],
         shapes: [{
             type: 'rect',
             // x-reference is assigned to the x-values
@@ -369,7 +480,7 @@ function multiVulnBarChart() {
         }]
     };
 
-    Plotly.newPlot('stackedBar_multiVuln', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('stackedBar_multiVuln', data, layout, chartConfig, { displayModeBar: true });
 };
 
 multiVulnBarChart();
@@ -421,15 +532,23 @@ function overallOutcomesBarChart() {
     var data = [vuln, inFlux, onTrack];
 
     var layout = {
+        autosize: true,
         barmode: 'stack',
-        width: 1024,
-        height: 500,
         margin: {
             l: 100,
             r: 0,
             b: 100,
-            t: 0,
+            t: 30,
             pad: 4
+        },
+        title: {
+            text: 'Overall EDI Outcomes, Wave 2 to Wave 8',
+            font: {
+                size: 14,
+                color: '#76777a',
+            },
+            xanchor: 'left',
+            x: 0,
         },
         legend: {
             x: 110,
@@ -450,6 +569,17 @@ function overallOutcomesBarChart() {
             title: "Wave"
         },
         hovermode: false,
+        annotations: [{
+            xref: 'paper',
+            yref: 'paper',
+            x: 1.2,
+            xanchor: 'right',
+            y: -0.25,
+            yanchor: 'right',
+            text: '©Human Early Learning Partnership, UBC - 2022',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false,
+        }],
         shapes: [{
             type: 'rect',
             // x-reference is assigned to the x-values
@@ -469,7 +599,7 @@ function overallOutcomesBarChart() {
         }]
     };
 
-    Plotly.newPlot('stackedBar_vulnProfile', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('stackedBar_vulnProfile', data, layout, chartConfig, { displayModeBar: true });
 };
 
 overallOutcomesBarChart();
@@ -482,15 +612,17 @@ overallOutcomesBarChart();
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVyZW15cmFsZXhhbmRlciIsImEiOiJjaWtyZ3F4anEwMWE5dXBtN3htc3ljNWZ5In0.9rsk4ooh5S5Cr15q9W2rDA';
 
 const map = new mapboxgl.Map({
-    container: 'map', // container id
+    container: 'mapVuln1orMore', // container id
     zoom: 4.3,
-    center: [-126.0, 54.4],
+    center: [-120.0, 54.5],
     style: 'mapbox://styles/jeremyralexander/cl94q91qo000514o4l6p1on6l', // replace this with your style URL
     cooperativeGestures: true,
 });
 
-// const nav = new mapboxgl.NavigationControl();
-// map.addControl(nav, 'top-left');
+// map.addControl(new mapboxgl.FullscreenControl());
+
+const nav = new mapboxgl.FullscreenControl();
+map.addControl(nav, 'top-left');
 
 
 
@@ -511,7 +643,7 @@ function nhRangeVulnBoxPlot() {
         },
         marker: {
             color: scaleColours.vuln1orMore.colorramp[5],
-            opacity: 0.5,
+            opacity: 0.3,
         },
         text: 'ytest',
         name: '2',
@@ -529,7 +661,7 @@ function nhRangeVulnBoxPlot() {
         },
         marker: {
             color: scaleColours.vuln1orMore.colorramp[5],
-            opacity: 0.5,
+            opacity: 0.3,
         },
         name: '3',
         type: 'box',
@@ -546,7 +678,7 @@ function nhRangeVulnBoxPlot() {
         },
         marker: {
             color: scaleColours.vuln1orMore.colorramp[5],
-            opacity: 0.5,
+            opacity: 0.3,
         },
         name: '4',
         type: 'box',
@@ -563,7 +695,7 @@ function nhRangeVulnBoxPlot() {
         },
         marker: {
             color: scaleColours.vuln1orMore.colorramp[5],
-            opacity: 0.5,
+            opacity: 0.3,
         },
         name: '5',
         type: 'box',
@@ -580,7 +712,7 @@ function nhRangeVulnBoxPlot() {
         },
         marker: {
             color: scaleColours.vuln1orMore.colorramp[5],
-            opacity: 0.5,
+            opacity: 0.3,
         },
         name: '6',
         type: 'box',
@@ -597,7 +729,7 @@ function nhRangeVulnBoxPlot() {
         },
         marker: {
             color: scaleColours.vuln1orMore.colorramp[5],
-            opacity: 0.5,
+            opacity: 0.3,
         },
         name: '7',
         type: 'box',
@@ -614,7 +746,7 @@ function nhRangeVulnBoxPlot() {
         },
         marker: {
             color: scaleColours.vuln1orMore.colorramp[5],
-            opacity: 0.5,
+            opacity: 0.3,
         },
         name: '8',
         type: 'box',
@@ -624,11 +756,10 @@ function nhRangeVulnBoxPlot() {
     var data = [wave2, wave3, wave4, wave5, wave6, wave7, wave8];
 
     var layout = {
-        width: 1024,
-        height: 500,
+        autosize: true,
         margin: {
             l: 100,
-            r: 50,
+            r: 75,
             b: 100,
             t: 50,
             pad: 4
@@ -637,6 +768,15 @@ function nhRangeVulnBoxPlot() {
             family: 'Nunito',
             size: 16,
             color: '#252525',
+        },
+        title: {
+            text: 'Range in EDI Overall Vulnerability for BC Neighbourhoods, Wave 2 to Wave 8',
+            font: {
+                size: 14,
+                color: '#76777a',
+            },
+            xanchor: 'left',
+            x: 0,
         },
         yaxis: {
             title: "Percent Vulnerable (%)",
@@ -647,6 +787,27 @@ function nhRangeVulnBoxPlot() {
             title: "Wave",
             margin: '2rem',
         },
+        annotations: [{
+            xref: 'paper',
+            yref: 'paper',
+            x: 0.95,
+            xanchor: 'left',
+            y: 0.41,
+            yanchor: 'middle',
+            text: 'BC Average',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false
+        },{
+            xref: 'paper',
+            yref: 'paper',
+            x: 1.05,
+            xanchor: 'right',
+            y: -0.3,
+            yanchor: 'right',
+            text: '©Human Early Learning Partnership, UBC - 2022',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false,
+        }],
         showlegend: false,
         hovermode: false,
         shapes: [{
@@ -668,7 +829,7 @@ function nhRangeVulnBoxPlot() {
         }]
     }
 
-    Plotly.newPlot('range_vulnDisparity', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('range_vulnDisparity', data, layout, chartConfig, { displayModeBar: true });
 
 
     const bcAvgTrend = {
@@ -691,7 +852,7 @@ function nhRangeVulnBoxPlot() {
         text: overallTrendData.vuln,
         texttemplate: "<b>%{text}%</b>",
         textposition: "top right",
-        textfont: { 'family': "Nunito", 'size': 16, 'color': '#252525'},
+        textfont: { 'family': "Nunito", 'size': 14, 'color': '#252525'},
         hoverinfo: 'none',
 
     };
@@ -701,11 +862,11 @@ function nhRangeVulnBoxPlot() {
         y: [55.4,69.6,59.1,56.4,60.4,68.4,72.0],
         mode: 'markers+text',
         marker: {
-            color: scaleColours.vuln1orMore.primary,
             size: 10,
+            symbol: 'line-ew',
             line: {
-                color: '#fff',
-                width: 1
+                color: scaleColours.vuln1orMore.primary,
+                width: 2
             },
         },
         line: {
@@ -714,8 +875,8 @@ function nhRangeVulnBoxPlot() {
         },
         text: [55.4,69.6,59.1,56.4,60.4,68.4,72.0],
         texttemplate: "<b>%{text}%</b>",
-        textposition: "top right",
-        textfont: { 'family': "Nunito", 'size': 16, 'color': '#252525'},
+        textposition: "middle right",
+        textfont: { 'family': "Nunito", 'size': 14, 'color': '#252525'},
         hoverinfo: 'none',
     };
 
@@ -726,9 +887,10 @@ function nhRangeVulnBoxPlot() {
         marker: {
             color: scaleColours.vuln1orMore.primary,
             size: 10,
+            symbol: 'line-ew',
             line: {
-                color: '#fff',
-                width: 1
+                color: scaleColours.vuln1orMore.primary,
+                width: 2
             },
         },
         line: {
@@ -738,19 +900,18 @@ function nhRangeVulnBoxPlot() {
         text: [6.0,6.1,6.4,4.3,9.2,12.6,13.2],
         texttemplate: "<b>%{text}%</b>",
         textposition: "middle right",
-        textfont: { 'family': "Nunito", 'size': 16, 'color': '#252525'},
+        textfont: { 'family': "Nunito", 'size': 14, 'color': '#252525'},
         hoverinfo: 'none',
     };
 
     var data = [topNHTrend,lowNHTrend,bcAvgTrend];
 
     var layout = {
-        width: 1024,
-        height: 500,
+        autosize: true,
         showlegend: false,
         margin: {
             l: 100,
-            r: 50,
+            r: 75,
             b: 100,
             t: 50,
             pad: 4
@@ -781,90 +942,11 @@ function nhRangeVulnBoxPlot() {
         }
     };
 
-    Plotly.newPlot('vuln1orMoreTrend_vulndisparity', data, layout, { displayModeBar: false,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('vuln1orMoreTrend_vulndisparity', data, layout, { displayModeBar: false });
 
 };
 
 nhRangeVulnBoxPlot();
-
-
-
-
-
-// HIGH LOW NH GROUPED BAR CHART
-
-// function nhLowHighBarChart() {
-
-//     const below15 = {
-//         x: xValueWaves,
-//         y: [22,25,7,7,6,5,2],
-//         name: 'Below 15%',
-//         type: 'bar',
-//         text: [22,25,7,7,6,5,2],
-//         texttemplate: "%{text}",
-//         marker: {
-//             color: scaleColours.vuln1orMore.colorramp[1],
-//         },
-//     };
-
-//     const above45 = {
-//         x: xValueWaves,
-//         y: [27,19,24,23,26,33,27],
-//         name: 'Above 45%',
-//         type: 'bar',
-//         text: [27,19,24,23,26,33,27],
-//         texttemplate: "%{text}",
-//         marker: {
-//             color: scaleColours.vuln1orMore.colorramp[6],
-//         },
-//     };
-
-
-//     var data = [below15,above45];
-
-//     var layout = {
-//         barmode: 'group',
-//         width: 1024,
-//         height: 500,
-//         margin: {
-//             l: 100,
-//             r: 50,
-//             b: 100,
-//             t: 50,
-//             pad: 4
-//         },
-//         font: {
-//             family: 'Nunito',
-//             size: 16,
-//             color: '#252525',
-//         },
-//         xaxis: {
-//             title: 'Wave',
-//             showgrid: false,
-//             range: [1.5, 8.5],
-//             fixedrange: true
-//         },
-//         yaxis: {
-//             title: 'Number of Neighbourhoods',
-//             showline: false,
-//             range: [0, 40],
-//             fixedrange: true,
-//             dtick: 10,
-//         },
-//         legend: {
-//             xanchor: 'center',
-//             x: 0.5,
-//             traceorder: 'reversed',
-//             itemclick: false,
-//             itemdoubleclick: false,
-//         }
-//     };
-
-//     Plotly.newPlot('barchart_nhLowHigh', data, layout, { displayModeBar: true,  responsive: true, scrollZoom: false });
-// };
-
-// nhLowHighBarChart();
-
 
 
 
@@ -913,8 +995,7 @@ function urbanRuralOutcomesBarChart() {
 
     var layout = {
         barmode: 'stack',
-        width: 500,
-        height: 500,
+        autosize: true,
         margin: {
             l: 100,
             r: 0,
@@ -933,16 +1014,36 @@ function urbanRuralOutcomesBarChart() {
             size: 16,
             color: '#252525',
         },
+        title: {
+            text: 'Overall EDI Outcomes',
+            font: {
+                size: 14,
+                color: '#76777a',
+            },
+            xanchor: 'middle',
+            x: 0.47,
+        },
         yaxis: {
             title: "Percent (%)"
         },
         xaxis: {
             title: "Wave 8"
         },
+        annotations: [{
+            xref: 'paper',
+            yref: 'paper',
+            x: 1.2,
+            xanchor: 'right',
+            y: -0.33,
+            yanchor: 'right',
+            text: '©Human Early Learning Partnership, UBC - 2022',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false,
+        }],
         hovermode: false,
     };
 
-    Plotly.newPlot('stackedBar_urbanRuralvulnProfile', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('stackedBar_urbanRuralvulnProfile', data, layout, chartConfig, { displayModeBar: true });
 };
 
 urbanRuralOutcomesBarChart();
@@ -966,6 +1067,11 @@ function scaleOutcomesBarChart() {
         type: 'bar',
         text: xValue_vulnOutcome.map(String),
         texttemplate: "%{text:.1f}%",
+        textfont: {
+            family: 'Nunito',
+            size: 14,
+            color: '#252525',
+        },
         hoverinfo: 'none',
         marker: {
             color: scaleColours.vuln1orMore.primary,
@@ -976,10 +1082,15 @@ function scaleOutcomesBarChart() {
     const inFluxOutcome = {
         x: xValue_inFluxOutcome,
         y: yValue_ScaleNames,
-        name: 'In Flux',
+        name: 'At Risk',
         type: 'bar',
         text: xValue_inFluxOutcome.map(String),
         texttemplate: "%{text:.1f}%",
+        textfont: {
+            family: 'Nunito',
+            size: 14,
+            color: '#252525',
+        },
         hoverinfo: 'none',
         marker: {
             color: scaleColours.inFlux
@@ -1006,19 +1117,27 @@ function scaleOutcomesBarChart() {
 
     var layout = {
         barmode: 'stack',
-        width: 1024,
-        height: 500,
+        autosize: true,
         margin: {
             l: 150,
             r: 50,
             b: 100,
-            t: 50,
+            t: 100,
             pad: 5
         },
         font: {
             family: 'Nunito',
-            size: 16,
+            size: 14,
             color: '#252525',
+        },
+        title: {
+            text: 'EDI Scale-Level Outcomes, All Five Scales, Wave 8',
+            font: {
+                size: 14,
+                color: '#76777a',
+            },
+            xanchor: 'left',
+            x: 0,
         },
         legend: {
             "orientation": "h",
@@ -1032,15 +1151,26 @@ function scaleOutcomesBarChart() {
             title: "Percent (%)",
             showgrid: false,
             range: [0, 100],
-            fixedrange: true
+            fixedrange: true,
         },
         yaxis: {
             showline: false,
             fixedrange: true
         },
+        annotations: [{
+            xref: 'paper',
+            yref: 'paper',
+            x: 1,
+            xanchor: 'right',
+            y: -0.3,
+            yanchor: 'right',
+            text: '©Human Early Learning Partnership, UBC - 2022',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false,
+        }],
     };
 
-    Plotly.newPlot('stackedBar_scaleOutcomes', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('stackedBar_scaleOutcomes', data, layout, chartConfig, { displayModeBar: true });
 };
 
 scaleOutcomesBarChart();
@@ -1191,6 +1321,7 @@ function allScalesTrendChart() {
     var data = [socialTrend, emotionalTrend, physicalTrend, languageTrend, communicationTrend];
 
     var layout = {
+        autosize: true,
         margin: {
             l: 100,
             r: 50,
@@ -1202,6 +1333,15 @@ function allScalesTrendChart() {
             family: 'Nunito',
             size: 16,
             color: '#252525',
+        },
+        title: {
+            text: 'EDI Scale-Level Trends in Vulnerability, All Five Scales, Wave 2-8',
+            font: {
+                size: 14,
+                color: '#76777a',
+            },
+            xanchor: 'left',
+            x: 0,
         },
         xaxis: {
             title: 'Wave',
@@ -1219,6 +1359,17 @@ function allScalesTrendChart() {
             itemclick: 'toggleothers',
             itemdoubleclick: 'false',
         },
+        annotations: [{
+            xref: 'paper',
+            yref: 'paper',
+            x: 1.28,
+            xanchor: 'right',
+            y: -0.3,
+            yanchor: 'right',
+            text: '©Human Early Learning Partnership, UBC - 2022',
+            font: {size: 12, color: '#76777a'},
+            showarrow: false,
+        }],
         shapes: [{
             type: 'rect',
             // x-reference is assigned to the x-values
@@ -1238,7 +1389,7 @@ function allScalesTrendChart() {
         }]
     };
 
-    Plotly.newPlot('trend_allScales', data, layout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_allScales', data, layout, chartConfig, { displayModeBar: true });
 };
 
 allScalesTrendChart();
@@ -1249,18 +1400,29 @@ allScalesTrendChart();
 // INDIVIDUAL SCALE-LEVEL TREND CHARTS
 
 const indScaleChartlayout = {
-    width: 976,
-    height: 200,
+    autosize: true,
+    width: 890,
+    height: 355,
     margin: {
-        l: 100,
-        r: 50,
-        b: 0,
-        t: 0
+        l: 50,
+        r: 100,
+        b: 100,
+        t: 50,
+        pad: 12
     },
     font: {
         family: 'Nunito',
         size: 16,
         color: '#252525',
+    },
+    title: {
+        text: 'placeholder',
+        font: {
+            size: 14,
+            color: '#76777a',
+        },
+        xanchor: 'left',
+        x: 0,
     },
     xaxis: {
         showzeroline: false,
@@ -1268,14 +1430,28 @@ const indScaleChartlayout = {
         showgrid: false,
         zeroline: false,
         showticklabels: false,
+        range: [1.5, 8.5],
+        fixedrange: true
     },
     yaxis: {
         showline: false,
         showgrid: false,
         visibile: false,
-        range: [8, 20],
         showticklabels: false,
+        fixedrange: true,
+        range: [8,19],
     },
+    annotations: [{
+        xref: 'paper',
+        yref: 'paper',
+        x: 1.1,
+        xanchor: 'right',
+        y: -0.3,
+        yanchor: 'right',
+        text: '©Human Early Learning Partnership, UBC - 2022',
+        font: {size: 12, color: '#76777a'},
+        showarrow: false,
+    }],
     shapes: [{
         type: 'rect',
         // x-reference is assigned to the x-values
@@ -1309,6 +1485,7 @@ function socialScalesTrendChart() {
             color: scaleColours.social.primary,
             width: 4
         },
+        name: 'Social Competence',
         text: socialTrendData.scaleVuln.map(String),
         texttemplate: "%{text:.1f}%",
         textposition: "top center",
@@ -1320,7 +1497,13 @@ function socialScalesTrendChart() {
         textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.social.primary },
     }];
 
-    Plotly.newPlot('trend_socialScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_socialScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true });
+
+    var titleUpdate = {
+        'title.text': 'Social Competence - Trends in Vulnerability, Wave 2-8',
+    }
+
+    Plotly.relayout('trend_socialScales', titleUpdate);
 
 };
 socialScalesTrendChart();
@@ -1351,7 +1534,13 @@ function emotionalScalesTrendChart() {
         textfont: { 'family': "Nunito", 'size': 16, 'color': scaleColours.emotional.primary },
     }];
 
-    Plotly.newPlot('trend_emotionalScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_emotionalScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true });
+
+    var titleUpdate = {
+        'title.text': 'Emotional Maturity - Trends in Vulnerability, Wave 2-8',
+    }
+
+    Plotly.relayout('trend_emotionalScales', titleUpdate);
 
 };
 emotionalScalesTrendChart();
@@ -1383,7 +1572,13 @@ function physicalScalesTrendChart() {
 
     }];
 
-    Plotly.newPlot('trend_physicalScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_physicalScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true });
+
+    var titleUpdate = {
+        'title.text': 'Physical Health & Well-being - Trends in Vulnerability, Wave 2-8',
+    }
+
+    Plotly.relayout('trend_physicalScales', titleUpdate);
 
 };
 physicalScalesTrendChart();
@@ -1415,7 +1610,13 @@ function languageScalesTrendChart() {
 
     }];
 
-    Plotly.newPlot('trend_languageScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_languageScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true });
+
+    var titleUpdate = {
+        'title.text': 'Language & Cognitive Development - Trends in Vulnerability, Wave 2-8',
+    }
+
+    Plotly.relayout('trend_languageScales', titleUpdate);
 
 };
 languageScalesTrendChart();
@@ -1447,7 +1648,13 @@ function communicationScalesTrendChart() {
 
     }];
 
-    Plotly.newPlot('trend_communicationScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_communicationScales', data, indScaleChartlayout, chartConfig, { displayModeBar: true });
+
+    var titleUpdate = {
+        'title.text': 'Communication Skills & General Knowledge - Trends in Vulnerability, Wave 2-8',
+    }
+
+    Plotly.relayout('trend_communicationScales', titleUpdate);
 
 };
 communicationScalesTrendChart();
@@ -1455,13 +1662,14 @@ communicationScalesTrendChart();
 // SUBSCALE-LEVEL TREND CHARTS
 
 const subscaleLayout = {
-    width: 1024,
-    height: 750,
+    autosize: true,
+    width: 890,
+    height: 450,
     margin: {
-        t: 100,
+        t: 140,
         r: 100,
         b: 100,
-        l: 100,
+        l: 50,
         pad: 12
     },
     font: {
@@ -1469,12 +1677,21 @@ const subscaleLayout = {
         size: 16,
         color: '#252525',
     },
+    title: {
+        text: 'placeholder',
+        font: {
+            size: 14,
+            color: '#76777a',
+        },
+        xanchor: 'left',
+        x: 0,
+    },
     legend: {
         "orientation": "h",
-        x: 0,
-        y: 1.6,
+        x: -0.07,
+        y: 1.3,
         font: {
-            size: 16,
+            size: 12,
         },
         itemwidth: 75,
         itemclick: 'toggleothers',
@@ -1484,7 +1701,8 @@ const subscaleLayout = {
         title: 'Wave',
         showzeroline: false,
         showgrid: false,
-        fixedrange: true,
+        range: [1.5, 8.5],
+        fixedrange: true
     },
     yaxis: {
         showline: false,
@@ -1496,12 +1714,12 @@ const subscaleLayout = {
         yref: 'paper',
         x: 1,
         xanchor: 'left',
-        y: 1,
+        y: 1.05,
         yanchor: 'top',
         text: 'Worse',
         font: {size: 16, color: '#CB181D'},
         showarrow: false
-      }, {
+      },{
         xref: 'paper',
         yref: 'paper',
         x: 1,
@@ -1511,17 +1729,27 @@ const subscaleLayout = {
         text: 'BC Average',
         font: {size: 12, color: '#76777a'},
         showarrow: false
-      }, {
+      },{
         xref: 'paper',
         yref: 'paper',
-        x: 1,
+        x: 1.005,
         xanchor: 'left',
         y: 0.05,
         yanchor: 'top',
         text: 'Better',
         font: {size: 16, color: '#8EC73F'},
         showarrow: false
-      }],
+      },{
+        xref: 'paper',
+        yref: 'paper',
+        x: 1.12,
+        xanchor: 'right',
+        y: -0.35,
+        yanchor: 'right',
+        text: '©Human Early Learning Partnership, UBC - 2022',
+        font: {size: 12, color: '#76777a'},
+        showarrow: false,
+    }],
     hovermode: false,
     shapes: [{
         type: 'rect',
@@ -1548,7 +1776,7 @@ function socialSubscalesTrendChart() {
     const overallSocCompSubscale = {
         x: xValueWaves,
         y: socialTrendData.subscales.overallSocComp,
-        name: '<span style="color: #3182BD; font-size: 1.1rem;">Overall Social Competence</span></br></br>Ability to get along with other children, play with various children, cooperation and self-confidence.',
+        name: '<span style="color: #3182BD; ">Overall Social Competence</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.social.primary,
@@ -1563,7 +1791,7 @@ function socialSubscalesTrendChart() {
     const approachLearnSubscale = {
         x: xValueWaves,
         y: socialTrendData.subscales.approachLearn,
-        name: '<span style="color: #3182BD; font-size: 1.1rem;">Approach to Learning</span></br></br>Ability to work independently, solve problems, follow instructions and class routines, adjust to changes.',
+        name: '<span style="color: #3182BD; ">Approach to Learning</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.social.primary,
@@ -1578,7 +1806,7 @@ function socialSubscalesTrendChart() {
     const readinessExploreSubscale = {
         x: xValueWaves,
         y: socialTrendData.subscales.readinessExplore,
-        name: '<span style="color: #3182BD; font-size: 1.1rem;">Readiness to Explore</span></br></br>Curiosity about the surrounding world, eagerness to explore new books, toys and games.',
+        name: '<span style="color: #3182BD; ">Readiness to Explore</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.social.primary,
@@ -1593,7 +1821,7 @@ function socialSubscalesTrendChart() {
     const respectResponsibilitySubscale = {
         x: xValueWaves,
         y: socialTrendData.subscales.respectResponsibility,
-        name: '<span style="color: #3182BD; font-size: 1.1rem;">Respect & Responsibility</span></br></br>Showing respect to others and property of others, self-control, ability to follow rules, take care of materials, </br>accept responsibility.',
+        name: '<span style="color: #3182BD; ">Respect & Responsibility</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.social.primary,
@@ -1609,7 +1837,13 @@ function socialSubscalesTrendChart() {
     var data = [overallSocCompSubscale, approachLearnSubscale, readinessExploreSubscale, respectResponsibilitySubscale];
 
 
-    Plotly.newPlot('trend_socialSubscales', data, subscaleLayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_socialSubscales', data, subscaleLayout, chartConfig, { displayModeBar: true });
+
+    var titleUpdate = {
+        'title.text': 'Social Competence - Subscale Trends, Wave 2-8',
+    }
+
+    Plotly.relayout('trend_socialSubscales', titleUpdate);
 
 };
 socialSubscalesTrendChart();
@@ -1619,7 +1853,7 @@ function emotionalSubscalesTrendChart() {
     const agressiveSubscale = {
         x: xValueWaves,
         y: emotionalTrendData.subscales.agressive,
-        name: '<span style="color: #54278F; font-size: 1.1rem;">Agressive Behaviour</span></br></br>Aggressive behaviours, using aggression as means of solving conflict, temper tantrums, being mean to others.',
+        name: '<span style="color: #54278F; ">Agressive Behaviour</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.emotional.primary,
@@ -1634,7 +1868,7 @@ function emotionalSubscalesTrendChart() {
     const anxiousFearfulSubscale = {
         x: xValueWaves,
         y: emotionalTrendData.subscales.anxiousFearful,
-        name: '<span style="color: #54278F; font-size: 1.1rem;">Anxious & Fearful Behaviours</span></br></br>Appearing fearful, anxious, worried, frequent crying, difficulty with separation from caregivers.',
+        name: '<span style="color: #54278F; ">Anxious & Fearful Behaviours</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.emotional.primary,
@@ -1650,7 +1884,7 @@ function emotionalSubscalesTrendChart() {
     const hyperInattentiveSubscale = {
         x: xValueWaves,
         y: emotionalTrendData.subscales.hyperInattentive,
-        name: '<span style="color: #54278F; font-size: 1.1rem;">Hyperactivity & Inattention</span></br></br>Hyperactive behaviours, distractible, difficulty waiting, impulsivity.',
+        name: '<span style="color: #54278F; ">Hyperactivity & Inattention</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.emotional.primary,
@@ -1665,7 +1899,7 @@ function emotionalSubscalesTrendChart() {
     const prosocialHelpingSubscale = {
         x: xValueWaves,
         y: emotionalTrendData.subscales.prosocialHelping,
-        name: '<span style="color: #54278F; font-size: 1.1rem;">Prosocial & Helping Behaviours</span></br></br>Helping someone who is sick, hurt or upset, inviting bystanders to join in, spontaneous offers of help.',
+        name: '<span style="color: #54278F; ">Prosocial & Helping Behaviours</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.emotional.primary,
@@ -1680,7 +1914,13 @@ function emotionalSubscalesTrendChart() {
 
     var data = [agressiveSubscale, anxiousFearfulSubscale, hyperInattentiveSubscale, prosocialHelpingSubscale];
 
-    Plotly.newPlot('trend_emotionalSubscales', data, subscaleLayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_emotionalSubscales', data, subscaleLayout, chartConfig, { displayModeBar: true });
+
+    var titleUpdate = {
+        'title.text': 'Emotional Maturity - Subscale Trends, Wave 2-8',
+    }
+
+    Plotly.relayout('trend_emotionalSubscales', titleUpdate);
 
 };
 emotionalSubscalesTrendChart();
@@ -1690,7 +1930,7 @@ function physicalSubscalesTrendChart() {
     const grossFineMotorSkillsSubscale = {
         x: xValueWaves,
         y: physicalTrendData.subscales.grossFineMotorSkills,
-        name: '<span style="color: #006D2C; font-size: 1.1rem;">Physical Readiness</span></br></br>Dressed appropriately for school activities, coming to school tired, late or hungry.',
+        name: '<span style="color: #006D2C; ">Gross & Fine Motor Skills</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.physical.primary,
@@ -1705,7 +1945,7 @@ function physicalSubscalesTrendChart() {
     const physIndepSubscale = {
         x: xValueWaves,
         y: physicalTrendData.subscales.physIndep,
-        name: '<span style="color: #006D2C; font-size: 1.1rem;">Physical Independence</span></br></br>Washroom independence, coordination, established hand preference and sucking thumb/fingers.',
+        name: '<span style="color: #006D2C; ">Physical Independence</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.physical.primary,
@@ -1720,7 +1960,7 @@ function physicalSubscalesTrendChart() {
     const physReadSubscale = {
         x: xValueWaves,
         y: physicalTrendData.subscales.physRead,
-        name: '<span style="color: #006D2C; font-size: 1.1rem;">Gross & Fine Motor Skills</span></br></br>Physically able to tackle the school day and gross and fine motor skills.',
+        name: '<span style="color: #006D2C; ">Physical Readiness</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.physical.primary,
@@ -1735,7 +1975,13 @@ function physicalSubscalesTrendChart() {
 
     var data = [grossFineMotorSkillsSubscale, physIndepSubscale, physReadSubscale];
 
-    Plotly.newPlot('trend_physicalSubscales', data, subscaleLayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_physicalSubscales', data, subscaleLayout, chartConfig, { displayModeBar: true });
+
+    var titleUpdate = {
+        'title.text': 'Physical Health & Well-being - Subscale Trends, Wave 2-8',
+    }
+
+    Plotly.relayout('trend_physicalSubscales', titleUpdate);
 
 };
 physicalSubscalesTrendChart();
@@ -1745,7 +1991,7 @@ function languageSubscalesTrendChart() {
     const basicLitSubscale = {
         x: xValueWaves,
         y: languageTrendData.subscales.basicLit,
-        name: '<span style="color: #C51B8A; font-size: 1.1rem;">Basic Literacy</span></br></br>Handling books, identifying some letters and letter sounds, awareness of rhyming words, writing direction.',
+        name: '<span style="color: #C51B8A; ">Basic Literacy</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.language.primary,
@@ -1760,7 +2006,7 @@ function languageSubscalesTrendChart() {
     const advLitSubscale = {
         x: xValueWaves,
         y: languageTrendData.subscales.advLit,
-        name: '<span style="color: #C51B8A; font-size: 1.1rem;">Advanced Literacy</span></br></br>Reading simple, complex words or sentences, writing simple words or sentences. ',
+        name: '<span style="color: #C51B8A; ">Advanced Literacy</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.language.primary,
@@ -1775,7 +2021,7 @@ function languageSubscalesTrendChart() {
     const basicNumSubscale = {
         x: xValueWaves,
         y: languageTrendData.subscales.basicNum,
-        name: '<span style="color: #C51B8A; font-size: 1.1rem;">Basic Numeracy</span></br></br>Counting to 20, comparing numbers, sorting and classifying, recognizing shapes. ',
+        name: '<span style="color: #C51B8A; ">Basic Numeracy</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.language.primary,
@@ -1790,7 +2036,7 @@ function languageSubscalesTrendChart() {
     const interestNumLitSubscale = {
         x: xValueWaves,
         y: languageTrendData.subscales.interestNumLit,
-        name: '<span style="color: #C51B8A; font-size: 1.1rem;">Interest in Literacy, Numeracy & Memory</span></br></br>Interest in books and reading, numbers and math, and ability to remember things. ',
+        name: '<span style="color: #C51B8A; ">Interest in Literacy, Numeracy & Memory</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.language.primary,
@@ -1805,31 +2051,13 @@ function languageSubscalesTrendChart() {
 
     var data = [basicLitSubscale, advLitSubscale, basicNumSubscale, interestNumLitSubscale];
 
-    Plotly.newPlot('trend_languageSubscales', data, subscaleLayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
+    Plotly.newPlot('trend_languageSubscales', data, subscaleLayout, chartConfig, { displayModeBar: true });
+
+    var titleUpdate = {
+        'title.text': 'Language & Cognitive Development - Subscale Trends, Wave 2-8',
+    }
+
+    Plotly.relayout('trend_languageSubscales', titleUpdate);
 
 };
 languageSubscalesTrendChart();
-
-function communicationSubscalesTrendChart() {
-
-    const commSkillsSubscale = {
-        x: xValueWaves,
-        y: communicationTrendData.subscales.commSkills,
-        name: 'Communication Skills & General Knowledge',
-        mode: 'lines+markers+text',
-        marker: {
-            color: scaleColours.communication.primary,
-            size: 12
-        },
-        line: {
-            color: scaleColours.communication.primary,
-            width: 4
-        },
-    };
-
-    var data = [commSkillsSubscale];
-
-    Plotly.newPlot('trend_communicationSubscales', data, subscaleLayout, chartConfig, { displayModeBar: true,  responsive: true, scrollZoom: false });
-
-};
-communicationSubscalesTrendChart();
