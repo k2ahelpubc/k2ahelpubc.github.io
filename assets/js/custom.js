@@ -1,4 +1,4 @@
-import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
+import "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
