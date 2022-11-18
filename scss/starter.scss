@@ -9,7 +9,6 @@
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
 
-
 //
 // Bring in Bootstrap
 //
@@ -30,194 +29,10 @@ $enable-shadows: true;
 
 // Customize some defaults
 
-// FONTS
-$font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-//Font weights
-$light-font: 300;
-$normal: 400;
-$medium: 500;
-$semi-bold: 600;
-$bold: 700;
-$bolder: 800;
-
-.light-font {font-weight: 300;}
-.normal-font {font-weight: 400;}
-.medium-font {font-weight: 500;}
-.semi-bold-font {font-weight: 600;}
-.bold-font {font-weight: 700;}
-.bolder-font {font-weight: 800;}
-
-//sizes
-$font-size-base: 1rem;
-$large-body-font-size: $font-size-base * 1.625;
-.large-body-font-size {
-  font-size: $large-body-font-size;
-}
-$small-body-font-size: $font-size-base * 0.8;
-.small-body-font-size {
-  font-size: $small-body-font-size;
-}
-
-// COLOUR THEME
-$edi-base: #e4002b;
-$primary:  #cb181d;
-$secondary:#fb6a4a;
-$success:#31a354;
-$warning:#fcb017;
-$danger:#ef3b2c;
-$white: #fff;
-$off-white:#f5f5f5;
-$light:#b3b5ba;
-$med:#76777a;
-$dark:#353535;
-
-.text-med {
-  color: $med;
-}
-
-$social: #3182BD;
-$emotional: #54278F;
-$physical: #006D2C;
-$language: #C51B8A;
-$communication: #E6550D;
-$vulnerable: #cb181d;
-$influx: #FCB017;
-$ontrack: #8EC73F;
-
-.socialColor {
-  color: $social;
-}
-.emotionalColor {
-  color: $emotional;
-}
-.physicalColor {
-  color: $physical;
-}
-.languageColor {
-  color: $language;
-}
-.communicationColor {
-  color: $communication;
-}
-
-.vulnerableColor {
-  color: $edi-base;
-}
-.inFluxColor {
-  color: $influx;
-}
-.onTrackColor {
-  color: $ontrack;
-}
-
-.meaningfulincrease{
-  color: #D96936;
-}
-.meaningfuldecrease{
-  color: #8FC289;
-}
-.meaningfulstable{
-  color: #ACA199;
-}
-
-.socialBcgColor {
-  background-color: $social;
-}
-.emotionalBcgColor {
-  background-color: $emotional;
-}
-.physicalBcgColor {
-  background-color: $physical;
-}
-.languageBcgColor {
-  background-color: $language;
-}
-.communicationBcgColor {
-  background-color: $communication;
-}
-.vulnerableBcgColor {
-  background-color: $edi-base;
-}
-
-.bg-offwhite {
-  background-color: $off-white;
-}
-
-$help-base: #002e5d;
-$help-1: $help-base;
-$help-2: #34587d;
-$help-3: #68829d;
-$help-4: #9cacbd;
-$help-5: #d0d6dd;
-
-//tdi colours
-$tdi-base: #7abe20;
-$tdi-1: $tdi-base;
-$tdi-2: #94cc4c;
-$tdi-3: #aeda78;
-$tdi-4: #c8e8a4;
-$tdi-5: #e2f6d0;
-
-//edi colours
-$edi-base: #e4002b;
-$edi-1: $edi-base;
-$edi-2: #d7424a;
-$edi-3: #db6771;
-$edi-4: #de8991;
-$edi-5: #e1aead;
-
-//cheq colours
-$cheq-base: #283d8f;
-$cheq-1: $cheq-base;
-$cheq-2: #3444a1;
-$cheq-3: #6874b9;
-$cheq-4: #9ca4d1;
-$cheq-5: #d4d8e9;
-
-//mdi colours
-$mdi-base: #de7c00;
-$mdi-1: $mdi-base;
-$mdi-2: #e49634;
-$mdi-3: #eab068;
-$mdi-4: #f0ca9c;
-$mdi-5: #f6e4d0;
-
-//ydi colours
-$ydi-base: #512d6d;
-$ydi-1: $ydi-base;
-$ydi-2: #6f5186;
-$ydi-3: #9a85aa;
-$ydi-4: #b4a4c0;
-$ydi-5: #cdc2d5;
-
-//teal colours
-$teal-base: #00778b;
-$teal-1: $teal-base;
-$teal-2: #009ca6;
-$teal-3: #64c2c2;
-$teal-4: #a8dddd;
-$teal-5: #c6eaea;
-
-//grey colours
-$grey-base: #53565a;
-$grey-1: $grey-base;
-$grey-2: #75787b;
-$grey-3: #97999b;
-$grey-4: #b1b3b3;
-$grey-5: #c8c9c7;
-$grey-6: #f8f8f8;
-
-$theme-colors: (
-  "edi": $edi-base,
-  "mdi": $mdi-base,
-  "tdi": $tdi-base,
-  "cheq": $cheq-base,
-  "ydi": $ydi-base,
-  "help": $help-base
-);
-
-
+// // FONTS
+$font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
+  "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 @import "bootstrap/scss/functions"; // Required
 @import "bootstrap/scss/variables"; // Required
@@ -225,6 +40,7 @@ $theme-colors: (
 
 @import "bootstrap/scss/root"; // Required
 @import "bootstrap/scss/reboot"; // Required
+@import "common/variables";
 @import "bootstrap/scss/type";
 // @import "bootstrap/scss/images";
 // @import "bootstrap/scss/code";
@@ -258,30 +74,131 @@ $theme-colors: (
 @import "bootstrap/scss/utilities";
 // @import "bootstrap/scss/print";
 
-
 //
 // Custom styles
 //
 
 @import "icon-list";
+@import "common/global";
+@import "common/mixins";
+@import "common/typography";
+@import "common/backgrounds";
+@import "components/buttons";
+// @import "components/comments";
+// @import "components/forms";
+@import "components/images";
+@import "components/cards";
+@import "components/box_quotes";
+@import "components/icons";
+@import "components/timeline";
+@import "components/faq";
+@import "components/carousel";
+@import "components/tables";
+// @import "components/wp-classes";
 
+// COLOR STYLES
 
-
-
-// SPACING STYLES
-.row {
-  margin: 0;
+.socialColor {
+  color: $social;
 }
 
-.mt-10 {
-  margin-top: 10rem;
+.emotionalColor {
+  color: $emotional;
 }
 
-.pt-10 {
-  padding-top: 10rem;
+.physicalColor {
+  color: $physical;
 }
-.pb-10 {
-  padding-bottom: 10rem;
+
+.languageColor {
+  color: $language;
+}
+
+.communicationColor {
+  color: $communication;
+}
+
+.vulnerableColor {
+  color: $edi-base;
+}
+
+.inFluxColor {
+  color: $influx;
+}
+
+.onTrackColor {
+  color: $ontrack;
+}
+
+// ------------------------------------- NEW!!!!! Couldn't get mixins working --------------------------------------
+
+.lightGreyColor {
+  color: $light;
+}
+
+.medGreyColor {
+  color: $med;
+}
+
+.darkGreyColor {
+  color: $dark;
+}
+
+// ------------------------------------- END OF NEW COLOR STYLES !!!!! --------------------------------------
+
+.socialBcgColor {
+  background-color: $social;
+}
+
+.emotionalBcgColor {
+  background-color: $emotional;
+}
+
+.physicalBcgColor {
+  background-color: $physical;
+}
+
+.languageBcgColor {
+  background-color: $language;
+}
+
+.communicationBcgColor {
+  background-color: $communication;
+}
+
+.vulnerableBcgColor {
+  background-color: $vulnerable;
+}
+
+.bg-offwhite {
+  background-color: $off-white;
+}
+
+// SIDEBAR MENU STYLES
+#edi-synth-side-menu {
+  top: 10rem;
+  font-size: 0.85rem;
+  margin-top: 3rem;
+  a {
+    font-weight: 400;
+  }
+  .list-group-item {
+    padding: 0.5rem;
+    position: relative;
+    display: block;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-width: 0 0 1px;
+    &:hover {
+      background-color: $gray-100;
+      text-decoration: none;
+    }
+  }
+  .list-group-item-action {
+    width: 100%;
+    color: #495057;
+    text-align: inherit;
+  }
 }
 
 // Style Bootstrap icons
@@ -289,66 +206,73 @@ $theme-colors: (
   fill: currentcolor;
 }
 
-.pulloutbox {
-  background-color: $off-white;
-  padding: 2rem;
-}
-
-
-
-
 // TAB STYLES
-
 .nav-pills .nav-link {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 50px;
   width: 90%;
+
   &.vulnerable {
     color: $edi-base;
     border: 2px solid $edi-base;
+
     &:hover {
       color: #f5f5f5;
-      background-color: rgba($edi-base,0.75);
+      background-color: rgba($edi-base, 0.75);
+    }
+
+    &.active {
+      background-color: $edi-base;
     }
   }
+
   &.social {
     color: $social;
     border: 2px solid $social;
+
     &:hover {
       color: #f5f5f5;
-      background-color: rgba($social,0.75);
+      background-color: rgba($social, 0.75);
     }
   }
+
   &.emotional {
     color: $emotional;
     border: 2px solid $emotional;
+
     &:hover {
       color: #f5f5f5;
-      background-color: rgba($emotional,0.75);
+      background-color: rgba($emotional, 0.75);
     }
   }
+
   &.physical {
     color: $physical;
     border: 2px solid $physical;
+
     &:hover {
       color: #f5f5f5;
-      background-color: rgba($physical,0.75);
+      background-color: rgba($physical, 0.75);
     }
   }
+
   &.language {
     color: $language;
     border: 2px solid $language;
+
     &:hover {
       color: #f5f5f5;
-      background-color: rgba($language,0.75);
+      background-color: rgba($language, 0.75);
     }
   }
+
   &.communication {
     color: $communication;
     border: 2px solid $communication;
+
     &:hover {
       color: #f5f5f5;
-      background-color: rgba($communication,0.75);
+      background-color: rgba($communication, 0.75);
     }
   }
 }
@@ -360,81 +284,113 @@ $theme-colors: (
 .nav-pills .nav-link.active.social {
   background-color: $social;
 }
+
 .nav-pills .nav-link.active.emotional {
   background-color: $emotional;
 }
+
 .nav-pills .nav-link.active.physical {
   background-color: $physical;
 }
+
 .nav-pills .nav-link.active.language {
   background-color: $language;
 }
+
 .nav-pills .nav-link.active.communication {
   background-color: $communication;
 }
 
-
-
 // BUTTON STYLES
-
 .btn-custom {
   background-color: transparent;
   border: none;
   box-shadow: none;
   border-radius: 50px;
 }
+
 .btn-custom-primary {
   color: $edi-base;
   background: transparent;
   border: 2px solid $edi-base;
+
   &:hover {
     background: $edi-base;
+    color: $white-colour;
+    border: 2px solid $edi-base;
+  }
+
+  &.active {
+    color: $white;
+    background-color: #9d1316;
+    background-image: none;
+    border-color: #921115;
   }
 }
+
+#BigPictureButtons {
+  &.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+  .btn-group > .btn-group:not(:last-child) > .btn {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  &.btn-group > .btn:not(:first-child),
+  .btn-group > .btn-group:not(:first-child) > .btn {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+}
+
 .btn-custom-secondary {
   background: $med;
+
   & :not(:disabled):not(.disabled).active {
     background-color: $edi-base;
   }
 }
 
+// LINK STYLES ------------------------------------------------------------- NEW!!!!
 
-
-
-// PLOTLY CUSTOM STYLES
-
-.svg-container {
-  width: 100%;
-  height: auto;
+#edi-synth-container a {
+  color: $font-base-colour;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: transparent;
+  &:hover {
+    color: $edi-base;
+    text-decoration: underline;
+  }
 }
 
+// PLOTLY JS CUSTOM STYLES ------------------------------------------------- NEW!!!!
 
-
-
-// CUSTOM TEXT STYLES
-
-.sectionTitle {
-  font-size: 3rem;
+.chartTitle p {
+  font-size: 16px;
+  color: $med;
 }
-
-
+.chartCopyright p {
+  font-size: 12px;
+  color: $med;
+}
 
 // LANDING/INTRODUCTION
 #landing-screen {
   width: 100%;
   position: relative;
   height: 80vh;
-  background-image: url('../images/landingImage.jpeg');
+  background-image: url("../images/landingImage.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center right;
+  margin-top: -1rem;
   #title-wrap {
     width: 80%;
     position: absolute;
     bottom: -25px;
     left: 75px;
     display: inline-block;
-    > .landing-content-wrap {     
+    > .landing-content-wrap {
       > p {
         margin-bottom: 0;
       }
@@ -446,7 +402,7 @@ $theme-colors: (
   position: relative;
   z-index: 4;
   display: inline-block;
-  background-color: rgba($off-white,0.65);
+  background-color: rgba($off-white, 0.65);
   padding: 20px;
   > p {
     padding: 20px 0px 10px;
@@ -468,9 +424,8 @@ $theme-colors: (
   display: inline-block;
   top: -115px;
   left: -25px;
-  background-color: rgba($secondary,0.5);
+  background-color: rgba(#fb6a4a, 0.5);
   text-transform: uppercase;
-  display: inline-block;
   padding: 20px 35px;
   > p {
     font-size: 40px;
@@ -484,7 +439,7 @@ $theme-colors: (
   top: -130px;
   left: 300px;
   z-index: 2;
-  background-color: rgba($dark,0.5);
+  background-color: rgba($dark, 0.5);
   display: inline-block;
   padding: 35px 20px 20px 20px;
   text-transform: uppercase;
@@ -504,7 +459,8 @@ $theme-colors: (
     left: 50px;
     top: 0;
   }
-  #landing-titleContainer, #landing-subtitleContainer {
+  #landing-titleContainer,
+  #landing-subtitleContainer {
     width: 280px;
     top: 0;
     left: 0;
@@ -518,7 +474,8 @@ $theme-colors: (
   #landing-screen {
     #title-wrap {
       bottom: -125px;
-      #landing-titleContainer, #landing-subtitleContainer {
+      #landing-titleContainer,
+      #landing-subtitleContainer {
         display: block;
       }
       #landing-titleContainer {
@@ -535,16 +492,7 @@ $theme-colors: (
   }
 }
 
-
 // PARTICIPATION/DEMOGRAPHICS
-.chartTitle p {
-  font-size: 14px;
-  color: $med;
-}
-.chartCopyright p {
-  font-size: 12px;
-  color: $med;
-}
 
 .tableContainer {
   position: relative;
@@ -552,8 +500,9 @@ $theme-colors: (
   margin-bottom: 0rem;
 }
 
-#demoNumTable_btn, #demoPercentTable_btn {
-  padding: .5rem 1.5rem;
+#demoNumTable_btn,
+#demoPercentTable_btn {
+  padding: 0.5rem 1.5rem;
 }
 
 #demoNumTable {
@@ -571,22 +520,34 @@ $theme-colors: (
   visibility: visible;
 }
 
+// EDI DATA COLLECTION STYLES ------------------------------- NEW!!
 
+#ediDataCollectionCTA {
+  border-left: 5px solid $edi-base;
+}
+
+// #ediDataCollectionDescription {
+//   border-top: 1px solid $edi-base;
+// }
 
 
 // MEANINGFUL CHANGE
+#meaningfulChangeIconLegend {
+  .mcIconImg {
+    width: 30px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
 #meaningfulChange {
   .mcIconImg {
-    display: inline-block;
-    padding-left: 1rem;
     width: 35px;
   }
   > .col-5 > p {
     margin-bottom: 0;
   }
 }
-
-
 
 // MAPBOX MAP STYLES
 /**
@@ -605,10 +566,10 @@ $theme-colors: (
 * (information box and legend) will be displayed
 * on the page. */
 
-.mapBoxContainer {
+.edi-synth-mapBoxContainer {
   position: relative;
 }
-.map-overlay {
+.edi-synth-map-overlay {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -625,9 +586,6 @@ $theme-colors: (
   height: auto;
 }
 
-
-
-
 // NH DISPARITY SECTION
 
 #vulnDisparity_innerWrap {
@@ -642,9 +600,6 @@ $theme-colors: (
 #nhOutcomeRanges p {
   margin-bottom: 0;
 }
-
-
-
 
 // SCALE SUBSCALE DIAGRAMS
 
@@ -669,30 +624,29 @@ $theme-colors: (
 .yAxisArrowUP {
   position: absolute;
   top: 155px;
-  right: 69px;
+  right: 95px;
   height: 80px;
   width: auto;
 }
 .yAxisArrowDOWN {
   position: absolute;
   bottom: 115px;
-  right: 69px;
+  right: 95px;
   height: 80px;
   width: auto;
 }
-
-
-
 
 // CONCLUSION SECTION
 
 .conclusionImg {
   height: 250px;
-  width: 100%;
+  width: 150%;
   margin: 10rem 0 5rem;
+  margin-left: -50%;
+  border-right: 5px solid $edi-base;
 
-  background-image: url('../images/conclusionImage.jpeg');
-  background-position: 50% 15%;
+  background-image: url("../images/conclusionImage.jpeg");
+  background-position: 50% 25%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -702,6 +656,7 @@ $theme-colors: (
   height: auto;
 }
 
+
 #citations {
   ol > li {
     color: $med;
@@ -710,20 +665,15 @@ $theme-colors: (
   }
 }
 
+// --------------------------------------- NEW !! --------------------------
 
-
-
-// SIDE BAR MENU
-
-#edi-synth-side-menu {
-  top: 8rem;
-  font-size: 0.85rem;
-
-  .list-group-item {
-    padding: 0.5rem 0.5rem;
-
-    &:hover {
-      background-color: $gray-100;
-    }
+a.inTextCitation {
+  color: $med;
+  &:hover {
+    color: $edi-base;
   }
+}
+
+#introduction a.inTextCitation {
+  font-size: 0.8rem;
 }

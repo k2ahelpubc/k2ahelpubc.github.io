@@ -1,0 +1,208 @@
+/** Import Bootstrap functions */
+@import "bootstrap/scss/functions";
+
+$nunito: "Nunito", sans-serif;
+$halant: "Halant", serif;
+$roboto: "Roboto", sans-serif;
+
+//Font weights
+$light-font: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$bolder: 800;
+
+//sizes
+$font-size-base: 1rem;
+$large-body-font-size: $font-size-base * 1.625;
+$small-body-font-size: $font-size-base * 0.8;
+
+$enable-rounded: false; //remove all rounded corners in bootstrap
+$enable-caret: false;
+
+$black-colour: #000;
+$white-colour: #fff;
+$off-white: #f5f5f5;
+$font-base-colour: #54565a;
+$block-quote-colour: #76777a;
+$media-button-colour: #7a6e66;
+$header-darker:  #535353;
+
+// help colours 
+$help-base: #002e5d;
+$help-1: $help-base;
+$help-2: #34587d;
+$help-3: #68829d;
+$help-4: #9cacbd;
+$help-5: #d0d6dd;
+
+//tdi colours
+$tdi-base: #7abe20;
+$tdi-1: $tdi-base;
+$tdi-2: #94cc4c;
+$tdi-3: #aeda78;
+$tdi-4: #c8e8a4;
+$tdi-5: #e2f6d0;
+
+//edi colours
+$edi-base: #e4002b;
+$edi-1: $edi-base;
+$edi-2: #d7424a;
+$edi-3: #db6771;
+$edi-4: #de8991;
+$edi-5: #e1aead;
+
+//cheq colours
+$cheq-base: #283d8f;
+$cheq-1: $cheq-base;
+$cheq-2: #3444a1;
+$cheq-3: #6874b9;
+$cheq-4: #9ca4d1;
+$cheq-5: #d4d8e9;
+
+//mdi colours
+$mdi-base: #de7c00;
+$mdi-1: $mdi-base;
+$mdi-2: #e49634;
+$mdi-3: #eab068;
+$mdi-4: #f0ca9c;
+$mdi-5: #f6e4d0;
+
+//ydi colours
+$ydi-base: #512d6d;
+$ydi-1: $ydi-base;
+$ydi-2: #6f5186;
+$ydi-3: #9a85aa;
+$ydi-4: #b4a4c0;
+$ydi-5: #cdc2d5;
+
+//teal colours
+$teal-base: #00778b;
+$teal-1: $teal-base;
+$teal-2: #009ca6;
+$teal-3: #64c2c2;
+$teal-4: #a8dddd;
+$teal-5: #c6eaea;
+
+//grey colours
+$grey-base: #53565a;
+$grey-1: $grey-base;
+$grey-2: #75787b;
+$grey-3: #97999b;
+$grey-4: #b1b3b3;
+$grey-5: #c8c9c7;
+$grey-6: #f8f8f8;
+
+$grey-brown: #796e65;
+$grey-brown-2: #aca39a;
+
+//content colours
+$about-box-yellow: #fef8e6;
+
+$scale-colours: (
+  "emotional": #6950a1,
+  "social": #0070b4,
+  "communication": #b05e32,
+  "language": #8b2388,
+  "physical": #00904c,
+);
+
+$light: #b3b5ba;
+$med: #76777a;
+$dark: #353535;
+
+$social: #3182bd;
+$emotional: #54278f;
+$physical: #006d2c;
+$language: #c51b8a;
+$communication: #e6550d;
+$vulnerable: #cb181d;
+$influx: #fcb017;
+$ontrack: #8ec73f;
+
+/********* BOOTSTRAP OVERRIDES *********/
+
+//Bootstrap color overrides
+$yellow: #fdda64;
+$blue: $cheq-base;
+$red: $edi-base;
+$orange: $mdi-base;
+$teal: $teal-base;
+
+$theme-colors: (
+  primary: $grey-base,
+  "edi": $edi-base,
+  "mdi": $mdi-base,
+  "tdi": $tdi-base,
+  "cheq": $cheq-base,
+  "ydi": $ydi-base,
+  "help": $help-base
+);
+
+$dropdown-bg: #f8f9fa;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+// Navbar overrides
+$nav-link-padding-x: 1.4rem;
+
+//Bootstrap font over-rides
+$font-family-base: $nunito;
+$font-family-sans-serif: $nunito;
+$font-family-monospace: $roboto;
+$line-height-base: 1.75;
+
+//Brand
+$brand-primary: $help-base;
+
+//Link over-rides
+$link-color: $help-base;
+$link-decoration: none;
+$link-hover-decoration: underline;
+$link-hover-color: $help-3;
+$link-visited-color: $help-3;
+
+//Heading overrides https://type-scale.com/ minor third
+$h1-font-size: 2.488rem;
+$h2-font-size: 2.074rem;
+$h3-font-size: 1.728rem;
+$h4-font-size: 1.444rem;
+$h5-font-size: 1.2rem;
+
+//Mobile font sizes  Major second
+$h1-font-size-sm: 1.802rem;
+$h2-font-size-sm: 1.602rem;
+$h3-font-size-sm: 1.424rem;
+$h4-font-size-sm: 1.266rem;
+$h5-font-size-sm: 1.125rem;
+
+$heading-bottom-margin: 1.38rem;
+
+$headings-color: $black-colour;
+$navbar-dark-color: $grey-base;
+$navbar-light-color: $grey-base;
+
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{str-replace(str-replace(#{$navbar-dark-color}, "(" , "%28"), ") " , "%29")}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{str-replace(str-replace(#{$navbar-light-color}, "(" , "%28"), ") " , "%29")}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
+/* stylelint-disable */
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 4),
+    7: ($spacer * 5),
+    10: ($spacer * 7),
+  ),
+  $spacers
+);
+/* stylelint-enable */

@@ -1,0 +1,26 @@
+.full-width-image {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+
+  img {
+    width: 100%;
+  }
+}
+
+.img-full-width-container {
+  width: 100%;
+}
+
+.tool-timeline {
+  max-height: 18rem;
+}
+
+.privacy-ethics-icon {
+  max-height: 8rem;
+}
+
+.asset-index-example {
+  max-width: 22rem;
+}

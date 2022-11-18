@@ -172,7 +172,7 @@ function vulnTrendLineChart() {
         title: {
             text: 'EDI Overall Vulnerability Trend for BC, Wave 2 to Wave 8',
             font: {
-                size: 14,
+                size: 16,
                 color: '#76777a',
             },
             xanchor: 'left',
@@ -427,7 +427,7 @@ function multiVulnBarChart() {
         title: {
             text: 'Percentage of Overall Vulnerability by Number of Scales Vulnerable, Wave 2 to Wave 8',
             font: {
-                size: 14,
+                size: 16,
                 color: '#76777a',
             },
             xanchor: 'left',
@@ -544,7 +544,7 @@ function overallOutcomesBarChart() {
         title: {
             text: 'Overall EDI Outcomes, Wave 2 to Wave 8',
             font: {
-                size: 14,
+                size: 16,
                 color: '#76777a',
             },
             xanchor: 'left',
@@ -563,10 +563,12 @@ function overallOutcomesBarChart() {
             color: '#252525',
         },
         yaxis: {
-            title: "Percent (%)"
+            title: "Percent (%)",
+            fixedrange: true,
         },
         xaxis: {
-            title: "Wave"
+            title: "Wave",
+            fixedrange: true,
         },
         hovermode: false,
         annotations: [{
@@ -772,11 +774,11 @@ function nhRangeVulnBoxPlot() {
         title: {
             text: 'Range in EDI Overall Vulnerability for BC Neighbourhoods, Wave 2 to Wave 8',
             font: {
-                size: 14,
+                size: 16,
                 color: '#76777a',
             },
             xanchor: 'left',
-            x: 0,
+            x: 0.015,
         },
         yaxis: {
             title: "Percent Vulnerable (%)",
@@ -850,7 +852,7 @@ function nhRangeVulnBoxPlot() {
             width: 2
         },
         text: overallTrendData.vuln,
-        texttemplate: "<b>%{text}%</b>",
+        texttemplate: "%{text:.1f}%",
         textposition: "top right",
         textfont: { 'family': "Nunito", 'size': 14, 'color': '#252525'},
         hoverinfo: 'none',
@@ -874,7 +876,7 @@ function nhRangeVulnBoxPlot() {
             width: 2
         },
         text: [55.4,69.6,59.1,56.4,60.4,68.4,72.0],
-        texttemplate: "<b>%{text}%</b>",
+        texttemplate: "%{text:.1f}%",
         textposition: "middle right",
         textfont: { 'family': "Nunito", 'size': 14, 'color': '#252525'},
         hoverinfo: 'none',
@@ -898,7 +900,7 @@ function nhRangeVulnBoxPlot() {
             width: 2
         },
         text: [6.0,6.1,6.4,4.3,9.2,12.6,13.2],
-        texttemplate: "<b>%{text}%</b>",
+        texttemplate: "%{text:.1f}%",
         textposition: "middle right",
         textfont: { 'family': "Nunito", 'size': 14, 'color': '#252525'},
         hoverinfo: 'none',
@@ -957,10 +959,10 @@ function urbanRuralOutcomesBarChart() {
 
     const vuln = {
         x: ['Urban','Rural'],
-        y: [33.4,33.2],
+        y: [33.4,32.1],
         name: 'Vulnerable',
         type: 'bar',
-        text: [33.4,33.2],
+        text: [33.4,32.1],
         texttemplate: "%{text:.1f}%",
         marker: {
             color: scaleColours.vuln1orMore.primary,
@@ -969,10 +971,10 @@ function urbanRuralOutcomesBarChart() {
 
     const inFlux = {
         x: ['Urban','Rural'],
-        y: [21.2,22.0],
+        y: [21.4,22.3],
         name: 'In Flux',
         type: 'bar',
-        text: [21.2,22.0],
+        text: [21.4,22.3],
         texttemplate: "%{text:.1f}%",
         marker: {
             color: scaleColours.inFlux
@@ -981,10 +983,10 @@ function urbanRuralOutcomesBarChart() {
 
     const onTrack = {
         x: ['Urban','Rural'],
-        y: [45.3,44.8],
+        y: [45.2,45.6],
         name: 'On Track',
         type: 'bar',
-        text: [45.3,44.8],
+        text: [45.2,45.6],
         texttemplate: "%{text:.1f}%",
         marker: {
             color: scaleColours.onTrack
@@ -995,12 +997,13 @@ function urbanRuralOutcomesBarChart() {
 
     var layout = {
         barmode: 'stack',
-        autosize: true,
+        width: 445,
+        height: 550,
         margin: {
             l: 100,
             r: 0,
             b: 100,
-            t: 50,
+            t: 75,
             pad: 4
         },
         legend: {
@@ -1015,19 +1018,21 @@ function urbanRuralOutcomesBarChart() {
             color: '#252525',
         },
         title: {
-            text: 'Overall EDI Outcomes',
+            text: 'Overall EDI Outcomes,<br>Urban and Rural Neighbourhoods, Wave 8',
             font: {
-                size: 14,
+                size: 16,
                 color: '#76777a',
             },
             xanchor: 'middle',
             x: 0.47,
         },
         yaxis: {
-            title: "Percent (%)"
+            title: "Percent (%)",
+            fixedrange: true,
         },
         xaxis: {
-            title: "Wave 8"
+            title: "Wave 8",
+            fixedrange: true,
         },
         annotations: [{
             xref: 'paper',
@@ -1055,10 +1060,10 @@ urbanRuralOutcomesBarChart();
 // SCALE-LEVEL OUTCOMES STACKED BAR CHART
 
 function scaleOutcomesBarChart() {
-    const yValue_ScaleNames = ['Physical', 'Social', 'Emotional', 'Language', 'Communication'];
-    const xValue_vulnOutcome = [14.7, 16.3, 17.5, 10.5, 14.3];
-    const xValue_inFluxOutcome = [15.5, 15.2, 15.6, 11.1, 10.4];
-    const xValue_onTrackOutcome = [69.8, 68.5, 67.0, 78.4, 75.3];
+    const yValue_ScaleNames = ['Communication', 'Language', 'Physical', 'Emotional', 'Social'];
+    const xValue_vulnOutcome = [14.3,10.5,14.7,17.5,16.3];
+    const xValue_inFluxOutcome = [10.4,11.1,15.5,15.6,15.2];
+    const xValue_onTrackOutcome = [75.3,78.4,69.8,67.0,68.5];
 
     const vulnOutcome = {
         x: xValue_vulnOutcome,
@@ -1070,7 +1075,7 @@ function scaleOutcomesBarChart() {
         textfont: {
             family: 'Nunito',
             size: 14,
-            color: '#252525',
+            color: '#fff',
         },
         hoverinfo: 'none',
         marker: {
@@ -1088,8 +1093,8 @@ function scaleOutcomesBarChart() {
         texttemplate: "%{text:.1f}%",
         textfont: {
             family: 'Nunito',
-            size: 14,
-            color: '#252525',
+            size: 16,
+            color: '#fff',
         },
         hoverinfo: 'none',
         marker: {
@@ -1105,6 +1110,11 @@ function scaleOutcomesBarChart() {
         type: 'bar',
         text: xValue_onTrackOutcome.map(String),
         texttemplate: "%{text:.1f}%",
+        textfont: {
+            family: 'Nunito',
+            size: 14,
+            color: '#fff',
+        },
         hoverinfo: 'none',
         marker: {
             color: scaleColours.onTrack
@@ -1133,7 +1143,7 @@ function scaleOutcomesBarChart() {
         title: {
             text: 'EDI Scale-Level Outcomes, All Five Scales, Wave 8',
             font: {
-                size: 14,
+                size: 16,
                 color: '#76777a',
             },
             xanchor: 'left',
@@ -1143,7 +1153,7 @@ function scaleOutcomesBarChart() {
             "orientation": "h",
             y: 5,
             x: 0,
-            traceorder: 'normal',
+            traceorder: 'reversed',
             itemclick: false,
             itemdoubleclick: false,
         },
@@ -1337,7 +1347,7 @@ function allScalesTrendChart() {
         title: {
             text: 'EDI Scale-Level Trends in Vulnerability, All Five Scales, Wave 2-8',
             font: {
-                size: 14,
+                size: 16,
                 color: '#76777a',
             },
             xanchor: 'left',
@@ -1416,9 +1426,9 @@ const indScaleChartlayout = {
         color: '#252525',
     },
     title: {
-        text: 'placeholder',
+        text: 'placeholder', // See Plotly.relayout in individual chart functions below for titles
         font: {
-            size: 14,
+            size: 16,
             color: '#76777a',
         },
         xanchor: 'left',
@@ -1678,9 +1688,9 @@ const subscaleLayout = {
         color: '#252525',
     },
     title: {
-        text: 'placeholder',
+        text: 'placeholder', // See Plotly.relayout in individual chart functions below for titles
         font: {
-            size: 14,
+            size: 16,
             color: '#76777a',
         },
         xanchor: 'left',
@@ -1691,7 +1701,7 @@ const subscaleLayout = {
         x: -0.07,
         y: 1.3,
         font: {
-            size: 12,
+            size: 14,
         },
         itemwidth: 75,
         itemclick: 'toggleothers',
@@ -1791,7 +1801,7 @@ function socialSubscalesTrendChart() {
     const approachLearnSubscale = {
         x: xValueWaves,
         y: socialTrendData.subscales.approachLearn,
-        name: '<span style="color: #3182BD; ">Approach to Learning</span>',
+        name: '<span style="color: #3182BD; ">Approaches to Learning</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.social.primary,
@@ -1806,7 +1816,7 @@ function socialSubscalesTrendChart() {
     const readinessExploreSubscale = {
         x: xValueWaves,
         y: socialTrendData.subscales.readinessExplore,
-        name: '<span style="color: #3182BD; ">Readiness to Explore</span>',
+        name: '<span style="color: #3182BD; ">Readiness to Explore New Things</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.social.primary,
@@ -1853,7 +1863,7 @@ function emotionalSubscalesTrendChart() {
     const agressiveSubscale = {
         x: xValueWaves,
         y: emotionalTrendData.subscales.agressive,
-        name: '<span style="color: #54278F; ">Agressive Behaviour</span>',
+        name: '<span style="color: #54278F; ">Aggressive Behaviour</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.emotional.primary,
@@ -1868,7 +1878,7 @@ function emotionalSubscalesTrendChart() {
     const anxiousFearfulSubscale = {
         x: xValueWaves,
         y: emotionalTrendData.subscales.anxiousFearful,
-        name: '<span style="color: #54278F; ">Anxious & Fearful Behaviours</span>',
+        name: '<span style="color: #54278F; ">Anxious & Fearful Behaviour</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.emotional.primary,
@@ -1899,7 +1909,7 @@ function emotionalSubscalesTrendChart() {
     const prosocialHelpingSubscale = {
         x: xValueWaves,
         y: emotionalTrendData.subscales.prosocialHelping,
-        name: '<span style="color: #54278F; ">Prosocial & Helping Behaviours</span>',
+        name: '<span style="color: #54278F; ">Prosocial & Helping Behaviour</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.emotional.primary,
@@ -1960,7 +1970,7 @@ function physicalSubscalesTrendChart() {
     const physReadSubscale = {
         x: xValueWaves,
         y: physicalTrendData.subscales.physRead,
-        name: '<span style="color: #006D2C; ">Physical Readiness</span>',
+        name: '<span style="color: #006D2C; ">Physical Readiness for the School Day</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.physical.primary,
@@ -1991,7 +2001,7 @@ function languageSubscalesTrendChart() {
     const basicLitSubscale = {
         x: xValueWaves,
         y: languageTrendData.subscales.basicLit,
-        name: '<span style="color: #C51B8A; ">Basic Literacy</span>',
+        name: '<span style="color: #C51B8A; ">Basic Literacy Skills</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.language.primary,
@@ -2006,7 +2016,7 @@ function languageSubscalesTrendChart() {
     const advLitSubscale = {
         x: xValueWaves,
         y: languageTrendData.subscales.advLit,
-        name: '<span style="color: #C51B8A; ">Advanced Literacy</span>',
+        name: '<span style="color: #C51B8A; ">Advanced Literacy Skills</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.language.primary,
@@ -2021,7 +2031,7 @@ function languageSubscalesTrendChart() {
     const basicNumSubscale = {
         x: xValueWaves,
         y: languageTrendData.subscales.basicNum,
-        name: '<span style="color: #C51B8A; ">Basic Numeracy</span>',
+        name: '<span style="color: #C51B8A; ">Basic Numeracy Skills</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.language.primary,
@@ -2036,7 +2046,7 @@ function languageSubscalesTrendChart() {
     const interestNumLitSubscale = {
         x: xValueWaves,
         y: languageTrendData.subscales.interestNumLit,
-        name: '<span style="color: #C51B8A; ">Interest in Literacy, Numeracy & Memory</span>',
+        name: '<span style="color: #C51B8A; ">Interest in Literacy/Numeracy & Memory</span>',
         mode: 'lines+markers+text',
         marker: {
             color: scaleColours.language.primary,

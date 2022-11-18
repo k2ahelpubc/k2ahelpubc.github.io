@@ -1,0 +1,65 @@
+.card {
+  border-color: $grey-3;
+
+  .card-title {
+    @include tool-colours;
+
+    font-size: $h5-font-size;
+    font-weight: $bold;
+    color: $black-colour;
+  }
+}
+
+.pillar-card {
+  .card-title {
+    font-size: 0.8rem;
+    margin-top: -2rem;
+    text-transform: uppercase;
+    color: $black-colour;
+    background-color: $yellow;
+    padding: 0.4rem;
+    width: 10rem;
+  }
+
+  .card-text {
+    font-family: $halant;
+  }
+
+  .card-link {
+    font-family: $halant;
+  }
+}
+
+.large-pillar-card {
+  display: flex;
+  align-items: center;
+
+  .card-title {
+    position: absolute;
+    font-size: 0.8rem;
+    margin: 0 auto;
+    margin-top: -0.8rem;
+    text-transform: uppercase;
+    color: $black-colour;
+    background-color: $yellow;
+    padding: 0.4rem;
+    width: 10rem;
+  }
+
+  .card-text {
+    font-family: $halant;
+  }
+
+  .card-link {
+    font-family: $halant;
+  }
+}
+
+.key-contact-card {
+  min-height: 350px;
+}
+
+.grey-card {
+  background-color: $grey-6;
+  border-color: $grey-6;
+}

@@ -1,0 +1,158 @@
+// Comma seperated list style https://www.codeproject.com/Tips/333651/Separating-HTML-list-items-by-comma-using-CSS
+.csv {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline;
+
+    &::after {
+      content: ",";
+    }
+
+    &:last-child::after {
+      content: "";
+    }
+  }
+}
+
+//Base font settings:
+body {
+  color: $font-base-colour;
+}
+
+.large-body-text {
+  color: $black-colour;
+  font-size: $large-body-font-size;
+}
+
+.small-body-font {
+  color: $font-base-colour;
+  font-size: $small-body-font-size;
+}
+
+.media-buttons {
+  color: $media-button-colour;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-family: $roboto;
+}
+
+h1 {
+  &.uppercase {
+    color: $help-base;
+    text-transform: uppercase;
+  }
+}
+
+h2 {
+  @include tool-colours;
+  
+  margin-bottom: $heading-bottom-margin;
+
+  &.uppercase {
+    color: $help-base;
+    text-transform: uppercase;
+  }
+
+  &.callout {
+    color: $header-darker;
+    
+    @include media-breakpoint-down(sm) {
+      font-size: $h2-font-size-sm;
+    }
+  }
+
+  &.big-stat {
+    @include tool-colours;
+
+    font-size: 6.9rem;
+    font-family: $halant;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 4.9rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: $h2-font-size-sm;
+  }
+}
+
+h3 {
+  @include tool-colours;
+  
+  margin-bottom: $heading-bottom-margin;
+
+  &.uppercase {
+    color: $black-colour;
+    text-transform: uppercase;
+  }
+}
+
+h4 {
+  @include tool-colours;
+  
+  font-weight: 500;
+
+  &.uppercase {
+    text-transform: uppercase;
+    color: $black-colour;
+  }
+}
+
+h5 {
+  @include tool-colours;
+
+  &.uppercase {
+    text-transform: uppercase;
+    color: $black-colour;
+  }
+}
+
+// When linking headers just inherit the link color and decoration from the header.
+h1,
+h2,
+h3,
+h4,
+h5 {
+  a {
+    text-decoration: inherit;
+    color: inherit;
+  }
+}
+
+.tools-timeline-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+//Scale font colours
+@each $key,$val in $scale-colours {
+  .scale-#{$key} {
+    color: #{$val};
+  }
+}
+
+.category-title {
+  position: relative;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: $white-colour;
+  background-color: $help-4;
+  padding: 0.4rem;
+  width: 10rem;
+  line-height: 1.2;
+}
+
+.research-concepts {
+  margin: 0;
+  font-size: $h3-font-size;
+  color: $black-colour;
+  font-weight: $light-font;
+}
+
+.text-small {
+  font-size: $small-body-font-size;
+}

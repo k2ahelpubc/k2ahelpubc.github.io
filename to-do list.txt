@@ -1,8 +1,7 @@
 CHART DESIGN
-- Critical Difference on scale-level trend charts
-- subscale explanation add subscale explanation notes - NEED TO?!
 - add meaninguful change explanation
-- participation rate hover text (others?!) - added it to paragraph for now
+- Critical Difference icons/smaller box/legend w/ ref note
+- subscale explanation add subscale explanation notes - NEED TO?!
 
 - add vulnerability rates to SDs on map and note re data availability
 

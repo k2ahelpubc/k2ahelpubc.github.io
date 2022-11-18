@@ -1,0 +1,9 @@
+#faq {
+  .faq-row {
+    border-bottom: 1px solid $black-colour;
+  }
+
+  .faq-row:last-child {
+    border-bottom: none;
+  }
+}

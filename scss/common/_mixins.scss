@@ -1,0 +1,48 @@
+//Add font color support
+@mixin tool-colours {
+  &.edi {
+    color: $edi-base;
+  }
+
+  &.mdi {
+    color: $mdi-base;
+  }
+
+  &.cheq {
+    color: $cheq-base;
+  }
+
+  &.tdi {
+    color: $tdi-base;
+  }
+
+  &.help {
+    color: $help-base;
+  }
+}
+
+// Block quote related
+@mixin small-block-quote {
+  color: $block-quote-colour;
+  font-family: $halant;
+  font-size: $h3-font-size;
+  line-height: 1.5;
+}
+
+@mixin thick-border-left($color) { 
+  border-left: solid $color 1.5rem;
+}
+
+/* stylelint-disable */
+@mixin fake-underline($color: #666, $top: 84%, $bottom: 90%) {
+  background-image: linear-gradient(
+      180deg, rgba(0,0,0,0),
+      rgba(0,0,0,0) $top,
+      $color $top + 0.1%,
+      $color $bottom,
+      rgba(0,0,0,0) $bottom + 0.1%,
+      rgba(0,0,0,0)
+  );
+  text-decoration: none;
+}
+/* stylelint-enable */

@@ -1,0 +1,22 @@
+.btn-card {
+  @include button-variant($white-colour, $black-colour, $black-colour);
+  
+  font-weight: $bold;
+  border-radius: 150px;
+  width: 50%;
+  font-size: $font-size-base - 0.2rem;
+}
+
+.btn-round {
+  @include button-variant($white-colour, $help-base, $help-base);
+  
+  font-weight: $bolder;
+  border-radius: 150px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  font-size: $font-size-base - 0.1rem;
+}
+
+.newsletter-btn {
+  @include button-variant($white-colour, $grey-base, $grey-base);
+}

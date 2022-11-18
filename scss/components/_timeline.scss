@@ -1,0 +1,41 @@
+ul.small-icon-timeline {
+  list-style-type: none;
+  position: relative;
+
+  > li {
+    margin: 40px 0;
+    padding-left: 40px;
+
+    &::before {
+      content: " ";
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid $grey-3;
+      left: 40px;
+      width: 20px;
+      height: 20px;
+      z-index: 400;
+    }
+
+    i {
+      position: absolute;
+      color: $grey-3;
+      margin-left: -86px;
+      margin-top: -8px;
+      margin-bottom: -10px;
+    }
+  }
+
+  &::before {
+    content: " ";
+    background: $grey-base;
+    display: inline-block;
+    position: absolute;
+    left: 49px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+  }
+}

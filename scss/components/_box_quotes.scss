@@ -1,0 +1,90 @@
+.large-block-quote {
+  color: $block-quote-colour;
+  font-family: $halant;
+  font-size: $h1-font-size;
+  line-height: 1.4;
+}
+
+.medium-block-quote {
+  color: $block-quote-colour;
+  font-family: $halant;
+  font-size: $h2-font-size;
+  line-height: 1.2;
+
+  @include media-breakpoint-down(sm) {
+    font-size: $h2-font-size-sm;
+    line-height: 1.2;
+  }
+}
+
+.small-block-quote {
+  color: $block-quote-colour;
+  font-family: $halant;
+  font-size: $h3-font-size;
+  line-height: 1.5;
+}
+
+.left-border-box-qoute {
+  @include small-block-quote();
+  @include thick-border-left($help-base); 
+  
+  padding: 1.5rem 1.4rem;
+  font-size: $font-size-base;
+  color: $font-base-colour;
+  border: solid $grey-4 1px;
+
+  h2 {
+    font-family: $nunito;
+  }
+
+  &.edi {
+    @include thick-border-left($edi-base);
+  }
+
+  &.mdi {
+    @include thick-border-left($mdi-base);
+  }
+
+  &.cheq {
+    @include thick-border-left($cheq-base);
+  }
+
+  &.tdi {
+    @include thick-border-left($tdi-base);
+  }
+
+  .learn-more {
+    font-size: $font-size-base;
+  }
+}
+
+.building-block-box {
+  background-color: rgba(248, 248, 248, 0.8);
+  color: $black-colour;
+
+  h3,
+  h4 {
+    font-weight: $light-font;
+    color: $help-base;
+  }
+}
+
+.yellow-box {
+  background-color: $about-box-yellow;
+
+  h2 {
+    font-weight: $light-font;
+    font-family: $halant;
+  }
+}
+
+.grey-box {
+  background-color: $grey-6;
+
+  h3,
+  h2 {
+    font-weight: $light-font;
+    color: $help-base;
+    margin-bottom: 1rem;
+  }
+}

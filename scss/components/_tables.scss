@@ -1,0 +1,39 @@
+.report-logo-column {
+  min-width: 9.4rem;
+}
+
+.reports-tool-logo {
+  max-height: 2.2rem;
+
+  @include media-breakpoint-down(sm) {
+    max-width: 2.5rem;
+  }
+}
+
+.report-tool-title {
+  border-left: 3px solid $grey-3;
+  padding: 0 0 0 0.8rem;
+  margin: 0 0;
+  font-size: 0.9rem;
+  color: $grey-2;
+  line-height: normal;
+}
+
+.reports-maps-tool-title {
+  padding: 0 0 0 0.8rem;
+  font-size: $h4-font-size;
+}
+
+.report-tool-text {
+  font-size: $h5-font-size;
+  line-height: normal;
+  
+  @include media-breakpoint-down(sm) { 
+    font-size: 1rem;
+  }
+}
+
+.report-list-item {
+  border: none;
+  padding: 0;
+}

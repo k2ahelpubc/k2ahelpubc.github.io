@@ -1,0 +1,40 @@
+#homePageCarousel {
+  margin-top: -4rem;
+
+  h4 {
+    font-family: $halant;
+    font-size: $font-size-base * 1.25;
+  }
+
+  .carousel-item {
+    max-height: 24rem;
+  }
+
+  .carousel-text {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: $normal;
+
+    a {
+      text-decoration: none;
+      color: $grey-2;
+
+      &.active {
+        color: $black-colour;
+        font-weight: 500;
+      }
+    }
+  }
+
+  $homepage-carousel-colours: ("1": $help-1, "2":  $help-2, "3":  $help-3, "4":  $help-4);
+
+  @each $i, $colour in $homepage-carousel-colours {
+    .carousel-text:nth-child(#{$i}) {
+      border-top: 1.5rem solid #{$colour};
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+  }
+}
