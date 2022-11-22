@@ -1,17 +1,34 @@
 CHART DESIGN
+- add meaninguful change explanation
+- Critical Difference icons/smaller box/legend w/ ref note
+- subscale explanation add subscale explanation notes - NEED TO?!
+
+- add vulnerability rates to SDs on map and note re data availability
+
 - numbers on track, at risk for hover?
 - text highlighting throughout - ASK KATE AS PART OF REVIEW
-- overall outcomes explanation diagram coding
 
-- section breaks - images? red line treatment? different backgrounds?
-- responsive design
-- animation plan?!
-- Plotly JS restyle in scales/subscale section to switch scales and to add labels when a single line is isolated in all scales chart.
-- Vuln map time slider through waves
+- sidebar nav - NIGEL to work on this
 
+- Add text labels to all scales chart when a line is isolated.
 - Multiple vulnerabilities, perhaps pop out the % in the chart description that highlights the change between W2 and W8
 - change cursor type on chart hover to cursor when there are not interactions
+- nh disparity download plot for whole chart...rearrange series
+- scale subscale secondary nav - INCOMPLETE
+
+- customize png download button
+
+- Vuln map time slider through waves
 
 WEBSITE UPDATES
 - note re w7 sd data and w8 provincial
 - remove w7 provincial report and add Wave 8 provincial report
+
+CHANGES/UPDATES
+- Add “participation 88%” sentence after the “participation and demographics” title
+- Range of V:
+    - add explanation for chart… 
+    - add W8 only range for on track and in flux
+- NHs under 15% and over 45% - don’t worry about suppression because can’t go back to W2; Kate and Jeremy decided to go with chart… check #s in chart (W7 was 3 for under 15%??)
+- Rural/Urban yes, need definitions from Barry (kate to follow up)
+- Jeremy and Kate can do content review, goes to Mariana for final sign off

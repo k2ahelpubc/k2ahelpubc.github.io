@@ -176,17 +176,19 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
 
 // SIDEBAR MENU STYLES
 #edi-synth-side-menu {
-  top: 16rem;
+  top: 10rem;
   font-size: 0.85rem;
   margin-top: 3rem;
+  a {
+    font-weight: 400;
+  }
   .list-group-item {
     padding: 0.5rem;
     position: relative;
     display: block;
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 1px solid rgba(0,0,0,.125);
     border-width: 0 0 1px;
-    font-weight: 400;
     &:hover {
       background-color: $gray-100;
       text-decoration: none;
@@ -352,7 +354,7 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
 
 #edi-synth-container a {
   color: $font-base-colour;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
   background-color: transparent;
   &:hover {
@@ -370,33 +372,6 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
 .chartCopyright p {
   font-size: 12px;
   color: $med;
-}
-a.chartDownloadBtn {
-  color: $light !important;
-  position: relative;
-  bottom: -30px;
-  right: 10px;
-  z-index: 10;
-  &:hover {
-    color: $edi-base !important;
-  }
-  &.tableDownloadBtn {
-    bottom: 40px;
-    right: 800px;
-  }
-  &.nhRangeDownloadBtn {
-    bottom: -60px;
-    right: -773px;
-  }
-  &.urbanRuralDownloadBtn {
-    top: 525px;
-  }
-  &.scaleOutcomesDownloadBtn {
-    bottom: -60px;
-  }
-  &.subscaleDownloadBtn {
-    top: 75px;
-  }
 }
 
 // LANDING/INTRODUCTION
@@ -555,6 +530,7 @@ a.chartDownloadBtn {
 //   border-top: 1px solid $edi-base;
 // }
 
+
 // MEANINGFUL CHANGE
 #meaningfulChangeIconLegend {
   .mcIconImg {
@@ -565,34 +541,22 @@ a.chartDownloadBtn {
   }
 }
 #meaningfulChange {
-  position: relative;
-  top: -190px;
   .mcIconImg {
-    width: 25px;
-  }
-  .mcIconLabel {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 0;
-    margin-left: 1rem;
+    width: 35px;
   }
   > .col-5 > p {
     margin-bottom: 0;
   }
 }
 
-#meaningfulChange
-
 // MAPBOX MAP STYLES
 /**
 * Create a position for the map
 * on the page */
-#mapVuln1orMore.mapboxgl-map {
+#mapVuln1orMore {
   position: relative;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
   width: auto;
   height: 600px;
 }
@@ -602,9 +566,8 @@ a.chartDownloadBtn {
 * (information box and legend) will be displayed
 * on the page. */
 
-#edi-synth-mapBoxContainer {
+.edi-synth-mapBoxContainer {
   position: relative;
-  height: 600px;
 }
 .edi-synth-map-overlay {
   position: absolute;
@@ -630,7 +593,7 @@ a.chartDownloadBtn {
 }
 #vuln1orMoreTrend_vulndisparity {
   position: absolute;
-  top: 24px;
+  top: 0;
   left: 0;
   z-index: 5;
 }
@@ -655,30 +618,6 @@ a.chartDownloadBtn {
     padding-left: 0;
     font-size: 0.9rem;
     color: $med;
-  }
-}
-
-#social-subscales-container,
-#emotional-subscales-container,
-#physical-subscales-container,
-#language-subscales-container,
-#communication-subscales-container {
-  position: relative;
-  #meaningfulChange {
-    position: absolute;
-    top: 305px;
-    right: 240px;
-    margin: 0 auto;
-  }
-}
-#social-subscales-container {
-  #meaningfulChange {
-    top: 285px;
-  }
-}
-#communication-subscales-container {
-  #meaningfulChange {
-    top: 215px;
   }
 }
 
@@ -716,6 +655,7 @@ a.chartDownloadBtn {
   width: 100px;
   height: auto;
 }
+
 
 #citations {
   ol > li {
