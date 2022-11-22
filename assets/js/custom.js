@@ -133,7 +133,6 @@ $('#demoPercentTable_btn').on('click', function () {
 
 
 
-
 // VULNERABLE ON ONE OR MORE SCALES OVER TIME
 
 function vulnTrendLineChart() {
@@ -302,7 +301,6 @@ function vulnTrendLineChart() {
 };
 
 vulnTrendLineChart();
-
 
 
 
@@ -488,7 +486,6 @@ multiVulnBarChart();
 
 
 
-
 // OVERALL VULNERABILITY PROFILE
 
 function overallOutcomesBarChart() {
@@ -609,7 +606,6 @@ overallOutcomesBarChart();
 
 
 
-
 // MAPBOX MAP CODE
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVyZW15cmFsZXhhbmRlciIsImEiOiJjaWtyZ3F4anEwMWE5dXBtN3htc3ljNWZ5In0.9rsk4ooh5S5Cr15q9W2rDA';
 
@@ -625,7 +621,6 @@ const map = new mapboxgl.Map({
 
 const nav = new mapboxgl.FullscreenControl();
 map.addControl(nav, 'top-left');
-
 
 
 
@@ -1058,7 +1053,6 @@ urbanRuralOutcomesBarChart();
 
 
 
-
 // SCALE-LEVEL OUTCOMES STACKED BAR CHART
 
 function scaleOutcomesBarChart() {
@@ -1187,7 +1181,6 @@ function scaleOutcomesBarChart() {
 };
 
 scaleOutcomesBarChart();
-
 
 
 
