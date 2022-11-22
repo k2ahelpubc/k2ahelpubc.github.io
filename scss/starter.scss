@@ -551,9 +551,11 @@ a.chartDownloadBtn {
   border-left: 5px solid $edi-base;
 }
 
-// #ediDataCollectionDescription {
-//   border-top: 1px solid $edi-base;
-// }
+#ediDataCollectionDescription {
+  border-top: 1px solid $edi-base;
+  border-right: 1px solid $edi-base;
+  // border-left: 5px solid $med;
+}
 
 // MEANINGFUL CHANGE
 #meaningfulChangeIconLegend {
@@ -642,6 +644,7 @@ a.chartDownloadBtn {
   margin-left: 38px;
   a.subscaleListName {
     color: $dark;
+    font-weight: 400 !important;
   }
   ul.subscaleListDescription {
     list-style: none;
@@ -667,6 +670,11 @@ a.chartDownloadBtn {
 #social-subscales-container {
   #meaningfulChange {
     top: 285px;
+  }
+}
+#language-subscales-container {
+  #meaningfulChange {
+    top: 330px;
   }
 }
 #communication-subscales-container {
