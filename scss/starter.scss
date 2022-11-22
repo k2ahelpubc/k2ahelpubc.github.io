@@ -581,12 +581,11 @@ a.chartDownloadBtn {
   }
 }
 
-#meaningfulChange
-
 // MAPBOX MAP STYLES
 /**
 * Create a position for the map
 * on the page */
+
 #mapVuln1orMore {
   position: relative;
   top: 0;
@@ -600,9 +599,6 @@ a.chartDownloadBtn {
 * (information box and legend) will be displayed
 * on the page. */
 
-.edi-synth-mapBoxContainer {
-  position: relative;
-}
 .edi-synth-map-overlay {
   position: absolute;
   top: 50%;
