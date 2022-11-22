@@ -1,5 +1,4 @@
 import "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js";
-import { map } from "jquery";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -108,7 +107,7 @@ const communicationTrendData = {
 
 const chartConfig = {
     displayModeBar: true,
-    modeBarButtonsToRemove: ['toImage','zoom2d', 'pan2d', 'select2d', 'lasso2d', 'zoomIn2d', 'zoomOut2d', 'autoScale2d', 'resetScale2d'],
+    modeBarButtonsToRemove: ['zoom2d', 'pan2d', 'select2d', 'lasso2d', 'zoomIn2d', 'zoomOut2d', 'autoScale2d', 'resetScale2d'],
     displaylogo: false,
     toImageButtonOptions: {
         format: 'png',
@@ -609,11 +608,13 @@ overallOutcomesBarChart();
 
 
 
+
+
 // MAPBOX MAP CODE
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVyZW15cmFsZXhhbmRlciIsImEiOiJjaWtyZ3F4anEwMWE5dXBtN3htc3ljNWZ5In0.9rsk4ooh5S5Cr15q9W2rDA';
 
-const mapvuln1orMore = new mapboxgl.Map({
-    container: 'edi-synth-map', // container id
+const map = new mapboxgl.Map({
+    container: 'mapVuln1orMore', // container id
     zoom: 4.3,
     center: [-120.0, 54.5],
     style: 'mapbox://styles/jeremyralexander/cl94q91qo000514o4l6p1on6l', // replace this with your style URL
@@ -623,10 +624,9 @@ const mapvuln1orMore = new mapboxgl.Map({
 // map.addControl(new mapboxgl.FullscreenControl());
 
 const nav = new mapboxgl.FullscreenControl();
-mapvuln1orMore.addControl(nav, 'top-left');
+map.addControl(nav, 'top-left');
 
-$('#edi-synth-map').show();
-map.resize();
+
 
 
 
@@ -758,13 +758,12 @@ function nhRangeVulnBoxPlot() {
     var data = [wave2, wave3, wave4, wave5, wave6, wave7, wave8];
 
     var layout = {
-        width: 920,
-        height: 500,
+        autosize: true,
         margin: {
             l: 100,
             r: 75,
             b: 100,
-            t: 100,
+            t: 50,
             pad: 4
         },
         font: {
@@ -910,14 +909,13 @@ function nhRangeVulnBoxPlot() {
     var data = [topNHTrend,lowNHTrend,bcAvgTrend];
 
     var layout = {
-        width: 920,
-        height: 500,
+        autosize: true,
         showlegend: false,
         margin: {
             l: 100,
             r: 75,
             b: 100,
-            t: 100,
+            t: 50,
             pad: 4
         },
         font: {
@@ -1150,7 +1148,6 @@ function scaleOutcomesBarChart() {
             },
             xanchor: 'left',
             x: 0,
-            y: 1.3,
         },
         legend: {
             "orientation": "h",
