@@ -613,8 +613,8 @@ overallOutcomesBarChart();
 // MAPBOX MAP CODE
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVyZW15cmFsZXhhbmRlciIsImEiOiJjaWtyZ3F4anEwMWE5dXBtN3htc3ljNWZ5In0.9rsk4ooh5S5Cr15q9W2rDA';
 
-const mapvuln1orMore = new mapboxgl.Map({
-    container: 'edi-synth-map', // container id
+const map = new mapboxgl.Map({
+    container: 'mapVuln1orMore', // container id
     zoom: 4.3,
     center: [-120.0, 54.5],
     style: 'mapbox://styles/jeremyralexander/cl94q91qo000514o4l6p1on6l', // replace this with your style URL
@@ -624,7 +624,7 @@ const mapvuln1orMore = new mapboxgl.Map({
 // map.addControl(new mapboxgl.FullscreenControl());
 
 const nav = new mapboxgl.FullscreenControl();
-mapvuln1orMore.addControl(nav, 'top-left');
+map.addControl(nav, 'top-left');
 
 
 
