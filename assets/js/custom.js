@@ -1,4 +1,5 @@
 import "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js";
+import { map } from "jquery";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -608,8 +609,6 @@ overallOutcomesBarChart();
 
 
 
-
-
 // MAPBOX MAP CODE
 mapboxgl.accessToken = 'pk.eyJ1IjoiamVyZW15cmFsZXhhbmRlciIsImEiOiJjaWtyZ3F4anEwMWE5dXBtN3htc3ljNWZ5In0.9rsk4ooh5S5Cr15q9W2rDA';
 
@@ -626,7 +625,8 @@ const mapvuln1orMore = new mapboxgl.Map({
 const nav = new mapboxgl.FullscreenControl();
 mapvuln1orMore.addControl(nav, 'top-left');
 
-
+$('#edi-synth-map').show();
+map.resize();
 
 
 
