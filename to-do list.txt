@@ -1,12 +1,12 @@
 CHART DESIGN
-- CD for subscales
+- redesign subscale legend with CD icons in it and not dynamic
 - numbers on track, at risk for hover?
 - text highlighting throughout - ASK KATE AS PART OF REVIEW
-- overall outcomes explanation diagram coding
 
 - section breaks - images? red line treatment? different backgrounds?
 - responsive design
 - animation plan?!
+
 - Plotly JS restyle in scales/subscale section to switch scales and to add labels when a single line is isolated in all scales chart.
 - Vuln map time slider through waves
 

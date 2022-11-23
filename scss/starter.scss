@@ -144,6 +144,18 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
   color: $dark;
 }
 
+.lightGreyBcgColor {
+  background-color: $light;
+}
+
+.medGreyBcgColor {
+  background-color: $med;
+}
+
+.darkGreyBcgColor {
+  background-color: $dark;
+}
+
 // ------------------------------------- END OF NEW COLOR STYLES !!!!! --------------------------------------
 
 .socialBcgColor {
@@ -167,7 +179,13 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
 }
 
 .vulnerableBcgColor {
-  background-color: $vulnerable;
+  background-color: $edi-base;
+}
+.inFluxBcgColor {
+  background-color: $influx;
+}
+.onTrackBcgColor {
+  background-color: $ontrack;
 }
 
 .bg-offwhite {
@@ -582,6 +600,64 @@ a.chartDownloadBtn {
     margin-bottom: 0;
   }
 }
+
+
+// OVERALL OUTCOMES DESCRIPTION DIAGRAM STYLES
+
+#outcomesGraphic {
+  padding: 1rem;
+
+  #fiveScalesEDIRow {
+    padding: 1rem;
+    .fiveScalesEDIIcons {
+      .scaleIconsOutcomes {
+        width: 75px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+
+  .bracketDivider {
+    height: 15px;
+    border-bottom: 1px solid $med;
+    border-right: 1px solid $med;
+    border-left: 1px solid $med;
+  }
+  .bracketDividerConnector {
+    height: 32px;
+    width: 2px;
+    margin: 0 auto;
+  }
+
+  #scaleLevelOutcomesRow, #overallOutcomesRow {
+    #overallOutcomeBoxes {
+      min-height: 247px;
+    }
+    .scaleOutcomeBox {
+      height: 100%;
+      min-height: 255px;
+    }
+    .outcomesBarDiagram {
+      height: 15px;
+      width: 100%;
+      & .vulnOutcomesBarDiagram {
+        width: 10%;
+      }
+      & .inFluxOutcomesBarDiagram {
+        width: 25%;
+      }
+      & .onTrackOutcomesBarDiagram {
+        width: 65%;
+      }
+      & .activeBarDiagram {
+        border: 1px solid $dark;
+      }
+    }
+  }
+
+}
+
 
 // MAPBOX MAP STYLES
 /**

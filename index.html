@@ -122,7 +122,7 @@
       
               <h2 class=" text-edi mb-5">The Big Picture</h2>
               <h3>Participation and Demographics</h3>
-              <p>The participation rate for Wave 8 was 88% of children enrolled in participating districts and schools. This rate is consistent with rates seen in earlier waves of data collection. The EDI Wave participation rate is the percentage of kindergarten children enrolled in the school districts involved in EDI data collection whom an EDI questionnaire was completed. EDI data are collected in 57 BC school districts and some participating independent and First Nations schools.</p>
+              <p>The participation rate for Wave 8 was 88% of children enrolled in participating districts and schools. This rate is consistent with rates seen in earlier waves of data collection. The EDI Wave participation rate is the percentage of kindergarten children enrolled in the school districts involved in EDI data collection for whom an EDI questionnaire was completed. EDI data are collected in 57 BC school districts and some participating independent and First Nations schools.</p>
               
               <div class="row justify-content-between align-items-center mt-5">
                 <div class="chartTitle">
@@ -409,12 +409,108 @@
       
                 <p>In past EDI data reporting, the focus has been on highlighting rates of developmental vulnerability in populations of children. However, the EDI measures the whole distribution of children's outcomes, allowing us to understand areas of strength and potential across the five key areas of development. <a class="" href="#outcomesGraphic" data-toggle="collapse" role="button" aria-expanded="false"
                     aria-controls="outcomesGraphic"> Discover more about the new metrics in the EDI. <i class="fa fa-angle-down"></i></a></p>
-      
-                <div class="row">
-                  <div id="outcomesGraphic" class="py-5 px-3 mx-auto collapse">
-      
-                    <img src="https://earlylearning.ubc.ca/app/uploads/2022/11/EDI-Outcomes.png" alt="EDI Scale-level and Overall Outcomes" width="100%">
+                
+                <div id="outcomesGraphic" class="collapse">
+                  <div id="fiveScalesEDIRow" class="row">
+                    <div class="col-4"></div>
+                    <div class="col-8 fiveScalesEDIIcons">
+                      <div class="row col justify-content-center text-center">
+                        <h5 class="text-uppercase">Five Scales of the EDI</h5>
+                      </div>
+                      <div class="row">
+                        <div class="col text-center"><img src="https://earlylearning.ubc.ca//app/uploads/2022/11/SocComp-90@72px.png" alt="Social Competence Scale Icon" title="Social Competence Scale" class="scaleIconsOutcomes"><i class="fas fa-long-arrow-alt-down socialColor"></i></div>
+                        <div class="col text-center"><img src="https://earlylearning.ubc.ca//app/uploads/2022/11/EmotMat-90@72px.png" alt="Emotional Maturity Scale Icon" title="Social Competence Scale" class="scaleIconsOutcomes"><i class="fas fa-long-arrow-alt-down emotionalColor"></i></div>
+                        <div class="col text-center"><img src="https://earlylearning.ubc.ca//app/uploads/2022/11/PhysHealthWB-90@72px_EDI.png" alt="Physical Health & Well-being Scale Icon" title="Physical Health & Well-being Scale" class="scaleIconsOutcomes"><i class="fas fa-long-arrow-alt-down physicalColor"></i></div>
+                        <div class="col text-center"><img src="https://earlylearning.ubc.ca//app/uploads/2022/11/LangCog-90@72px.png" alt="Language & Cognitive Development Scale Icon" title="Language & Cognitive Development Scale" class="scaleIconsOutcomes"><i class="fas fa-long-arrow-alt-down languageColor"></i></div>
+                        <div class="col text-center"><img src="https://earlylearning.ubc.ca//app/uploads/2022/11/ComSkGenKn-90@72px.png" alt="Communication Skills & General Knowledge Scale Icon" title="Communication Skills & General Knowledge Scale" class="scaleIconsOutcomes"><i class="fa fa-long-arrow-alt-down" style="color: #B05E32;"></i></div>
+                      </div>
+                    </div>
+                  </div>
 
+                  <div class="row mt-3 mx-auto outcomesDivider">
+                    <div class="col-4 mx-1"></div>
+                    <div class="col">
+                      <div class="bracketDivider"></div>
+                      <div class="row">
+                        <div class="col"><div class="bracketDividerConnector vulnerableBcgColor mb-n1"></div></div>
+                        <div class="col"><div class="bracketDividerConnector inFluxBcgColor mb-n1"></div></div>
+                        <div class="col"><div class="bracketDividerConnector onTrackBcgColor mb-n1"></div></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="scaleLevelOutcomesRow" class="row mx-auto justify-content-center align-items-center">
+                    <div class="col-4 p-5 mx-1 bg-offwhite scaleOutcomeBox">
+                      <h5>Scale-level Outcomes</h5>
+                      <p class="mb-0">The percentage of children on track, at risk or vulnerable on the specifc area of development the scale is measuring.</p>
+                    </div>
+                    <div class="col">
+                      <div id="scaleOutcomeBoxes" class="row justify-content-center align-items-center text-center">
+                        <div class="col m-1 py-6 p-3 bg-offwhite scaleOutcomeBox">
+                          <h5 class="text-uppercase vulnerableColor">Vulnerable</h5>
+                          <p class="font-weight-bold mb-0 text-small">Below the 10%</p>
+                          <p class="text-small">cut-off score.</p>
+                          <div class="row mx-auto justify-content-center outcomesBarDiagram">
+                            <div id="" class="vulnOutcomesBarDiagram vulnerableBcgColor activeBarDiagram"></div>
+                            <div id="" class="inFluxOutcomesBarDiagram inFluxBcgColor"></div>
+                            <div id="" class="onTrackOutcomesBarDiagram onTrackBcgColor"></div>
+                          </div>
+                        </div>
+                        <div class="col m-1 py-6 p-3 bg-offwhite scaleOutcomeBox">
+                          <h5 class="text-uppercase inFluxColor">At Risk</h5>
+                          <p class="font-weight-bold mb-0 text-small">Between the 10% - 25%</p>
+                          <p class="text-small">cut-off scores</p>
+                          <div class="row mx-auto justify-content-center outcomesBarDiagram">
+                            <div id="" class="vulnOutcomesBarDiagram vulnerableBcgColor"></div>
+                            <div id="" class="inFluxOutcomesBarDiagram inFluxBcgColor activeBarDiagram"></div>
+                            <div id="" class="onTrackOutcomesBarDiagram onTrackBcgColor"></div>
+                          </div>
+                        </div>
+                        <div class="col m-1 py-6 p-3 bg-offwhite scaleOutcomeBox">
+                          <h5 class="text-uppercase onTrackColor">On Track</h5>
+                          <p class="font-weight-bold mb-0 text-small">Above the 25%</p>
+                          <p class="text-small">cut-off score</p>
+                          <div class="row mx-auto justify-content-center outcomesBarDiagram">
+                            <div id="" class="vulnOutcomesBarDiagram vulnerableBcgColor"></div>
+                            <div id="" class="inFluxOutcomesBarDiagram inFluxBcgColor"></div>
+                            <div id="" class="onTrackOutcomesBarDiagram onTrackBcgColor activeBarDiagram"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mt-3 mx-auto outcomesDivider">
+                    <div class="col-4"></div>
+                    <div class="col">
+                      <div class="bracketDivider"></div>
+                      <div class="bracketDividerConnector medGreyBcgColor mb-n1"></div>
+                    </div>
+                  </div>
+                  
+                  <div id="overallOutcomesRow" class="row mx-auto justify-content-center align-items-center">
+                    <div class="col-4 p-5 mr-1 border overallOutcomeBox">
+                      <h5>Overall Outcomes</h5>
+                      <p class="mb-0">The percentage of children on track, in Flux or vulnerable in their overall development across all five scales of the EDI.</p>
+                    </div>
+                    <div class="col border m-1">
+                      <div id="overallOutcomeBoxes" class="row justify-content-center align-items-center text-center">
+                        <div class="col p-3 overallOutcomeBox">
+                          <h5 class="text-uppercase vulnerableColor">Vulnerable</h5>
+                          <p class="text-small mb-0">on one or more scales.</p>
+                          <br>
+                        </div>
+                        <div class="col p-3 overallOutcomeBox">
+                          <h5 class="text-uppercase inFluxColor">In Flux</h5>
+                          <p class="text-small mb-0">Not vulnerable or on track on any scale.</p>
+                        </div>
+                        <div class="col p-3 overallOutcomeBox">
+                          <h5 class="text-uppercase onTrackColor">On Track</h5>
+                          <p class="text-small mb-0">on all scales</p>
+                          <br>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -461,7 +557,7 @@
                               <img src="assets/images/vuln1orMore_Legend.png" class="legendClasses" alt="Map Legend Vulnerable on One or More Scales">
                               <hr>
                               <p class="mt-3 small mb-0">Range in School District Vulnerability</p>
-                              <p class="text-edi mb-0">21.8% - 72%</p>
+                              <p class="text-edi mb-0">21.8% - 72.0%</p>
                           </div>
                       </div>
       
