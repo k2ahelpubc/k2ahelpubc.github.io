@@ -1,7 +1,5 @@
 CHART DESIGN
-- redesign subscale legend with CD icons in it and not dynamic
 - numbers on track, at risk for hover?
-- text highlighting throughout - ASK KATE AS PART OF REVIEW
 
 - section breaks - images? red line treatment? different backgrounds?
 - responsive design

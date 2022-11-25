@@ -163,7 +163,7 @@ function vulnTrendLineChart() {
         autosize: true,
         margin: {
             l: 75,
-            r: 0,
+            r: 150,
             b: 100,
             t: 50,
             pad: 4
@@ -1150,7 +1150,7 @@ function scaleOutcomesBarChart() {
             "orientation": "h",
             y: 5,
             x: 0,
-            traceorder: 'reversed',
+            traceorder: 'normal',
             itemclick: false,
             itemdoubleclick: false,
         },
@@ -1327,13 +1327,14 @@ function allScalesTrendChart() {
     var data = [socialTrend, emotionalTrend, physicalTrend, languageTrend, communicationTrend];
 
     var layout = {
-        autosize: true,
+        width: 890,
+        height: 450,
         margin: {
-            l: 100,
-            r: 50,
+            l: 75,
+            r: 0,
             b: 100,
             t: 50,
-            pad: 4
+            pad: 12
         },
         font: {
             family: 'Nunito',
@@ -1406,7 +1407,7 @@ allScalesTrendChart();
 // INDIVIDUAL SCALE-LEVEL TREND CHARTS
 
 const indScaleChartlayout = {
-    autosize: true,
+    // autosize: true,
     width: 890,
     height: 355,
     margin: {
@@ -1447,27 +1448,27 @@ const indScaleChartlayout = {
         fixedrange: true,
         range: [8,19],
     },
-    annotations: [{
-        xref: 'paper',
-        yref: 'paper',
-        x: 1.1,
-        xanchor: 'right',
-        y: -0.3,
-        yanchor: 'right',
-        text: '©Human Early Learning Partnership, UBC - 2022',
-        font: {size: 12, color: '#76777a'},
-        showarrow: false,
-    }],
+    // annotations: [{
+    //     xref: 'paper',
+    //     yref: 'paper',
+    //     x: 0.3,
+    //     xanchor: 'right',
+    //     y: 0,
+    //     yanchor: 'right',
+    //     text: '©Human Early Learning Partnership, UBC - 2022',
+    //     font: {size: 12, color: '#76777a'},
+    //     showarrow: false,
+    // }],
     shapes: [{
         type: 'rect',
         // x-reference is assigned to the x-values
         xref: 'paper',
         // y-reference is assigned to the plot paper [0,1]
         yref: 'paper',
-        x0: 0.9,
-        y0: -0.15,
+        x0: 0.88,
+        y0: -0.5,
         x1: 0.98,
-        y1: 1,
+        y1: 1.05,
         fillcolor: '#b3b5ba',
         opacity: 0.2,
         line: {
@@ -1620,6 +1621,7 @@ function languageScalesTrendChart() {
 
     var titleUpdate = {
         'title.text': 'Language & Cognitive Development - Trends in Vulnerability, Wave 2-8',
+        'yaxis.range': [6,14],
     }
 
     Plotly.relayout('trend_languageScales', titleUpdate);
@@ -1658,6 +1660,8 @@ function communicationScalesTrendChart() {
 
     var titleUpdate = {
         'title.text': 'Communication Skills & General Knowledge - Trends in Vulnerability, Wave 2-8',
+        'height': '300',
+        'yaxis.range': [12,19],
     }
 
     Plotly.relayout('trend_communicationScales', titleUpdate);
@@ -1668,13 +1672,13 @@ communicationScalesTrendChart();
 // SUBSCALE-LEVEL TREND CHARTS
 
 const subscaleLayout = {
-    autosize: true,
+    // autosize: true,
     width: 890,
     height: 450,
     margin: {
-        t: 140,
+        t: 50,
         r: 100,
-        b: 100,
+        b: 110,
         l: 50,
         pad: 12
     },
@@ -1703,6 +1707,7 @@ const subscaleLayout = {
         itemclick: 'toggleothers',
         itemdoubleclick: 'false',
     },
+    showlegend: false,
     xaxis: {
         title: 'Wave',
         showzeroline: false,
@@ -1718,9 +1723,9 @@ const subscaleLayout = {
     annotations: [{
         xref: 'paper',
         yref: 'paper',
-        x: 1,
+        x: 1.007,
         xanchor: 'left',
-        y: 1.05,
+        y: 1.02,
         yanchor: 'top',
         text: 'Worse',
         font: {size: 16, color: '#CB181D'},
@@ -1728,19 +1733,19 @@ const subscaleLayout = {
       },{
         xref: 'paper',
         yref: 'paper',
-        x: 1,
+        x: 1.00,
         xanchor: 'left',
         y: 0.5,
         yanchor: 'middle',
-        text: 'BC Average',
+        text: 'BC Average<br>W2 Baseline',
         font: {size: 12, color: '#76777a'},
         showarrow: false
       },{
         xref: 'paper',
         yref: 'paper',
-        x: 1.005,
+        x: 1.0075,
         xanchor: 'left',
-        y: 0.05,
+        y: 0.07,
         yanchor: 'top',
         text: 'Better',
         font: {size: 16, color: '#8EC73F'},
@@ -1748,9 +1753,9 @@ const subscaleLayout = {
       },{
         xref: 'paper',
         yref: 'paper',
-        x: 1.12,
+        x: 0.3,
         xanchor: 'right',
-        y: -0.35,
+        y: -0.25,
         yanchor: 'right',
         text: '©Human Early Learning Partnership, UBC - 2022',
         font: {size: 12, color: '#76777a'},
@@ -1763,10 +1768,10 @@ const subscaleLayout = {
         xref: 'paper',
         // y-reference is assigned to the plot paper [0,1]
         yref: 'paper',
-        x0: 0.9,
+        x0: 0.88,
         y0: -0.15,
         x1: 0.98,
-        y1: 1,
+        y1: 1.5,
         fillcolor: '#b3b5ba',
         opacity: 0.2,
         line: {
@@ -1775,7 +1780,6 @@ const subscaleLayout = {
         layer: 'below',
     }]
 };
-
 
 function socialSubscalesTrendChart() {
 

@@ -379,6 +379,8 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
   }
 }
 
+
+
 // PLOTLY JS CUSTOM STYLES ------------------------------------------------- NEW!!!!
 
 .chartTitle p {
@@ -392,7 +394,7 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
 a.chartDownloadBtn {
   color: $light !important;
   position: relative;
-  bottom: -30px;
+  bottom: -35px;
   right: 10px;
   z-index: 10;
   &:hover {
@@ -413,7 +415,7 @@ a.chartDownloadBtn {
     bottom: -60px;
   }
   &.subscaleDownloadBtn {
-    top: 75px;
+    top:-65px;
   }
 }
 
@@ -535,6 +537,28 @@ a.chartDownloadBtn {
   }
 }
 
+
+
+
+// SECTION BREAK STYLES ------------------------------------------------------------ NEW!!!!
+
+.sectionBreakImg {
+  height: 250px;
+  width: 150%;
+  margin: 10rem 0 5rem;
+  margin-left: -50%;
+  border-right: 5px solid $edi-base;
+  // border-bottom: 1px solid $edi-base;
+}
+
+.ediSynthSectionTitle {
+  margin-left: 33%;
+  font-size: 3rem;
+  z-index: 2;
+}
+
+
+
 // PARTICIPATION/DEMOGRAPHICS
 
 .tableContainer {
@@ -553,6 +577,17 @@ a.chartDownloadBtn {
   top: 0;
   left: 0;
   visibility: hidden;
+}
+
+#demoNumTable thead tr th, #demoPercentTable thead tr th {
+  text-align: left;
+}
+#demoNumTable tbody tr td, #demoPercentTable tbody tr td {
+  text-align: right;
+}
+
+.waveTableHeader th {
+  text-align: right !important;
 }
 
 #demoPercentTable {
@@ -584,7 +619,7 @@ a.chartDownloadBtn {
     margin-bottom: 0;
   }
 }
-#meaningfulChange {
+.meaningfulChange {
   position: relative;
   top: -190px;
   .mcIconImg {
@@ -599,6 +634,24 @@ a.chartDownloadBtn {
   > .col-5 > p {
     margin-bottom: 0;
   }
+}
+#vuln1orMore_meaningfulChange {
+  width: 150px;
+  position: relative;
+  top: -122px;
+  right: -775px;
+}
+.scales_meaningfulChange {
+  width: 150px;
+  position: absolute;
+  top: 380px;
+  right: -15px;
+}
+.scales_communication_meaningfulChange {
+  width: 150px;
+  position: absolute;
+  top: 320px;
+  right: -15px;
 }
 
 
@@ -620,9 +673,9 @@ a.chartDownloadBtn {
 
   .bracketDivider {
     height: 15px;
-    border-bottom: 1px solid $med;
-    border-right: 1px solid $med;
-    border-left: 1px solid $med;
+    border-bottom: 2px solid $med;
+    border-right: 2px solid $med;
+    border-left: 2px solid $med;
   }
   .bracketDividerConnector {
     height: 32px;
@@ -730,63 +783,81 @@ a.chartDownloadBtn {
   }
 }
 
+#trend_socialSubscales,#trend_emotionalSubscales,#trend_physicalSubscales,#trend_languageSubscales,#trend_communicationSubscales {
+  top: -100px;
+  margin-bottom: -100px;
+}
+
 #social-subscales-container,
 #emotional-subscales-container,
 #physical-subscales-container,
 #language-subscales-container,
 #communication-subscales-container {
   position: relative;
-  #meaningfulChange {
-    position: absolute;
-    top: 305px;
-    right: 240px;
-    margin: 0 auto;
-  }
-}
-#social-subscales-container {
-  #meaningfulChange {
-    top: 285px;
-  }
-}
-#language-subscales-container {
-  #meaningfulChange {
-    top: 330px;
-  }
-}
-#communication-subscales-container {
-  #meaningfulChange {
-    top: 215px;
-  }
 }
 
 .yAxisArrowUP {
   position: absolute;
-  top: 155px;
-  right: 95px;
-  height: 80px;
+  top: 75px;
+  right: 90px;
+  height: 100px;
   width: auto;
 }
 .yAxisArrowDOWN {
   position: absolute;
-  bottom: 115px;
-  right: 95px;
-  height: 80px;
+  bottom: 135px;
+  right: 90px;
+  height: 100px;
   width: auto;
+}
+
+.subscales_legend_meaningfulChange {
+  position: relative;
+  top: -25px;
+  .subscaleLegendItem {
+    margin-left: 2.5rem;
+    font-size: 14px;
+    p.socialColor {
+      font-size: 0.9rem;
+      color: #3182BD;
+      margin-bottom: 1rem;
+    }
+    .legendLine {
+      width: 100px;
+      height: 20px;
+      margin-right: 1rem;
+    }
+  }
+  .mcIconLabel {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+  .mcIconImg {
+    width: 20px;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+  }
 }
 
 // CONCLUSION SECTION
 
 .conclusionImg {
-  height: 250px;
-  width: 150%;
-  margin: 10rem 0 5rem;
-  margin-left: -50%;
-  border-right: 5px solid $edi-base;
-
-  background-image: url("../images/conclusionImage.jpeg");
-  background-position: 50% 25%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  &::before {    
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    background-image: url("../images/conclusionImage.jpeg");
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+  }
 }
 
 .stayTunedImg {
