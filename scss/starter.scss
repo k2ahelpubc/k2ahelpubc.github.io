@@ -391,6 +391,10 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
   font-size: 12px;
   color: $med;
 }
+.subscaleCopyright {
+  position: relative;
+  top: -25px;
+}
 a.chartDownloadBtn {
   color: $light !important;
   position: relative;
@@ -406,7 +410,7 @@ a.chartDownloadBtn {
   }
   &.nhRangeDownloadBtn {
     bottom: -60px;
-    right: -773px;
+    right: -820px;
   }
   &.urbanRuralDownloadBtn {
     top: 525px;
@@ -543,19 +547,86 @@ a.chartDownloadBtn {
 // SECTION BREAK STYLES ------------------------------------------------------------ NEW!!!!
 
 .sectionBreakImg {
-  height: 250px;
-  width: 150%;
-  margin: 10rem 0 5rem;
-  margin-left: -50%;
-  border-right: 5px solid $edi-base;
-  // border-bottom: 1px solid $edi-base;
-}
+    position: relative;
+    height: 250px;
+    width: 150%;
+    margin: 10rem 0 5rem;
+    margin-left: -50%;
+    border-right: 5px solid $edi-base;
+    border-bottom: 1px solid $edi-base;
+  }
+  .conclusionImg::before {    
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+    background-image: url("../images/conclusionImage.jpeg");
+  }
+  .geogVulnImg::before {    
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    background-position: 50% 65%;
+    background-repeat: no-repeat;
+    background-image: url("../images/vancouver-skyline.jpg");
+  }
+  .bigPictureImg::before {    
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.95;
+    background-position: 50% 65%;
+    background-repeat: no-repeat;
+    background-image: url("../images/bigPicture.jpg");
+  }
+  .exploringDeeperImg::before {    
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    background-position: 50% 65%;
+    background-repeat: no-repeat;
+    background-image: url("../images/exploringDeeper.jpg");
+  }
 
 .ediSynthSectionTitle {
   margin-left: 33%;
   font-size: 3rem;
   z-index: 2;
 }
+
+
+// TOOLTIP STYLES ------------------------------------------------ NEW!!!!!
+
+.tooltip-inner {
+  background-color: $light;
+  color: $dark;
+}
+
+.bs-tooltip-top .arrow::before {
+  border-top-color: $light;
+}
+
+
 
 
 
@@ -842,23 +913,6 @@ a.chartDownloadBtn {
 }
 
 // CONCLUSION SECTION
-
-.conclusionImg {
-  position: relative;
-  &::before {    
-    content: "";
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.75;
-    background-image: url("../images/conclusionImage.jpeg");
-    background-position: 50% 25%;
-    background-repeat: no-repeat;
-  }
-}
 
 .stayTunedImg {
   width: 100px;

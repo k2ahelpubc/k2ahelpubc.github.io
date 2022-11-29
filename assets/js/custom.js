@@ -2,6 +2,10 @@ import "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
 // GLOBAL VARIABLES
 
 const xValueWaves = ['2', '3', '4', '5', '6', '7', '8'];
@@ -269,7 +273,7 @@ function vulnTrendLineChart() {
         },{
             xref: 'paper',
             yref: 'paper',
-            x: 0.98,
+            x: 1.2,
             xanchor: 'right',
             y: -0.3,
             yanchor: 'right',
@@ -612,6 +616,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiamVyZW15cmFsZXhhbmRlciIsImEiOiJjaWtyZ3F4anEwM
 const map = new mapboxgl.Map({
     container: 'mapVuln1orMore', // container id
     zoom: 4.3,
+    minZoom: 4.3,
+    maxZoom: 14,
     center: [-120.0, 54.5],
     style: 'mapbox://styles/jeremyralexander/cl94q91qo000514o4l6p1on6l', // replace this with your style URL
     cooperativeGestures: true,
@@ -795,16 +801,6 @@ function nhRangeVulnBoxPlot() {
             text: 'BC Average',
             font: {size: 12, color: '#76777a'},
             showarrow: false
-        },{
-            xref: 'paper',
-            yref: 'paper',
-            x: 1.05,
-            xanchor: 'right',
-            y: -0.3,
-            yanchor: 'right',
-            text: '©Human Early Learning Partnership, UBC - 2022',
-            font: {size: 12, color: '#76777a'},
-            showarrow: false,
         }],
         showlegend: false,
         hovermode: false,
@@ -1369,7 +1365,7 @@ function allScalesTrendChart() {
         annotations: [{
             xref: 'paper',
             yref: 'paper',
-            x: 1.28,
+            x: 1.25,
             xanchor: 'right',
             y: -0.3,
             yanchor: 'right',
@@ -1750,17 +1746,7 @@ const subscaleLayout = {
         text: 'Better',
         font: {size: 16, color: '#8EC73F'},
         showarrow: false
-      },{
-        xref: 'paper',
-        yref: 'paper',
-        x: 0.3,
-        xanchor: 'right',
-        y: -0.25,
-        yanchor: 'right',
-        text: '©Human Early Learning Partnership, UBC - 2022',
-        font: {size: 12, color: '#76777a'},
-        showarrow: false,
-    }],
+      }],
     hovermode: false,
     shapes: [{
         type: 'rect',
@@ -2010,7 +1996,7 @@ function languageSubscalesTrendChart() {
         line: {
             color: scaleColours.language.primary,
             width: 4,
-            dash: 'dash',
+            dash: 'solid',
         },
     };
     const advLitSubscale = {
@@ -2025,7 +2011,7 @@ function languageSubscalesTrendChart() {
         line: {
             color: scaleColours.language.primary,
             width: 4,
-            dash: 'solid',
+            dash: 'dash',
         },
     };
     const basicNumSubscale = {
@@ -2055,7 +2041,7 @@ function languageSubscalesTrendChart() {
         line: {
             color: scaleColours.language.primary,
             width: 4,
-            dash: 'dot',
+            dash: 'longdashdot',
         },
     };
 
