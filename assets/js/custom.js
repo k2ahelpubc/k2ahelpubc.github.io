@@ -1133,7 +1133,7 @@ function scaleOutcomesBarChart() {
             color: '#252525',
         },
         title: {
-            text: 'EDI Scale-Level Outcomes, All Five Scales, Wave 8',
+            text: 'EDI Scale-level Outcomes, All Five Scales, Wave 8',
             font: {
                 size: 16,
                 color: '#76777a',
@@ -1338,7 +1338,7 @@ function allScalesTrendChart() {
             color: '#252525',
         },
         title: {
-            text: 'EDI Scale-Level Trends in Vulnerability, All Five Scales, Wave 2-8',
+            text: 'EDI Scale-level Trends in Vulnerability, All Five Scales, Wave 2-8',
             font: {
                 size: 16,
                 color: '#76777a',

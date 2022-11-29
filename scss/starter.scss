@@ -422,6 +422,11 @@ a.chartDownloadBtn {
     top:-65px;
   }
 }
+// change hover cursor type
+.js-plotly-plot .plotly .cursor-pointer {
+  cursor: default !important;
+}
+
 
 // LANDING/INTRODUCTION
 #landing-screen {
@@ -632,16 +637,13 @@ a.chartDownloadBtn {
 
 // PARTICIPATION/DEMOGRAPHICS
 
-.tableContainer {
-  position: relative;
-  height: 315px;
-  margin-bottom: 0rem;
-}
-
 #demoNumTable_btn,
 #demoPercentTable_btn {
   padding: 0.5rem 1.5rem;
 }
+
+
+// TABLE STYLES
 
 #demoNumTable {
   position: absolute;
@@ -649,18 +651,6 @@ a.chartDownloadBtn {
   left: 0;
   visibility: hidden;
 }
-
-#demoNumTable thead tr th, #demoPercentTable thead tr th {
-  text-align: left;
-}
-#demoNumTable tbody tr td, #demoPercentTable tbody tr td {
-  text-align: right;
-}
-
-.waveTableHeader th {
-  text-align: right !important;
-}
-
 #demoPercentTable {
   position: absolute;
   top: 0;
@@ -669,16 +659,30 @@ a.chartDownloadBtn {
   visibility: visible;
 }
 
-// EDI DATA COLLECTION STYLES ------------------------------- NEW!!
-
-#ediDataCollectionCTA {
-  border-left: 5px solid $edi-base;
+.tableContainer {
+  position: relative;
+  height: 315px;
+  margin-bottom: 0rem;
+}
+.table thead tr th, #demoPercentTable thead tr th {
+  text-align: left;
+}
+.table tbody tr td, #demoPercentTable tbody tr td {
+  text-align: right;
+}
+#nhHighLowTable thead tr th, #demoPercentTable thead tr th {
+  text-align: right;
+}
+.waveTableHeader th {
+  text-align: right !important;
 }
 
-#ediDataCollectionDescription {
-  border-top: 1px solid $edi-base;
-  border-right: 1px solid $edi-base;
-  // border-left: 5px solid $med;
+
+
+// EDI DATA COLLECTION STYLES ------------------------------- NEW!!
+
+.accordionContainer {
+  border-top: 1px solid $med;
 }
 
 // MEANINGFUL CHANGE
@@ -832,6 +836,9 @@ a.chartDownloadBtn {
 #nhOutcomeRanges p {
   margin-bottom: 0;
 }
+
+
+
 
 // SCALE SUBSCALE DIAGRAMS
 
