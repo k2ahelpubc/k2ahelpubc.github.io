@@ -557,8 +557,6 @@ a.chartDownloadBtn {
     width: 150%;
     margin: 10rem 0 5rem;
     margin-left: -50%;
-    border-right: 5px solid $edi-base;
-    border-bottom: 1px solid $edi-base;
   }
   .conclusionImg::before {    
     content: "";
@@ -573,6 +571,19 @@ a.chartDownloadBtn {
     background-repeat: no-repeat;
     background-image: url("../images/conclusionImage.jpeg");
   }
+  .bigPictureImg::before {    
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.95;
+    background-position: 50% 45%;
+    background-repeat: no-repeat;
+    background-image: url("../images/bigPicture.jpg");
+  }
   .geogVulnImg::before {    
     content: "";
     background-size: cover;
@@ -584,20 +595,7 @@ a.chartDownloadBtn {
     opacity: 0.75;
     background-position: 50% 65%;
     background-repeat: no-repeat;
-    background-image: url("../images/vancouver-skyline.jpg");
-  }
-  .bigPictureImg::before {    
-    content: "";
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.95;
-    background-position: 50% 65%;
-    background-repeat: no-repeat;
-    background-image: url("../images/bigPicture.jpg");
+    background-image: url("../images/geogVulnImg.jpg");
   }
   .exploringDeeperImg::before {    
     content: "";
@@ -608,15 +606,29 @@ a.chartDownloadBtn {
     bottom: 0px;
     left: 0px;
     opacity: 0.75;
-    background-position: 50% 65%;
+    background-position: 50% 75%;
     background-repeat: no-repeat;
     background-image: url("../images/exploringDeeper.jpg");
   }
 
 .ediSynthSectionTitle {
+  width: 100%;
+  margin-top: 1.5rem;
   margin-left: 33%;
+  margin-bottom: 0;
   font-size: 3rem;
   z-index: 2;
+  display: block;
+}
+
+.redBar {
+  position: relative;
+  display: block;
+  margin-left: 33%;
+  width: 200px;
+  height: 15px;
+  z-index: 2;
+  background-color: $edi-base;
 }
 
 
