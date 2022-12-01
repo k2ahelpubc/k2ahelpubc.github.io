@@ -408,6 +408,10 @@ a.chartDownloadBtn {
     bottom: 40px;
     right: 800px;
   }
+  &.mapDownloadBtn {
+    bottom: 0;
+    right: 0;
+  }
   &.nhRangeDownloadBtn {
     bottom: -60px;
     right: -820px;
@@ -558,19 +562,6 @@ a.chartDownloadBtn {
     margin: 10rem 0 5rem;
     margin-left: -50%;
   }
-  .conclusionImg::before {    
-    content: "";
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.75;
-    background-position: 50% 25%;
-    background-repeat: no-repeat;
-    background-image: url("../images/conclusionImage.jpeg");
-  }
   .bigPictureImg::before {    
     content: "";
     background-size: cover;
@@ -579,10 +570,10 @@ a.chartDownloadBtn {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.95;
-    background-position: 50% 45%;
+    // opacity: 0.95;
+    background-position: 50% 70%;
     background-repeat: no-repeat;
-    background-image: url("../images/bigPicture.jpg");
+    background-image: url("https://earlylearning.ubc.ca//app/uploads/2022/12/bigPicture.jpg");
   }
   .geogVulnImg::before {    
     content: "";
@@ -592,10 +583,10 @@ a.chartDownloadBtn {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.75;
+    // opacity: 0.75;
     background-position: 50% 65%;
     background-repeat: no-repeat;
-    background-image: url("../images/geogVulnImg.jpg");
+    background-image: url("https://earlylearning.ubc.ca//app/uploads/2022/12/geogVulnImg.jpg");
   }
   .exploringDeeperImg::before {    
     content: "";
@@ -605,20 +596,43 @@ a.chartDownloadBtn {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.75;
-    background-position: 50% 75%;
+    opacity: 1;
+    background-position: 50% 70%;
     background-repeat: no-repeat;
-    background-image: url("../images/exploringDeeper.jpg");
+    background-image: url("https://earlylearning.ubc.ca//app/uploads/2022/12/exploringDeeper.jpg");
+  }
+  .conclusionImg::before {    
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+    background-image: url("https://earlylearning.ubc.ca//app/uploads/2022/12/conclusionImage.jpeg");
   }
 
 .ediSynthSectionTitle {
+  position: relative;
   width: 100%;
-  margin-top: 1.5rem;
   margin-left: 33%;
   margin-bottom: 0;
   font-size: 3rem;
   z-index: 2;
   display: block;
+  &::before {
+    position: relative;
+    content: "";
+    width: 65px;
+    height: 65px;
+    border-radius: 50px;
+    background-color: $edi-base;
+    display: inline-block;
+    top: 15px;
+    margin-right: 2rem;
+  }
 }
 
 .redBar {

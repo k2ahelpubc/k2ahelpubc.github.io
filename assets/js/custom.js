@@ -1,6 +1,6 @@
 import "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js";
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+import "../js/animations.js";
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
@@ -152,6 +152,7 @@ function vulnTrendLineChart() {
             color: scaleColours.vuln1orMore.primary,
             width: 4
         },
+        ids: 'vulnTrendLine',
         text: overallTrendData.vuln,
         texttemplate: "%{text:.1f}%",
         textposition: "top center",
@@ -306,7 +307,7 @@ function vulnTrendLineChart() {
 
 vulnTrendLineChart();
 
-
+// gsap.from("#trend_vuln1orMore g.points", {opacity: 0, stagger:0.5, scrollTrigger:"#trend_vuln1orMore"});
 
 
 // MULTIPLE VULNERABILITIES STACKED BAR CHART

@@ -1,15 +1,8 @@
 CHART DESIGN
-- numbers on track, at risk for hover?
-
-- section breaks - images? red line treatment? different backgrounds?
 - responsive design
 - animation plan?!
-
 - Plotly JS restyle in scales/subscale section to switch scales and to add labels when a single line is isolated in all scales chart.
 - Vuln map time slider through waves
-
-- Multiple vulnerabilities, perhaps pop out the % in the chart description that highlights the change between W2 and W8
-- change cursor type on chart hover to cursor when there are not interactions
 
 WEBSITE UPDATES
 - note re w7 sd data and w8 provincial
