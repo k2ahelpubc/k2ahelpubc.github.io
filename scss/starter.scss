@@ -317,6 +317,7 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
   background-color: $communication;
 }
 
+
 // BUTTON STYLES
 .btn-custom {
   background-color: transparent;
@@ -380,14 +381,13 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
 }
 
 
-
 // PLOTLY JS CUSTOM STYLES ------------------------------------------------- NEW!!!!
 
 .chartTitle p {
   font-size: 16px;
   color: $med;
 }
-.chartCopyright p {
+.chartCopyright {
   font-size: 12px;
   color: $med;
 }
@@ -398,23 +398,23 @@ $font-family-sans-serif: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
 a.chartDownloadBtn {
   color: $light !important;
   position: relative;
-  bottom: -35px;
-  right: 10px;
+  bottom: -2rem;
+  right: 0.5rem;
   z-index: 10;
   &:hover {
     color: $edi-base !important;
   }
   &.tableDownloadBtn {
-    bottom: 40px;
-    right: 800px;
+    bottom: 0.6rem;
+    right: 0;
+    left: 1rem;
+  }
+  &.overallOutcomesDownloadBtn {
+    bottom: -1.25rem;
   }
   &.mapDownloadBtn {
     bottom: 0;
     right: 0;
-  }
-  &.nhRangeDownloadBtn {
-    bottom: -60px;
-    right: -820px;
   }
   &.urbanRuralDownloadBtn {
     top: 525px;
@@ -429,6 +429,18 @@ a.chartDownloadBtn {
 // change hover cursor type
 .js-plotly-plot .plotly .cursor-pointer {
   cursor: default !important;
+}
+
+
+// TOOLTIP STYLES ------------------------------------------------ NEW!!!!!
+
+.tooltip-inner {
+  background-color: $light;
+  color: $dark;
+}
+
+.bs-tooltip-top .arrow::before {
+  border-top-color: $light;
 }
 
 
@@ -551,16 +563,14 @@ a.chartDownloadBtn {
 }
 
 
-
-
 // SECTION BREAK STYLES ------------------------------------------------------------ NEW!!!!
 
 .sectionBreakImg {
     position: relative;
     height: 250px;
-    width: 150%;
-    margin: 10rem 0 5rem;
-    margin-left: -50%;
+    width: 100%;
+    margin-left: 0;
+    padding: 0;
   }
   .bigPictureImg::before {    
     content: "";
@@ -616,9 +626,7 @@ a.chartDownloadBtn {
 
 .ediSynthSectionTitle {
   position: relative;
-  width: 100%;
-  margin-left: 33%;
-  margin-bottom: 0;
+  
   font-size: 3rem;
   z-index: 2;
   display: block;
@@ -634,31 +642,47 @@ a.chartDownloadBtn {
     margin-right: 2rem;
   }
 }
-
-.redBar {
-  position: relative;
-  display: block;
-  margin-left: 33%;
-  width: 200px;
-  height: 15px;
-  z-index: 2;
-  background-color: $edi-base;
+@media (min-width: 992px) {
+  .sectionBreakImg {
+    width: 150%;
+    margin: 10rem 0 5rem;
+    margin-left: -50% !important;
+  }
+  .ediSynthSectionTitle {
+    width: 100%;
+    margin-left: 33%;
+    margin-bottom: 0 !important;
+  }
 }
 
 
-// TOOLTIP STYLES ------------------------------------------------ NEW!!!!!
+// ACCORDION CONTAINER STYLES ------------------------------- NEW!!
 
-.tooltip-inner {
-  background-color: $light;
-  color: $dark;
-}
-
-.bs-tooltip-top .arrow::before {
-  border-top-color: $light;
+.accordionContainer {
+  border-top: 1px solid $med;
 }
 
 
 
+// 
+// ---------------------------------- INDIVIDUAL SECTION STYLING ---------------------------------------
+// 
+
+
+// KEY FINDINGS
+#w8keyFindings {
+  .keyFindingImg {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@include media-breakpoint-up(md) { 
+  .keyFindingImg {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 
 
 // PARTICIPATION/DEMOGRAPHICS
@@ -668,19 +692,16 @@ a.chartDownloadBtn {
   padding: 0.5rem 1.5rem;
 }
 
-
-// TABLE STYLES
-
 #demoNumTable {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1rem;
   visibility: hidden;
 }
 #demoPercentTable {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1rem;
   z-index: 2;
   visibility: visible;
 }
@@ -703,13 +724,6 @@ a.chartDownloadBtn {
   text-align: right !important;
 }
 
-
-
-// EDI DATA COLLECTION STYLES ------------------------------- NEW!!
-
-.accordionContainer {
-  border-top: 1px solid $med;
-}
 
 // MEANINGFUL CHANGE
 #meaningfulChangeIconLegend {
@@ -737,10 +751,9 @@ a.chartDownloadBtn {
   }
 }
 #vuln1orMore_meaningfulChange {
-  width: 150px;
   position: relative;
-  top: -122px;
-  right: -775px;
+  left: 86%;
+  top: -115px;
 }
 .scales_meaningfulChange {
   width: 150px;
@@ -754,6 +767,12 @@ a.chartDownloadBtn {
   top: 320px;
   right: -15px;
 }
+
+@media (min-width: 1200px) {
+  #vuln1orMore_meaningfulChange {
+    // right: -775px;
+  }
+} 
 
 
 // OVERALL OUTCOMES DESCRIPTION DIAGRAM STYLES
@@ -816,9 +835,6 @@ a.chartDownloadBtn {
 
 
 // MAPBOX MAP STYLES
-/**
-* Create a position for the map
-* on the page */
 
 #mapVuln1orMore {
   position: relative;
@@ -827,12 +843,6 @@ a.chartDownloadBtn {
   width: auto;
   height: 600px;
 }
-
-/**
-* Set rules for how the map overlays
-* (information box and legend) will be displayed
-* on the page. */
-
 .edi-synth-map-overlay {
   position: absolute;
   top: 50%;
@@ -850,6 +860,7 @@ a.chartDownloadBtn {
   height: auto;
 }
 
+
 // NH DISPARITY SECTION
 
 #vulnDisparity_innerWrap {
@@ -857,15 +868,13 @@ a.chartDownloadBtn {
 }
 #vuln1orMoreTrend_vulndisparity {
   position: absolute;
-  top: 24px;
+  top: 0;
   left: 0;
   z-index: 5;
 }
 #nhOutcomeRanges p {
   margin-bottom: 0;
 }
-
-
 
 
 // SCALE SUBSCALE DIAGRAMS
@@ -962,7 +971,8 @@ a.chartDownloadBtn {
   }
 }
 
-// --------------------------------------- NEW !! --------------------------
+// --------------------------------------- NEW !! ----------------------------------------
+// CITATION STYLES
 
 a.inTextCitation {
   color: $med;

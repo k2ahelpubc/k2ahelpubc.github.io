@@ -1,9 +1,5 @@
 CHART DESIGN
 - responsive design
-- animation plan?!
+- animate in bar sections/trend lines
 - Plotly JS restyle in scales/subscale section to switch scales and to add labels when a single line is isolated in all scales chart.
 - Vuln map time slider through waves
-
-WEBSITE UPDATES
-- note re w7 sd data and w8 provincial
-- remove w7 provincial report and add Wave 8 provincial report

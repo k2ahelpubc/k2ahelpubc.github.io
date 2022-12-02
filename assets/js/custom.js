@@ -135,8 +135,6 @@ $('#demoPercentTable_btn').on('click', function () {
 });
 
 
-
-
 // VULNERABLE ON ONE OR MORE SCALES OVER TIME
 
 function vulnTrendLineChart() {
@@ -165,7 +163,9 @@ function vulnTrendLineChart() {
     }];
 
     var layout = {
-        autosize: true,
+        // autosize: true,
+        width: 920,
+        height: 480,
         margin: {
             l: 75,
             r: 150,
@@ -307,8 +307,6 @@ function vulnTrendLineChart() {
 
 vulnTrendLineChart();
 
-// gsap.from("#trend_vuln1orMore g.points", {opacity: 0, stagger:0.5, scrollTrigger:"#trend_vuln1orMore"});
-
 
 // MULTIPLE VULNERABILITIES STACKED BAR CHART
 
@@ -414,7 +412,9 @@ function multiVulnBarChart() {
     var data = [oneVuln, twoVuln, threeVuln, fourVuln, fiveVuln, vuln1orMoreTrendLine];
 
     var layout = {
-        autosize: true,
+        // autosize: true,
+        width: 920,
+        height: 500,
         margin: {
             l: 100,
             r: 0,
@@ -458,7 +458,7 @@ function multiVulnBarChart() {
             yref: 'paper',
             x: 1.2,
             xanchor: 'right',
-            y: -0.3,
+            y: -0.25,
             yanchor: 'right',
             text: '©Human Early Learning Partnership, UBC - 2022',
             font: {size: 12, color: '#76777a'},
@@ -484,11 +484,10 @@ function multiVulnBarChart() {
     };
 
     Plotly.newPlot('stackedBar_multiVuln', data, layout, chartConfig, { displayModeBar: true });
+    
 };
 
 multiVulnBarChart();
-
-
 
 
 // OVERALL VULNERABILITY PROFILE
@@ -534,7 +533,9 @@ function overallOutcomesBarChart() {
     var data = [vuln, inFlux, onTrack];
 
     var layout = {
-        autosize: true,
+        // autosize: true,
+        width: 920,
+        height: 500,
         barmode: 'stack',
         margin: {
             l: 100,
@@ -607,8 +608,6 @@ function overallOutcomesBarChart() {
 };
 
 overallOutcomesBarChart();
-
-
 
 
 // MAPBOX MAP CODE
@@ -760,13 +759,14 @@ function nhRangeVulnBoxPlot() {
     var data = [wave2, wave3, wave4, wave5, wave6, wave7, wave8];
 
     var layout = {
+        // autosize: true,
         width: 920,
         height: 500,
         margin: {
             l: 100,
-            r: 75,
+            r: 100,
             b: 100,
-            t: 100,
+            t: 50,
             pad: 4
         },
         font: {
@@ -795,11 +795,11 @@ function nhRangeVulnBoxPlot() {
         annotations: [{
             xref: 'paper',
             yref: 'paper',
-            x: 0.95,
+            x: 0.94,
             xanchor: 'left',
             y: 0.41,
             yanchor: 'middle',
-            text: 'BC Average',
+            text: 'BC Avg.',
             font: {size: 12, color: '#76777a'},
             showarrow: false
         }],
@@ -826,7 +826,29 @@ function nhRangeVulnBoxPlot() {
 
     Plotly.newPlot('range_vulnDisparity', data, layout, chartConfig, { displayModeBar: true });
 
-
+    const topNHTrend = {
+        x: xValueWaves,
+        y: [55.4,69.6,59.1,56.4,60.4,68.4,72.0],
+        mode: 'markers+text',
+        marker: {
+            size: 10,
+            symbol: 'line-ew',
+            line: {
+                color: scaleColours.vuln1orMore.primary,
+                width: 2
+            },
+        },
+        line: {
+            color: scaleColours.vuln1orMore.primary,
+            width: 2
+        },
+        text: [55.4,69.6,59.1,56.4,60.4,68.4,72.0],
+        texttemplate: "%{text:.1f}%",
+        textposition: "middle right",
+        textfont: { 'family': "Nunito", 'size': 14, 'color': '#252525'},
+        hoverinfo: 'none',
+    };
+    
     const bcAvgTrend = {
         x: xValueWaves,
         y: overallTrendData.vuln,
@@ -850,29 +872,6 @@ function nhRangeVulnBoxPlot() {
         textfont: { 'family': "Nunito", 'size': 14, 'color': '#252525'},
         hoverinfo: 'none',
 
-    };
-
-    const topNHTrend = {
-        x: xValueWaves,
-        y: [55.4,69.6,59.1,56.4,60.4,68.4,72.0],
-        mode: 'markers+text',
-        marker: {
-            size: 10,
-            symbol: 'line-ew',
-            line: {
-                color: scaleColours.vuln1orMore.primary,
-                width: 2
-            },
-        },
-        line: {
-            color: scaleColours.vuln1orMore.primary,
-            width: 2
-        },
-        text: [55.4,69.6,59.1,56.4,60.4,68.4,72.0],
-        texttemplate: "%{text:.1f}%",
-        textposition: "middle right",
-        textfont: { 'family': "Nunito", 'size': 14, 'color': '#252525'},
-        hoverinfo: 'none',
     };
 
     const lowNHTrend = {
@@ -902,14 +901,15 @@ function nhRangeVulnBoxPlot() {
     var data = [topNHTrend,lowNHTrend,bcAvgTrend];
 
     var layout = {
+        // autosize: true,
         width: 920,
         height: 500,
         showlegend: false,
         margin: {
             l: 100,
-            r: 75,
+            r: 100,
             b: 100,
-            t: 100,
+            t: 50,
             pad: 4
         },
         font: {
@@ -1119,8 +1119,10 @@ function scaleOutcomesBarChart() {
     var data = [vulnOutcome, inFluxOutcome, onTrackOutcome];
 
     var layout = {
+        // autosize: true,
+        width: 920,
+        height: 500,
         barmode: 'stack',
-        autosize: true,
         margin: {
             l: 150,
             r: 50,
